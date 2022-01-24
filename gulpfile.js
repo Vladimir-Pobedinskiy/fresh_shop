@@ -10,8 +10,20 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 // минификация картинок плагин imagemin
 const imagemin = require('gulp-imagemin');
+// svg-sprite
+const svgSprite = require('gulp-svg-sprite');
+// Дополнение к функции спрайтов svg-sprite при использовании gulp-cheerio
+const cheerio = require('gulp-cheerio');
+// В некоторых случаях при использовании плагина gulp-cheerio может возникать ошибка, связанная с заменой символа ">". В таком случае можно подключить плагин  gulp-replace
+const replace = require('gulp-replace');
+// плагин gulp-file-include (собирает все html в один)
+const fileInclude   = require('gulp-file-include');
 // перезаписывает dist (удаляет старые файлы)
 const del = require('del');
+// перевод в woff
+const ttf2woff = require('gulp-ttf2woff');
+// перевод в woff2
+const ttf2woff2 = require('gulp-ttf2woff2');
 // автоматическое обновление браузера
 const browserSync = require('browser-sync').create();
 
@@ -23,6 +35,17 @@ function browsersync() {
     },
     notify: false   // убирает окошко справа при автообновлении
   }) 
+}
+
+// функция для деления html на части с помощью gulp-file-include
+const htmlInclude = () => {
+  return src(['app/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
+  .pipe(fileInclude({
+    prefix: '@',
+    basepath: '@file',    // включить файл относительно каталога, в котором находится файл (пример)
+  }))
+  .pipe(dest('app'))      // указываем, в какую папку поместить готовый файл html
+  .pipe(browserSync.stream());
 }
 
 //функция переводит из scss в css 
@@ -50,6 +73,45 @@ function scripts() {
   .pipe(browserSync.stream())   // здесь уже будет перезагружать страницу а не добавлять стили как для css 
 }
 
+// функция svgSprites
+function svgSprites() {
+  return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
+    .pipe(cheerio({
+      run: ($) => {
+          $("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
+          $("[stroke]").removeAttr("stroke"); // очищаем, если есть лишние атрибуты строк
+          $("[style]").removeAttr("style"); // убираем внутренние стили для иконок
+      },
+      parserOptions: { xmlMode: true },
+    })
+    )
+    .pipe(replace('&gt;','>')) // боремся с заменой символа 
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg', // указываем имя файла спрайта и путь
+          },
+        },
+      })
+    )
+		.pipe(dest('app/images')); // указываем, в какую папку поместить готовый файл спрайта
+}
+
+// функция конвертирования шрифтов
+function fonts() {
+  src('app/fonts/**/*.*')
+  .pipe(ttf2woff())
+  .pipe(dest('app/fonts'))
+  .pipe(dest('dist/fonts'))
+
+  return src('app/fonts/**/*.*')
+  .pipe(ttf2woff2())
+  .pipe(dest('app/fonts'))
+  .pipe(dest('dist/fonts'))
+}
+
+// функция images
 function images() {
   return src('app/images/**/*.*')
   .pipe(imagemin([
@@ -83,18 +145,24 @@ function cleanDist() {
 
 // функция для автоматического отслеживания и изменения в опр. файлы 
 function watching() {
+  watch(['app/html/**/*.html'], htmlInclude);   // отслеживаниt всех файлов .html и подпапок внутри папки "html"
+  watch(['app/fonts/**/*.ttf'], fonts);
+  watch(['app/images/icons/*.svg'], svgSprites);
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload); // спросить про chenche
+  watch(['app/**/*.html']).on('change', browserSync.reload); 
 }
 
 
+exports.htmlInclude = htmlInclude; //экспорт функции htmlInclude
+exports.svgSprites = svgSprites;
 exports.styles = styles; // как раз производит экспорт из scss в css 
 exports.scripts = scripts;  
 exports.browsersync = browsersync;  
 exports.watching = watching; // отслеживает и автоматически обновляет css
+exports.fonts = fonts;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build);   //записывает три задачи в одну коману build при итоговой сборке
+exports.build = series(cleanDist, fonts, images, build);   //записывает три задачи в одну коману build при итоговой сборке
 
-exports.default = parallel(styles, scripts, browsersync, watching);   // запускает по дефолту все что мы внесли(при прописи gulp)
+exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);   // запускает по дефолту все что мы внесли(при прописи gulp)

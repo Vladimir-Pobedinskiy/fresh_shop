@@ -1,0 +1,53 @@
+
+.header {
+  &__top {
+    background-color: #31352B;
+    height: 50px;
+  }
+
+  &__top-box {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__top-back-items {
+
+  }
+
+  &__top-item {
+    display: inline-block;
+  }
+
+  &__top-icon {
+    width: 32px;
+    height: 22px;
+    fill: #fff;
+  }
+
+  &__top-item-text{
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+}
+
+.menu {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 24px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
