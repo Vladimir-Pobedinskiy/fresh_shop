@@ -155,11 +155,11 @@ function watching() {
 
 
 exports.htmlInclude = htmlInclude; //экспорт функции htmlInclude
-exports.svgSprites = svgSprites;
 exports.styles = styles; // как раз производит экспорт из scss в css 
 exports.scripts = scripts;  
 exports.browsersync = browsersync;  
 exports.watching = watching; // отслеживает и автоматически обновляет css
+exports.svgSprites = svgSprites;
 exports.fonts = fonts;
 exports.images = images;
 exports.cleanDist = cleanDist;

@@ -22,7 +22,7 @@
               <svg class="header__top-icon">
                 <use xlink:href="images/sprite.svg#icon-del-address"></use>
               </svg>
-              <span class="header__top-item-text">адрес и время доставки</span>
+              <span class="header__top-text">адрес и время доставки</span>
             </a>
           </li>
           <li class="header__top-item">
@@ -30,11 +30,11 @@
               <svg class="header__top-icon">
                 <use xlink:href="images/sprite.svg#icon-tel"></use>
               </svg>
-              <span class="header__top-item-text">горячая линия 24/7</span>
+              <span class="header__top-text">горячая линия 24/7</span>
             </a>
           </li>
         </ul>
-        
+
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
@@ -48,12 +48,62 @@
             </li>
           </ul>
         </nav>
-  
+
       </div>
 
     </div>
   </div>
 
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-wrapper">
+        <img class="logo header__bottom-logo" src="images/logo.svg" alt="логотип сайта">
+
+        <div class="header__bottom-catalog">
+          <svg class="header__bottom-catalog-icon">
+            <use xlink:href="images/sprite.svg#icon-nav"></use>
+          </svg>
+          <p class="header__bottom-catalog-title">Каталог продуктов</p>
+          <img class="header__bottom-catalog-icon-arrow" src="images/icon-arrow.svg" alt="стрелка">
+        </div>
+
+        <div class="header__bottom-inputbox">
+          <svg class="header__bottom-inputbox-icon">
+            <use xlink:href="images/sprite.svg#icon-search"></use>
+          </svg>
+          <input class="header__bottom-input" type="search" name="search" placeholder="  Найти в магазине ..." required>
+        </div>
+        
+        <button class="header__bottom-button" type="submit">поиск</button>
+
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__item-link" href="#">
+              <svg class="user-nav__icon">
+                <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__item-link" href="#">
+              <svg class="user-nav__icon">
+                <use xlink:href="images/sprite.svg#icon-heart"></use>
+              </svg>
+            </a>
+            <span class="user-nav__count">12</span>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__item-link" href="#">
+              <svg class="user-nav__icon">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+            </a>
+            <span class="user-nav__count">12</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 </header>
 
@@ -64,9 +114,98 @@
   </main>
 
   <footer class="footer">
-    
+  <div class="container">
 
-  </footer>
+    <div class="footer__top-logo">
+      <img class="logo footer__top-logoimg" src="images/logo.svg" alt="логотип сайта">
+    </div>
+
+    <div class="footer__top">
+
+      <div class="footer__promotion">
+        <p class="footer__top-text">Следите за нашими акциями</p>
+        <div class="footer__email">
+          <input class="footer__promotion-input" type="email" name="email" placeholder="email@email.com" required>
+          <button class="footer__promotion-button" type="submit">подписаться</button>
+        </div>
+      </div>
+
+      <div class="footer__about">
+
+        <div class="footer__about-item">
+          <a class="footer__about-link footer__top-text" href="#">О нас</a>
+          <a class="footer__about-link footer__top-text" href="#">Контакты</a>
+          <a class="footer__about-link footer__top-text" href="#">Публичная оферта</a>
+        </div>
+
+        <div class="footer__about-item">
+          <a class="footer__about-link footer__top-text" href="#">Оплата и доставка</a>
+          <a class="footer__about-link footer__top-text" href="#">Вакансии</a>
+          <a class="footer__about-link footer__top-text" href="#">Акции</a>
+        </div>
+
+        <div class="footer__about-item">
+          <a class="footer__about-link footer__top-text" href="#">Отзывы</a>
+          <a class="footer__about-link footer__top-text" href="#">Новости</a>
+        </div>
+
+      </div>
+
+      <div class="footer__contacts">
+        <a class="footer__contacts-link footer__top-text" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
+        <a class="footer__contacts-link footer__top-text" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              <svg class="footer__link-icon">
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              <svg class="footer__link-icon">
+                <use xlink:href="images/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              <svg class="footer__link-icon">
+                <use xlink:href="images/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              <svg class="footer__link-icon">
+                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__bottom-copyrite">&#169; фрэшок</p>
+      <ul class="footer__bottom-cards">
+        <li class="footer__bottom-item">
+          <svg class="footer__bottom-card">
+            <use xlink:href="images/sprite.svg#icon-visa"></use>
+          </svg>
+        </li>
+        <li class="footer__bottom-item">
+          <svg class="footer__bottom-card">
+            <use xlink:href="images/sprite.svg#icon-mastercard"></use>
+          </svg>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
 
   <script src="js/main.min.js"></script>
 </body>
