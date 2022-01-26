@@ -5,7 +5,6 @@
      padding: 30px 0;
    }
 
-
    &__top {
      padding-bottom: 30px;
      display: flex;
@@ -70,16 +69,12 @@
      flex-direction: column;
    }
 
-   &__about-link {}
-
    &__contacts {
      display: flex;
      flex-direction: column;
      max-width: 215px;
      width: 100%;
    }
-
-   &__contacts-link {}
 
    &__list {
      display: flex;
@@ -93,8 +88,6 @@
      }
 
    }
-
-   &__link {}
 
    &__link-icon {
      width: 32px;
