@@ -58,6 +58,7 @@ function styles() {
     grid: true
   }))
   .pipe(dest('app/css'))
+  .pipe(dest('dist/css'))
   .pipe(browserSync.stream())  // будет добавлять стили без перезагрузки
 }
 
@@ -65,6 +66,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))  // происходит конкатинация js файлов 
