@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Fresh shop</title>
+  <title>Fresh shop | home page</title>
 </head>
 
 <body>
@@ -24,50 +24,32 @@
 
   <main class="main">
 
-    <section class="slider">
+    @include('components/_slider.html')
 
-      <div class="slider__top">
+    @include('components/_service.html')
 
-        <div class="slider__wrapper" style="background-image: url(images/slick-vegetables-bg.jpg);">
-          <div class="container">
-            <div class="slider__wrap">
-              <div class="slider__inner">
-                <h1 class="slider__title">свежачок вам в хату</h1>
-                <h2 class="slider__subtitle">скидка -50%</h2>
-                <p class="slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
-                <button class="slider__button btn" type="submit">Купить сейчас</button>
-              </div>
-            </div>
-          </div>
-        </div>
+    @include('components/_products.html')
 
-        <div class="slider__wrapper" style="background-image: url(images/slick-tomato-bg.jpg);">
-          <div class="container">
-            <div class="slider__wrap">
-              <div class="slider__inner">
-                <h1 class="slider__title">накрути себе томатов</h1>
-                <h2 class="slider__subtitle">акция: 3 кг по цене 1</h2>
-                <p class="slider__text">Только с 12 по 15 июля скидка на домашние помидорчики</p>
-                <button class="slider__button btn" type="submit">Купить сейчас</button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="sales">
+      <div class="container">
+        <div class="sales__wrapper">
 
-        <div class="slider__wrapper" style="background-image: url(images/slick-salat-bg.jpg);">
-          <div class="container">
-            <div class="slider__wrap">
-              <div class="slider__inner">
-                <h1 class="slider__title">пусть остальные позеленеют от зависти</h1>
-                <h2 class="slider__subtitle">распродажа зелени</h2>
-                <button class="slider__button btn" type="submit">Купить сейчас</button>
-              </div>
-            </div>
-          </div>
-        </div>
+          <h3 class="sales__wrapper-title title">акции</h3>
 
-      </div>
-      
+          <ul class="sales__wrapper-buttons">
+            <li class="sales__wrapper-button">
+              <button class="sales__wrapper-btn" type="button">все товары</button>
+            </li>
+            <li class="sales__wrapper-button">
+              <button class="sales__wrapper-btn" type="button">новинки</button>
+            </li>
+            <li class="sales__wrapper-button">
+              <button class="sales__wrapper-btn" type="button">хиты</button>
+            </li>
+          </ul>
+
+        <div>
+      <div>
     </section>
 
   </main>
