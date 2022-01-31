@@ -57,28 +57,48 @@ main {
 }
 
 
+.star-box {
+  display: flex;
+}
+
+.star-info {
+  @extend %opensans-700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  align-self: flex-end;
+}
+
+.star {
+  align-self: flex-end;
+}
+
+
+// product
 .product {
 
   &__item {
     height: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid $dark-500;
     border-radius: 6px;
     transition: border 0.5s ease;
+    position: relative;
+
     &:hover {
       border-color: $green-900;
     }
   }
 
+  &__visual-block {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__top {
     padding: 12px 12px;
     min-height: 57px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
   }
 
   &__top-item {
@@ -88,25 +108,49 @@ main {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__top-heart-button {
+    top: 12px;
+    right: 12px;
+    position: absolute;
+    background-color: $white;
+    outline: transparent;
+    border: 3px solid transparent;
+    border-radius: 4px;
+
+    &:focus {
+      border-color: #CF3E3B;
+    }
 
   }
 
   &__top-heart {
-    top: 12px;
-    right: 12px;
-    position: absolute;
     max-width: 32px;
     width: 100%;
     height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: fill 0.5s ease;
+
+    &:hover {
+      fill: #CF3E3B;
+    }
+
+    &:active {
+      fill-rule: "#CF3E3B";
+    }
   }
 
   &__image {
     max-height: 215px;
     max-width: 298px;
     margin-bottom: 18px;
-    position: relative;    
+    position: relative;
 
-    &:before {
+    &:before,
+    &:after {
       content: '';
       position: absolute;
       left: 0;
@@ -126,24 +170,9 @@ main {
       transition: transform 0.2s ease;
       z-index: 2;
     }
-    
+
     &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-image: url(../images/bgs.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      transform-origin: top bottom;
-      transform: scale(0);
-      transition: transform 0.2s ease;
       z-index: 1;
     }
 
@@ -151,7 +180,6 @@ main {
     &:hover::after {
       transform: scale(1);
     }
-    
   }
 
   &__image-img {
@@ -160,8 +188,15 @@ main {
     object-fit: cover;
   }
 
-  &__title {
+  &__info-block {
+    min-height: 120px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
     padding: 0 18px;
     margin-bottom: 9px;
     @extend %opensans-600;
@@ -169,13 +204,13 @@ main {
     line-height: 1.4;
     letter-spacing: 0.03em;
     color: $dark-900;
-    flex: 1 1 auto;
   }
 
   &__bottom {
     min-height: 50px;
     height: auto;
     display: flex;
+    align-items: flex-end;
     position: relative;
     padding: 0 18px 18px 18px;
   }
@@ -183,7 +218,6 @@ main {
   &__bottom-price-list {
     display: flex;
     flex-direction: column;
-
   }
 
   &__bottom-price-item {
@@ -191,20 +225,7 @@ main {
     margin-bottom: 3px;
   }
 
-  &__bottom-price-list:first-child {
-    color: $silver-600;
-  }
-
   &__bottom-price {
-    display: flex;
-    align-items: flex-end;
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    color: $dark-500
-  }
-
-  &__bottom-new-price {
     font-size: 14px;
     line-height: 1;
     letter-spacing: 0.03em;
@@ -225,10 +246,49 @@ main {
     transform: rotate(-7deg);
   }
 
-  &__bottom-cart {
+  &__bottom-new-price {
+    @extend %opensans-400;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+  }
+
+  &__bottom-cart-button {
+    width: 32px;
+    height: 32px;
     position: absolute;
     right: 18px;
     bottom: 18px;
+    padding: 8px 8px 16px 8px;
+    border: 0;
+    outline: transparent;
+    border-radius: 4px;
+    background-color: #63A60E;
+    outline: transparent;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+
+    &:hover {
+      background-color: #4D810C;
+    }
+
+    &:focus {
+      background-color: #63A60E;
+      box-shadow: 0px 0px 0px 4px #E0EDCF;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__bottom-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 16px;
+    width: 100%;
+
   }
 
 }

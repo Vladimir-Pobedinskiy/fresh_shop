@@ -1,6 +1,5 @@
-// присваиваем src и dest возможности галпа
+// присваиваем src и dest, ... возможности галпа
 const { src, dest, watch, parallel, series } = require('gulp');
-// передает в константу функционал плагина
 const scss = require('gulp-sass')(require('sass'));
 // именует .min.css и собирает js
 const concat = require('gulp-concat');
@@ -8,26 +7,19 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 // делает minjs
 const uglify = require('gulp-uglify');
-// минификация картинок плагин imagemin
 const imagemin = require('gulp-imagemin');
-// svg-sprite
 const svgSprite = require('gulp-svg-sprite');
 // Дополнение к функции спрайтов svg-sprite при использовании gulp-cheerio
 const cheerio = require('gulp-cheerio');
 // В некоторых случаях при использовании плагина gulp-cheerio может возникать ошибка, связанная с заменой символа ">". В таком случае можно подключить плагин  gulp-replace
 const replace = require('gulp-replace');
-// плагин gulp-file-include (собирает все html в один)
 const fileInclude   = require('gulp-file-include');
 // перезаписывает dist (удаляет старые файлы)
 const del = require('del');
-// перевод в woff
 const ttf2woff = require('gulp-ttf2woff');
-// перевод в woff2
 const ttf2woff2 = require('gulp-ttf2woff2');
-// автоматическое обновление браузера
 const browserSync = require('browser-sync').create();
 
-// функция для работы browser-sync
 function browsersync() {
   browserSync.init({
     server: {
@@ -37,7 +29,6 @@ function browsersync() {
   }) 
 }
 
-// функция для деления html на части с помощью gulp-file-include
 const htmlInclude = () => {
   return src(['app/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
   .pipe(fileInclude({
@@ -48,7 +39,7 @@ const htmlInclude = () => {
   .pipe(browserSync.stream());
 }
 
-//функция переводит из scss в css 
+
 function styles() {
   return src('app/scss/style.scss')
   .pipe(scss({outputStyle: 'expanded'}))  //compressed для min файла 
@@ -62,12 +53,13 @@ function styles() {
   .pipe(browserSync.stream())  // будет добавлять стили без перезагрузки
 }
 
-// функция для скриптов
+
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))  // происходит конкатинация js файлов 
@@ -76,7 +68,7 @@ function scripts() {
   .pipe(browserSync.stream())   // здесь уже будет перезагружать страницу а не добавлять стили как для css 
 }
 
-// функция svgSprites
+
 function svgSprites() {
   return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
     .pipe(cheerio({
@@ -114,7 +106,7 @@ function fonts() {
   .pipe(dest('dist/fonts'))
 }
 
-// функция images
+
 function images() {
   return src('app/images/**/*.*')
   .pipe(imagemin([

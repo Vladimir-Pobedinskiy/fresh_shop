@@ -30,26 +30,108 @@
 
     @include('components/_products.html')
 
-    <section class="sales">
+    @include('components/_sales.html')
+
+    <section class="partners">
+
+      <div class="partners__container">
+
+        <h3 class="screen-reader-only">Наши партнеры</h3>
+
+        <div class="partners__list">
+
+          <div class="partners__item">
+            <a class="partners__item-link" href="#">
+              <img src="images/partners/sprite.svg" alt="спрайт">
+            </a>
+          </div>
+          <div class="partners__item">
+            <a class="partners__item-link" href="#">
+              <img src="images/partners/dr-pepper.svg" alt="доктор пеппер">
+            </a>
+          </div>
+          <div class="partners__item">
+
+            <a class="partners__item-link" href="#">
+              <img src="images/partners/coca-cola.svg" alt="кока кола">
+            </a>
+          </div>
+          <div class="partners__item">
+            <a class="partners__item-link" href="#">
+              <img src="images/partners/pepsi.svg" alt="пепси">
+            </a>
+          </div>
+          <div class="partners__item">
+            <a class="partners__item-link" href="#">
+              <img src="images/partners/redbull.svg" alt="рэдбулл">
+            </a>
+          </div>
+          <div class="partners__item">
+            <a class="partners__item-link" href="#">
+              <img src="images/partners/fanta.svg" alt="фанта">
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="news">
       <div class="container">
-        <div class="sales__wrapper">
 
-          <h3 class="sales__wrapper-title title">акции</h3>
+        <div class="news__top">
+          <h3 class="news__title title">наши новости</h3>
+          <a class="news__link" href="#">все новости</a>
+        </div>
 
-          <ul class="sales__wrapper-buttons">
-            <li class="sales__wrapper-button">
-              <button class="sales__wrapper-btn" type="button">все товары</button>
-            </li>
-            <li class="sales__wrapper-button">
-              <button class="sales__wrapper-btn" type="button">новинки</button>
-            </li>
-            <li class="sales__wrapper-button">
-              <button class="sales__wrapper-btn" type="button">хиты</button>
-            </li>
-          </ul>
+        <div class="news__bottom">
 
-        <div>
-      <div>
+          <div class="news__day-wrapper">
+
+            <div class="news__day-wrap" style="background-image: url(images/calendar/july.svg);">
+              <div class="news__day-block">
+                <p class="news__day-months">июль</p>
+                <p class="news__day-day">15</p>
+              </div>
+            </div>
+            <div class="news__day-title-block">
+              <a class="news__day-link" href="#">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!</a>
+            </div>
+          </div>
+
+
+          <div class="news__day-wrapper">
+
+            <div class="news__day-wrap" style="background-image: url(images/calendar/may.svg);">
+              <div class="news__day-block">
+                <p class="news__day-months">май</p>
+                <p class="news__day-day">07</p>
+              </div>
+            </div>
+            <div class="news__day-title-block">
+              <a class="news__day-link" href="#">Шикарнейший выбор манго в нашем онлайн-маркете</a>
+            </div>
+          </div>
+
+
+          <div class="news__day-wrapper">
+
+            <div class="news__day-wrap" style="background-image: url(images/calendar/february.svg);">
+              <div class="news__day-block">
+                <p class="news__day-months">февраль</p>
+                <p class="news__day-day">20</p>
+              </div>
+            </div>
+            <div class="news__day-title-block">
+              <a class="news__day-link" href="#">Всё, что вы хотели знать о папайя</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
   </main>

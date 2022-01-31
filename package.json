@@ -24,10 +24,9 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
-    "sass": "^1.49.0"
-  },
-  "dependencies": {
     "mixitup": "^3.3.1",
+    "rateyo": "^2.3.5",
+    "sass": "^1.49.0",
     "slick-carousel": "^1.8.1"
   }
 }
