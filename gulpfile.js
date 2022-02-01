@@ -30,12 +30,12 @@ function browsersync() {
 }
 
 const htmlInclude = () => {
-  return src(['app/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
+  return src(['app/html/*.html']) 
   .pipe(fileInclude({
     prefix: '@',
     basepath: '@file',    // включить файл относительно каталога, в котором находится файл (пример)
   }))
-  .pipe(dest('app'))      // указываем, в какую папку поместить готовый файл html
+  .pipe(dest('app'))      
   .pipe(browserSync.stream());
 }
 
@@ -64,13 +64,13 @@ function scripts() {
   ])
   .pipe(concat('main.min.js'))  // происходит конкатинация js файлов 
   .pipe(uglify())               // делает минифицированным
-  .pipe(dest('app/js'))         // сохраняется в указ. пути
+  .pipe(dest('app/js'))        
   .pipe(browserSync.stream())   // здесь уже будет перезагружать страницу а не добавлять стили как для css 
 }
 
 
 function svgSprites() {
-  return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
+  return src('app/images/icons/*.svg') 
     .pipe(cheerio({
       run: ($) => {
           $("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
@@ -90,7 +90,7 @@ function svgSprites() {
         },
       })
     )
-		.pipe(dest('app/images')); // указываем, в какую папку поместить готовый файл спрайта
+		.pipe(dest('app/images')); 
 }
 
 // функция конвертирования шрифтов
@@ -140,7 +140,7 @@ function cleanDist() {
 
 // функция для автоматического отслеживания и изменения в опр. файлы 
 function watching() {
-  watch(['app/html/**/*.html'], htmlInclude);   // отслеживаниt всех файлов .html и подпапок внутри папки "html"
+  watch(['app/html/**/*.html'], htmlInclude);  
   watch(['app/fonts/**/*.ttf'], fonts);
   watch(['app/images/icons/*.svg'], svgSprites);
   watch(['app/scss/**/*.scss'], styles);

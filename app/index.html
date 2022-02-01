@@ -18,7 +18,7 @@
   <title>Fresh shop | home page</title>
 </head>
 
-<body>
+<body class="body">
 
   <header class="header">
 
@@ -78,6 +78,48 @@
           </svg>
           <p class="header__bottom-catalog-title">Каталог продуктов</p>
           <img class="header__bottom-catalog-icon-arrow" src="images/icon-arrow.svg" alt="стрелка">
+
+          <ul class="header__bottom-catalog-list">
+
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Бакалея</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Молочные продукты</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Хлеб</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Мясо</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Колбаса</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Рыба</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Алкоголь</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Напитки</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Торты</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Мясо</a>
+            </li>
+            <li class="header__bottom-catalog-item">
+              <a class="header__bottom-catalog-link" href="#">Чай, кофе</a>
+            </li>
+  
+          </ul>
+
         </button>
 
         <div class="header__bottom-inputbox">
@@ -95,26 +137,26 @@
 
         <ul class="user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__item-link" href="#">
+            <button class="user-nav__item-button" type="button">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-user"></use>
               </svg>
-            </a>
+            </button>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__item-link" href="#">
+            <button class="user-nav__item-button" type="button">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-heart"></use>
               </svg>
-            </a>
+            </button>
             <span class="user-nav__count">12</span>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__item-link" href="#">
+            <button class="user-nav__item-button" type="button">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-cart"></use>
               </svg>
-            </a>
+            </button>
             <span class="user-nav__count">12</span>
           </li>
         </ul>
@@ -1031,11 +1073,11 @@
     <div class="footer__top-wrapper  container">
       <div class="footer__promotion">
         <label class="footer__top-label footer__top-text" for="footer-input">Следите за нашими акциями</label>
-        <div class="footer__email">
+        <form class="footer__email">
           <input class="footer__promotion-input" id="footer-input" type="email" name="email"
             placeholder="email@email.com" required>
-          <button class="footer__promotion-button" type="button">подписаться</button>
-        </div>
+          <button class="footer__promotion-button" type="button" name="button">подписаться</button>
+        </form>
       </div>
 
       <ul class="footer__about">
