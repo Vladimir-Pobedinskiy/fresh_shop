@@ -40,7 +40,7 @@ $(function(){
 const list = document.querySelector('.header__bottom-catalog');
 const catalogList = document.querySelector('.header__bottom-catalog-list');
 const arrowCatalogList = document.querySelector('.header__bottom-catalog-icon-arrow');
-const body = document.querySelector('.body');
+
 
 list.addEventListener('click', (event) => {
   list.classList.toggle('__active');
@@ -49,7 +49,7 @@ list.addEventListener('click', (event) => {
 })
 
 window.addEventListener('click', (event) => { 
-  const target = event.target 
+  const target = event.target; 
   if (!target.closest('.header__bottom-catalog')) { 
     catalogList.classList.remove('__active');
     arrowCatalogList.classList.remove('__active');
