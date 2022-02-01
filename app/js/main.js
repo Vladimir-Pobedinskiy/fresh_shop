@@ -53,6 +53,7 @@ window.addEventListener('click', (event) => {
   if (!target.closest('.header__bottom-catalog')) { 
     catalogList.classList.remove('__active');
     arrowCatalogList.classList.remove('__active');
+    list.classList.remove('__active');
   }
 })
 
