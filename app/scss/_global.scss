@@ -30,7 +30,6 @@ main {
   max-width: 200px;
   width: 100%;
   height: 65px;
-
 }
 
 .title {
@@ -39,7 +38,7 @@ main {
   @extend %ruda-600;
   font-size: 32px;
   line-height: 1.4;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03rem;
   text-transform: uppercase;
   color: $dark-900;
 }
@@ -56,9 +55,7 @@ main {
   color: $white;
 }
 
-
-
-
+// звездный рейтинг
 .star-box {
   display: flex;
 }
@@ -67,12 +64,77 @@ main {
   @extend %opensans-700;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03rem;
   align-self: flex-end;
 }
 
 .star {
   align-self: flex-end;
+}
+
+
+//counter счетчик каталога
+.counter {
+  max-width: 84px;
+  width: 100%;
+  display: inline-flex;
+  justify-self: flex-end;
+  margin-right: 20px;
+  outline: transparent;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+
+  &__button {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: $green-900;
+    &:hover {
+      background-color: #4D810C;
+    }
+
+    &:focus {
+      background-color: #63A60E;
+      box-shadow: 0 0 0 3px #E0EDCF;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25)F;
+    }
+  }
+
+  &__button--minus {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &__button--plus {
+    border-radius: 0 4px 4px 0;
+  }
+
+  &__button-image {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__button-image--minus {
+    background-image: url(../images/counter/minus.svg);
+  }
+
+  &__button-image--plus {
+    background-image: url(../images/counter/plus.svg);
+  }
+
+  &__value {
+    max-width: 36px;
+    width: 100%;
+    height: 24px;
+    text-align: center;
+    background-color: $green-200;
+    outline: transparent;
+  }
+
 }
 
 
@@ -204,7 +266,7 @@ main {
     @extend %opensans-600;
     font-size: 14px;
     line-height: 1.4;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03rem;
     color: $dark-900;
   }
 
@@ -212,12 +274,13 @@ main {
     min-height: 50px;
     height: auto;
     display: flex;
-    align-items: flex-end;
-    position: relative;
+    align-items: center;
+
     padding: 0 18px 18px 18px;
   }
 
   &__bottom-price-list {
+    margin-right: auto;
     display: flex;
     flex-direction: column;
   }
@@ -228,9 +291,10 @@ main {
   }
 
   &__bottom-price {
+    margin-right: auto;
     font-size: 14px;
     line-height: 1;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03rem;
     color: $dark-500
   }
 
@@ -252,14 +316,13 @@ main {
     @extend %opensans-400;
     font-size: 14px;
     line-height: 1;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03rem;
     color: $dark-500;
   }
 
   &__bottom-cart-button {
     width: 32px;
     height: 32px;
-    position: absolute;
     right: 18px;
     bottom: 18px;
     padding: 8px 8px 16px 8px;
@@ -276,11 +339,11 @@ main {
 
     &:focus {
       background-color: #63A60E;
-      box-shadow: 0px 0px 0px 4px #E0EDCF;
+      box-shadow: 0 0 0px 4px #E0EDCF;
     }
 
     &:active {
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 

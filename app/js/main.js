@@ -33,10 +33,9 @@ $(function(){
 
 
 
-// js 
+// JS
 
 // открытие меню каталога
-
 const list = document.querySelector('.header__bottom-catalog');
 const catalogList = document.querySelector('.header__bottom-catalog-list');
 const arrowCatalogList = document.querySelector('.header__bottom-catalog-icon-arrow');
@@ -57,6 +56,30 @@ window.addEventListener('click', (event) => {
   }
 })
 
+// счетчик товаров каталога
+const counter = function () {
+  const btns = document.querySelectorAll('.counter__button');
 
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const direction = this.dataset.direction;
+      const inp = this.parentElement.querySelector('.counter__value');
+      const currentValue = +inp.value;
+      let newValue;
+
+      if (direction === 'plus') {
+        newValue = currentValue + 1;
+      } else {
+        newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+      }
+
+      inp.value = newValue;
+    })
+  })
+
+}
+
+counter();
 
 
