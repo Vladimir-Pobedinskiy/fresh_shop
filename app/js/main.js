@@ -42,17 +42,17 @@ const arrowCatalogList = document.querySelector('.header__bottom-catalog-icon-ar
 
 
 list.addEventListener('click', (event) => {
-  list.classList.toggle('__active');
-  catalogList.classList.toggle('__active');
-  arrowCatalogList.classList.toggle('__active');
+  list.classList.toggle('--active');
+  catalogList.classList.toggle('--active');
+  arrowCatalogList.classList.toggle('--active');
 })
 
 window.addEventListener('click', (event) => { 
   const target = event.target; 
   if (!target.closest('.header__bottom-catalog')) { 
-    catalogList.classList.remove('__active');
-    arrowCatalogList.classList.remove('__active');
-    list.classList.remove('__active');
+    catalogList.classList.remove('--active');
+    arrowCatalogList.classList.remove('--active');
+    list.classList.remove('--active');
   }
 })
 

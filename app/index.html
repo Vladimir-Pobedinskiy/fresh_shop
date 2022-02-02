@@ -68,9 +68,9 @@
     <div class="container">
       <div class="header__bottom-wrapper">
 
-       <a class="header__bottom-link" href="#">
-        <img class="logo header__bottom-logo" src="images/logo.svg" alt="логотип сайта">
-       </a> 
+        <a class="header__bottom-link" href="#">
+          <img class="logo header__bottom-logo" src="images/logo.svg" alt="логотип сайта">
+        </a>
 
         <button class="header__bottom-catalog" type="button">
           <svg class="header__bottom-catalog-icon">
@@ -117,23 +117,25 @@
             <li class="header__bottom-catalog-item">
               <a class="header__bottom-catalog-link" href="#">Чай, кофе</a>
             </li>
-  
+
           </ul>
 
         </button>
 
-        <div class="header__bottom-inputbox">
-          <svg class="header__bottom-inputbox-icon">
-            <use xlink:href="images/sprite.svg#icon-search"></use>
-          </svg>
-          <input class="header__bottom-input" id="header-input" type="search" name="search"
-            placeholder="  Найти в магазине ..." required>
-        </div>
+          <form class="header__bottom-inputbox" action="#">
 
-        <button class="header__bottom-button" type="button">
-        <label class="header__bottom-label" for="header-input">поиск</label>
-        </button>
+            <svg class="header__bottom-inputbox-icon">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+            
+            <input class="header__bottom-input" id="header-input" type="search" name="search"
+              placeholder="  Найти в магазине ..." required>
 
+          </form>
+
+          <button class="header__bottom-button" type="submit">
+            <label class="header__bottom-label" for="header-input">поиск</label>
+          </button>
 
         <ul class="user-nav">
           <li class="user-nav__item">
@@ -314,19 +316,23 @@
                       </li>
                     </ul>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
 
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -364,19 +370,23 @@
                   <div class="product__bottom">
                     <p class="product__bottom-price">199 ₽</p>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+                      
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
             
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -416,19 +426,23 @@
                   <div class="product__bottom">
                     <p class="product__bottom-price">1019 ₽</p>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+                      
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
 
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -466,19 +480,23 @@
                   <div class="product__bottom">
                     <p class="product__bottom-price">600 ₽</p>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+                      
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
 
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -517,19 +535,23 @@
                   <div class="product__bottom">
                     <p class="product__bottom-price">49 ₽</p>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+                      
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
 
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -577,19 +599,23 @@
                       </li>
                     </ul>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+                      
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
 
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -628,19 +654,23 @@
                   <div class="product__bottom">
                     <p class="product__bottom-price">877 ₽</p>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+                      
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
 
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -678,19 +708,23 @@
                   <div class="product__bottom">
                     <p class="product__bottom-price">349 ₽</p>
 
-                    <div class="product__bottom-counter counter">
+                    <form class="product__bottom-counter counter" action="#">
+
                       <button class="counter__button counter__button--minus" type="button" data-direction="minus">
                         <div class="counter__button-image counter__button-image--minus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
+
                       <input class="counter__value" type="text" value="0">
+                      
                       <button class="counter__button counter__button--plus" type="button" data-direction="plus">
                         <div class="counter__button-image counter__button-image--plus">
                           <p class="screen-reader-only">иконка счетчика</p>
                         </div>
                       </button>
-                    </div>
+
+                    </form>
 
                     <button class="product__bottom-cart-button" type="button">
                       <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
@@ -1193,10 +1227,10 @@
     <div class="footer__top-wrapper  container">
       <div class="footer__promotion">
         <label class="footer__top-label footer__top-text" for="footer-input">Следите за нашими акциями</label>
-        <form class="footer__email">
+        <form class="footer__email" action="#">
           <input class="footer__promotion-input" id="footer-input" type="email" name="email"
             placeholder="email@email.com" required>
-          <button class="footer__promotion-button" type="button" name="button">подписаться</button>
+          <button class="footer__promotion-button" type="submit" name="button">подписаться</button>
         </form>
       </div>
 

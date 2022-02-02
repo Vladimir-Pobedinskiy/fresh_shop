@@ -174,19 +174,10 @@
       background-color: $green-200;
     }
 
-  }
+    &.--active {
+      border-radius: 6px 6px 0 0;
+    }
 
-  .header__bottom-catalog.__active {
-    border-radius: 6px 6px 0 0;
-  }
-  
-  .header__bottom-catalog-list.__active {
-    transform-origin: top;
-    transform: scale(1);
-  }
-  
-  .header__bottom-catalog-icon-arrow.__active {
-    transform: rotate(180deg);
   }
 
   &__bottom-catalog-list {
@@ -203,6 +194,11 @@
     transform-origin: top;
     transform: scale(0);
     transition: transform 0.4s ease;
+
+    &.--active {
+      transform-origin: top;
+      transform: scale(1);
+    }
   }
 
 
@@ -215,10 +211,11 @@
     min-height: 50px;
     height: auto;
     border: 1px solid #EBEBEB;
+
     &:last-child {
       border-radius: 0 0 6px 6px;
     }
-    
+
   }
 
 
@@ -268,6 +265,11 @@
   &__bottom-catalog-icon-arrow {
     height: 8px;
     width: 12px;
+    
+    &.--active {
+      transform: rotate(180deg);
+    }
+
   }
 
   &__bottom-inputbox {
