@@ -6,15 +6,18 @@
 
 @import 'components/header';
 
-@import 'pages/home/slider_top';
+
+@import 'pages/home/slider';
 @import 'components/service';
 @import 'pages/home/products';
 @import 'pages/home/sales';
 @import 'pages/home/partners';
 @import 'pages/home/news';
 
+// страница catalog
+@import 'pages/catalog/filters-catalog';
+
+
 @import 'components/footer';
 
-
-@import 'media';
 @import 'libs';

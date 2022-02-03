@@ -69,19 +69,15 @@
       <div class="header__bottom-wrapper">
 
         <a class="header__bottom-link" href="#">
-          <img class="header__bottom-logo logo" src="images/logo.svg" alt="логотип сайта">
+          <img class="logo header__bottom-logo" src="images/logo.svg" alt="логотип сайта">
         </a>
 
-        <div class="header__bottom-catalog-box">
-
-          <button class="header__bottom-catalog" type="button">
-            <svg class="header__bottom-catalog-icon">
-              <use xlink:href="images/sprite.svg#icon-nav"></use>
-            </svg>
-            <p class="header__bottom-catalog-title">Каталог продуктов</p>
-            <img class="header__bottom-catalog-icon-arrow" src="images/icon-arrow.svg" alt="стрелка">
-
-          </button>
+        <button class="header__bottom-catalog" type="button">
+          <svg class="header__bottom-catalog-icon">
+            <use xlink:href="images/sprite.svg#icon-nav"></use>
+          </svg>
+          <p class="header__bottom-catalog-title">Каталог продуктов</p>
+          <img class="header__bottom-catalog-icon-arrow" src="images/icon-arrow.svg" alt="стрелка">
 
           <ul class="header__bottom-catalog-list">
 
@@ -123,37 +119,38 @@
             </li>
 
           </ul>
-        </div>
 
-        <form class="header__bottom-inputbox" action="#">
-
-          <svg class="header__bottom-inputbox-icon">
-            <use xlink:href="images/sprite.svg#icon-search"></use>
-          </svg>
-
-          <input class="header__bottom-input" id="header-input" type="search" name="search"
-            placeholder="  Найти в магазине ..." required>
-
-        </form>
-
-        <button class="header__bottom-button" type="submit">
-          <label class="header__bottom-label" for="header-input">поиск</label>
         </button>
+
+          <form class="header__bottom-inputbox" action="#">
+
+            <svg class="header__bottom-inputbox-icon">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+            
+            <input class="header__bottom-input" id="header-input" type="search" name="search"
+              placeholder="  Найти в магазине ..." required>
+
+          </form>
+
+          <button class="header__bottom-button" type="submit">
+            <label class="header__bottom-label" for="header-input">поиск</label>
+          </button>
 
         <ul class="user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__item-button" href="#">
+            <button class="user-nav__item-button" type="button">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-user"></use>
               </svg>
-            </a>
+            </button>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__item-button" href="#">
+            <button class="user-nav__item-button" type="button">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-heart"></use>
               </svg>
-            </a>
+            </button>
             <span class="user-nav__count">12</span>
           </li>
           <li class="user-nav__item">
@@ -172,10 +169,11 @@
 </header>
 
   <main class="main">
-    <h1 class="screen-reader-only"> Главная страница интернет магазина овощей и фруктов</h1>
+
     <section class="slider">
 
-  <h2 class="screen-reader-only">Главный слайдер</h2>
+  <h1 class="screen-reader-only">Главный слайдер</h1>
+  <h2 class="screen-reader-only"> Слайдер содержит главные акции магазина</h2>
 
   <div class="slider__top">
 
@@ -184,7 +182,7 @@
         <div class="slider__wrap">
           <div class="slider__inner">
             <h3 class="slider__title">свежачок вам в хату</h3>
-            <strong class="slider__subtitle">скидка -50%</strong>
+            <h3 class="slider__subtitle">скидка -50%</h3>
             <p class="slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
             <a class="slider__link" href="#">Купить сейчас</a>
           </div>
@@ -197,7 +195,7 @@
         <div class="slider__wrap">
           <div class="slider__inner">
             <h3 class="slider__title">накрути себе томатов</h3>
-            <strong class="slider__subtitle">акция: 3 кг по цене 1</strong>
+            <h3 class="slider__subtitle">акция: 3 кг по цене 1</h3>
             <p class="slider__text">Только с 12 по 15 июля скидка на домашние помидорчики</p>
             <a class="slider__link" href="#">Купить сейчас</a>
           </div>
@@ -210,7 +208,7 @@
         <div class="slider__wrap">
           <div class="slider__inner">
             <h3 class="slider__title">пусть остальные позеленеют от зависти</h3>
-            <strong class="slider__subtitle">распродажа зелени</strong>
+            <h3 class="slider__subtitle">распродажа зелени</h3>
             <a class="slider__link" href="#">Купить сейчас</a>
           </div>
         </div>
@@ -223,31 +221,24 @@
     <div class="service">
   <div class="service__wrapper">
     <div class="container">
-
-      <h2 class="screen-reader-only">Сервисные услуги</h2>
-
-      <ul class="service__items">
-
-        <li class="service__item">
+      <h5 class="screen-reader-only">Сервисные услуги</h5>
+      <div class="service__items">
+        <div class="service__item">
           <div class="service__icon  service__icon--delivery screen-reader-only">иконка доставки</div>
-          <h3 class="service__item-title">Бесплатная доставка</h3>
+          <h6 class="service__item-title">Бесплатная доставка</h6>
           <p class="service__item-text">Для заказов на сумму от 500 ₽ </p>
-        </li>
-
-        <li class="service__item">
+        </div>
+        <div class="service__item">
           <div class="service__icon service__icon--return screen-reader-only">иконка возврата</div>
-          <h3 class="service__item-title">Возврат товара</h3>
+          <h6 class="service__item-title">Возврат товара</h6>
           <p class="service__item-text">Если товары были испорчены</p>
-        </li>
-        
-        <li class="service__item">
+        </div>
+        <div class="service__item">
           <div class="service__icon service__icon--support screen-reader-only">иконка круглосуточной поддержки</div>
-          <h3 class="service__item-title">Поддержка 24/7</h3>
+          <h6 class="service__item-title">Поддержка 24/7</h6>
           <p class="service__item-text">Лучшие операторы</p>
-        </li>
-
-      </ul>
-
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -255,7 +246,7 @@
 
   <div class="container">
 
-    <h2 class="products__title title">Топовые товары</h2>
+    <h3 class="products__top-title title">топовые товары</h3>
 
     <div data-ref="mixitup-container-1">
 
@@ -279,7 +270,7 @@
           </li>
         </ul>
 
-        <ul class="products__top-list product__list">
+        <ul class="product__list">
 
           <li class="product__item mix category-a" data-order="1">
 
@@ -310,7 +301,7 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Ананас, 1кг</p>
+              <h6 class="product__title">Ананас, 1кг</h6>
 
               <div class="product__bottom">
 
@@ -356,15 +347,14 @@
             <div class="product__visual-block">
 
               <div class="product__top">
-
-                <button class="product__top-heart-button" type="button">
-                  <svg class="product__top-heart">
-                    <use xlink:href="images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-                
+                <p class="screen-reader-only">верхний блок</p>
               </div>
-         
+              <button class="product__top-heart-button" type="button">
+                <svg class="product__top-heart">
+                  <use xlink:href="images/sprite.svg#icon-heart"></use>
+                </svg>
+              </button>
+
               <a class="product__image" href="#">
                 <img class="product__image-img" src="images/products/lemon.svg" alt="лимоны">
               </a>
@@ -373,7 +363,7 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Лимон, 1кг</p>
+              <h6 class="product__title">Лимон, 1кг</h6>
 
               <div class="product__bottom">
                 <p class="product__bottom-price">199 ₽</p>
@@ -429,7 +419,7 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Питахайя красная с белой мякотью, 1шт</p>
+              <h6 class="product__title">Питахайя красная с белой мякотью, 1шт</h6>
 
               <div class="product__bottom">
                 <p class="product__bottom-price">1019 ₽</p>
@@ -483,7 +473,7 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</p>
+              <h6 class="product__title">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</h6>
 
               <div class="product__bottom">
                 <p class="product__bottom-price">600 ₽</p>
@@ -538,7 +528,7 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Морковь молодая с бабушкиной грядки, 1кг</p>
+              <h6 class="product__title">Морковь молодая с бабушкиной грядки, 1кг</h6>
 
               <div class="product__bottom">
                 <p class="product__bottom-price">49 ₽</p>
@@ -594,8 +584,8 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный
-                апельсин безалкогольн...</p>
+              <h6 class="product__title">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный
+                апельсин безалкогольн...</h6>
 
               <div class="product__bottom">
                 <ul class="product__bottom-price-list">
@@ -657,7 +647,7 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Кофе с коноплей органический Caffé Salomoni 250г</p>
+              <h6 class="product__title">Кофе с коноплей органический Caffé Salomoni 250г</h6>
 
               <div class="product__bottom">
                 <p class="product__bottom-price">877 ₽</p>
@@ -711,7 +701,7 @@
 
             <div class="product__info-block">
 
-              <p class="product__title">Перец оранжевый, 1кг</p>
+              <h6 class="product__title">Перец оранжевый, 1кг</h6>
 
               <div class="product__bottom">
                 <p class="product__bottom-price">349 ₽</p>
@@ -754,20 +744,20 @@
       <ul class="products__banner-list">
         <li class="products__banner-item products__banner-item-first-child"
           style="background-image: url(../images/fruits-1.svg);">
-          <p class="products__banner-uptitle">свежайшие фрукты</p>
-          <p class="products__banner-title">начни фруктовое лето<br>всего от 99 ₽</p>
+          <h6 class="products__banner-uptitle">свежайшие фрукты</h6>
+          <h4 class="products__banner-title">начни фруктовое лето<br>всего от 99 ₽</h4>
           <a class="products__banner-link products__banner-item-first-child" href="#">перейти к покупкам</a>
         </li>
         <li class="products__banner-item products__banner-item-nth-child"
           style="background-image: url(../images/veg-2.svg);">
-          <p class="products__banner-uptitle">сезонная распродажа</p>
-          <p class="products__banner-title">овощепад<br>до -50%</p>
+          <h6 class="products__banner-uptitle">сезонная распродажа</h6>
+          <h4 class="products__banner-title">овощепад<br>до -50%</h4>
           <a class="products__banner-link" href="#">перейти к покупкам</a>
         </li>
         <li class="products__banner-item products__banner-item-nth-child"
           style="background-image: url(../images/bread-3.svg);">
-          <p class="products__banner-uptitle">ням-ням</p>
-          <p class="products__banner-title">свежий хлебчик</p>
+          <h6 class="products__banner-uptitle">ням-ням</h6>
+          <h4 class="products__banner-title">свежий хлебчик</h4>
           <a class="products__banner-link" href="#">перейти к покупкам</a>
         </li>
       </ul>
@@ -779,7 +769,7 @@
 
   <div class="container">
 
-    <h2 class="sales__title title">Акции</h2>
+    <h3 class="sales__title title">акции</h3>
 
     <div data-ref="mixitup-container-2">
 
@@ -795,7 +785,7 @@
         </li>
       </ul>
 
-      <ul class="sales__product-list product__list">
+      <ul class="product__list-sales">
 
         <li class="product__item mix category-a" data-order="1">
 
@@ -1122,7 +1112,7 @@
 
   <div class="partners__container">
 
-    <h2 class="screen-reader-only">Наши партнеры</h2>
+    <h3 class="screen-reader-only">Наши партнеры</h3>
 
     <div class="partners__list">
 
@@ -1167,13 +1157,13 @@
   <div class="container">
 
     <div class="news__top">
-      <h2 class="news__title title">наши новости</h2>
+      <h3 class="news__title title">наши новости</h3>
       <a class="news__link" href="#">все новости</a>
     </div>
 
-    <ul class="news__bottom">
+    <div class="news__bottom">
 
-      <li class="news__day-wrapper">
+      <div class="news__day-wrapper">
 
         <div class="news__day-wrap" style="background-image: url(images/calendar/july.svg);">
           <div class="news__day-block">
@@ -1184,11 +1174,10 @@
         <div class="news__day-title-block">
           <a class="news__day-link" href="#">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!</a>
         </div>
+      </div>
 
-      </li>
 
-
-      <li class="news__day-wrapper">
+      <div class="news__day-wrapper">
 
         <div class="news__day-wrap" style="background-image: url(images/calendar/may.svg);">
           <div class="news__day-block">
@@ -1199,11 +1188,10 @@
         <div class="news__day-title-block">
           <a class="news__day-link" href="#">Шикарнейший выбор манго в нашем онлайн-маркете</a>
         </div>
+      </div>
 
-      </li>
 
-
-      <li class="news__day-wrapper">
+      <div class="news__day-wrapper">
 
         <div class="news__day-wrap" style="background-image: url(images/calendar/february.svg);">
           <div class="news__day-block">
@@ -1214,10 +1202,9 @@
         <div class="news__day-title-block">
           <a class="news__day-link" href="#">Всё, что вы хотели знать о папайя</a>
         </div>
-        
-      </li>
+      </div>
 
-    </ul>
+    </div>
 
   </div>
 </section>
@@ -1227,7 +1214,7 @@
   <footer class="footer">
 
   <div class="container">
-    <a class="footer__top-logo screen-reader-only" href="#"><img class="logo"
+    <a class="footer__top-logo screen-reader-only" href="#"><img class="logo footer__top-logoimg"
         src="images/logo.svg" alt="логотип сайта">логотип футера</a>
   </div>
 

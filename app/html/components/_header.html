@@ -47,15 +47,19 @@
       <div class="header__bottom-wrapper">
 
         <a class="header__bottom-link" href="#">
-          <img class="logo header__bottom-logo" src="images/logo.svg" alt="логотип сайта">
+          <img class="header__bottom-logo logo" src="images/logo.svg" alt="логотип сайта">
         </a>
 
-        <button class="header__bottom-catalog" type="button">
-          <svg class="header__bottom-catalog-icon">
-            <use xlink:href="images/sprite.svg#icon-nav"></use>
-          </svg>
-          <p class="header__bottom-catalog-title">Каталог продуктов</p>
-          <img class="header__bottom-catalog-icon-arrow" src="images/icon-arrow.svg" alt="стрелка">
+        <div class="header__bottom-catalog-box">
+
+          <button class="header__bottom-catalog" type="button">
+            <svg class="header__bottom-catalog-icon">
+              <use xlink:href="images/sprite.svg#icon-nav"></use>
+            </svg>
+            <p class="header__bottom-catalog-title">Каталог продуктов</p>
+            <img class="header__bottom-catalog-icon-arrow" src="images/icon-arrow.svg" alt="стрелка">
+
+          </button>
 
           <ul class="header__bottom-catalog-list">
 
@@ -97,38 +101,37 @@
             </li>
 
           </ul>
+        </div>
 
+        <form class="header__bottom-inputbox" action="#">
+
+          <svg class="header__bottom-inputbox-icon">
+            <use xlink:href="images/sprite.svg#icon-search"></use>
+          </svg>
+
+          <input class="header__bottom-input" id="header-input" type="search" name="search"
+            placeholder="  Найти в магазине ..." required>
+
+        </form>
+
+        <button class="header__bottom-button" type="submit">
+          <label class="header__bottom-label" for="header-input">поиск</label>
         </button>
-
-          <form class="header__bottom-inputbox" action="#">
-
-            <svg class="header__bottom-inputbox-icon">
-              <use xlink:href="images/sprite.svg#icon-search"></use>
-            </svg>
-            
-            <input class="header__bottom-input" id="header-input" type="search" name="search"
-              placeholder="  Найти в магазине ..." required>
-
-          </form>
-
-          <button class="header__bottom-button" type="submit">
-            <label class="header__bottom-label" for="header-input">поиск</label>
-          </button>
 
         <ul class="user-nav">
           <li class="user-nav__item">
-            <button class="user-nav__item-button" type="button">
+            <a class="user-nav__item-button" href="#">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-user"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__item-button" type="button">
+            <a class="user-nav__item-button" href="#">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-heart"></use>
               </svg>
-            </button>
+            </a>
             <span class="user-nav__count">12</span>
           </li>
           <li class="user-nav__item">

@@ -23,13 +23,12 @@
   @include('components/_header.html')
 
   <main class="main">
-    <h1 class="screen-reader-only"> Главная страница интернет магазина овощей и фруктов</h1>
-    @include('pages/home/_slider.html')
+
+    @include('components/_breadcrumbs.html')
+
+    @include('pages/catalog/_filters-catalog.html')
+
     @include('components/_service.html')
-    @include('pages/home/_products.html')
-    @include('pages/home/_sales.html')
-    @include('pages/home/_partners.html')
-    @include('pages/home/_news.html')
 
   </main>
 
