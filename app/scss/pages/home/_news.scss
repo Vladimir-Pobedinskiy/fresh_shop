@@ -1,0 +1,118 @@
+// news
+.news {
+  padding-bottom: 72px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    @extend %opensans-700;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $green-900;
+    outline: transparent;
+    border-bottom: 2px solid transparent;
+    transition: border 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+
+    &:hover {
+      color: #4D800C;
+      border-color: #4D800C;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+      color: $green-900;
+    }
+
+    &:active {
+      border-color: $green-200;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__day-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__day-wrap {
+    max-width: 410px;
+    width: 100%;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__day-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    width: 65px;
+    height: 76px;
+    background-color: $white;
+    border-radius: 0 0 4px 4px;
+  }
+
+  &__day-months {
+    margin-bottom: 4px;
+    @extend %opensans-700;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: $dark-900;
+    text-transform: uppercase;
+  }
+
+  &__day-day {
+    @extend %ruda-600;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__day-title-block {
+    padding: 18px;
+    max-width: 410px;
+    width: 100%;
+    min-height: 108px;
+    height: auto;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+  }
+
+  &__day-link {
+    display: block;
+    width: fit-content;
+    @extend %opensans-600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $dark-900;
+    outline: transparent;
+    transition: border 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      color: $green-900;
+    }
+    
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+      color: $green-900;
+    }
+
+  }
+}

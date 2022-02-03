@@ -7,14 +7,14 @@ $(function(){
   });
 
     // звездный рейтинг
-    $(".star").rateYo({
-      maxValue: 1.0,
-      numStars: 1.0,
-      readOnly: true,
-      normalFill: "#FFB800",
-      starWidth: "16px"
+  $(".star").rateYo({
+    maxValue: 1.0,
+    numStars: 1.0,
+    readOnly: true,
+    normalFill: "#FFB800",
+    starWidth: "16px"
       
-    });
+  });
   
   // галерея
   var containerEl1 = document.querySelector('[data-ref="mixitup-container-1"]');
@@ -32,14 +32,15 @@ $(function(){
 });
 
 
-
 // JS
 
 // открытие меню каталога
+
+const catalogMenu = function () {
+
 const list = document.querySelector('.header__bottom-catalog');
 const catalogList = document.querySelector('.header__bottom-catalog-list');
 const arrowCatalogList = document.querySelector('.header__bottom-catalog-icon-arrow');
-
 
 list.addEventListener('click', (event) => {
   list.classList.toggle('--active');
@@ -50,11 +51,16 @@ list.addEventListener('click', (event) => {
 window.addEventListener('click', (event) => { 
   const target = event.target; 
   if (!target.closest('.header__bottom-catalog')) { 
+    list.classList.remove('--active');
     catalogList.classList.remove('--active');
     arrowCatalogList.classList.remove('--active');
-    list.classList.remove('--active');
   }
 })
+
+}
+
+catalogMenu ();
+
 
 // счетчик товаров каталога
 const counter = function () {
@@ -72,6 +78,10 @@ const counter = function () {
         newValue = currentValue + 1;
       } else {
         newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+      }
+
+      if (newValue > 99) {
+        return 99;
       }
 
       inp.value = newValue;

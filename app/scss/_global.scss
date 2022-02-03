@@ -80,14 +80,14 @@ main {
   display: inline-flex;
   justify-self: flex-end;
   margin-right: 18px;
-  outline: transparent;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
 
   &__button {
     padding: 4px;
     width: 24px;
     height: 24px;
     background-color: $green-900;
+    outline: transparent;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
     &:hover {
       background-color: #4D810C;
     }
