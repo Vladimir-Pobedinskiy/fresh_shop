@@ -1,21 +1,7 @@
 $(function(){
 
-  // слайдер 
-  $('.slider__top').slick({
-    speed: 700,
-    easing:'ease',
-    nextArrow: `<button type="button" class="slick-next">Next</button>
-    <span class="slider-arrow-prev screen-reader-only">стрелка навигации</span>`,
-    prevArrow: `<button type="button" class="slick-prev">Next</button>
-    <span class="slider-arrow-next screen-reader-only">стрелка навигации</span>`
-    
-  });
 
-    // слайдер 
-    $('. ').slick({
-      speed: 700,
-      easing:'ease',
-    });
+
 
     // звездный рейтинг
   $(".star-box__star").rateYo({
@@ -44,6 +30,35 @@ $(function(){
 
 
 // JS
+
+  // слайдер 
+
+  new Swiper('.slider__top', {
+    speed: 900,
+    slidesPerView: 'auto',
+    loop: true,
+    grabCursor: true,
+   // Navigation arrows
+   navigation: {
+     nextEl: '.slider__top-button-next',
+     prevEl: '.slider__top-button-prev'
+   },
+
+
+   effect: 'coverflow',
+   coverflowEffect: {
+     rotate: 30,
+     slideShadows: false,
+   },
+
+   pagination: {
+    el: '.slider__top-pagination',
+    dynamicBullets: true,
+    clickable: true,
+    
+  },
+   
+  });
 
 // открытие меню каталога
 

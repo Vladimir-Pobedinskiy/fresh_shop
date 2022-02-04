@@ -1,6 +1,13 @@
 .slider {
 
-  &__wrapper {
+  &__top {
+    z-index: 0;
+    width: 100%;
+  }
+
+  &__item {
+    width: auto;
+    width: 100%;
     min-height: 600px;
     height: auto;
     width: 100%;
@@ -20,8 +27,9 @@
 
   &__inner {
     padding: 24px;
+    max-width: 1290px;
     width: 100%;
-    min-height: 315px;
+    min-height: 270px;
     height: auto;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -29,6 +37,7 @@
 
   &__title,
   &__subtitle {
+    display: block;
     max-width: 762px;
     width: 100%;
     @extend %ruda-900;
@@ -70,7 +79,7 @@
   }
 
   &__text {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
     @extend %opensans-400;
     font-size: 16px;
     line-height: 1.4;
@@ -81,78 +90,65 @@
     position: relative;
   }
 
+}
 
-  .slick-next.slick-arrow,
-  .slick-prev.slick-arrow {
-    width: 60px;
-    height: 60px;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.slider {
+
+  &__top-button-prev,
+  &__top-button-next {
+    width: 60px !important;
+    height: 60px !important;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    margin-top: -30px;
-    position: absolute;
-    top: 50%;
-    border: none;
     border-radius: 6px;
-    z-index: 10;
-    font-size: 0;
- 
-  }
+    background-repeat: no-repeat;
+    background-size: 19px 32px;
+    background-position: center center;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
 
-  .slick-next.slick-arrow {
-    right: 2.5%;
     &:hover {
-      background-color: $red-900;
+      background-color: $green-200;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+      border-radius: 6px;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 0;
+      background-color: #F3F3F2;;
     }
   }
 
-  .slick-prev.slick-arrow {
-    left: 2.5%;
+  &__top-button-prev {
+    margin-left: 60px;
+  }
+
+  &__top-button-next {
+    margin-right: 60px;
+  }
+
+  &__top-button-prev-icon,
+  &__top-button-next-icon {
+    transition: fill 0.4s ease;
+
     &:hover {
-      background-color: $red-900;
+      fill: $green-900;
     }
-  }
 
-
-  .slider__top {
-    .slider-arrow-prev {
-      left: 2.5%;
-      width: 60px;
-      height: 60px;
-      background-color: $dark-800;
-      margin-top: -30px;
-      position: absolute;
-      top: 50%;
-      border: none;
-      border-radius: 6px;
-      z-index: 10;
-      font-size: 0;
-      mask: url('../images/sprite.svg#icon-slick-arrow-prev') center/105px no-repeat;
-
-      &:hover {
-        background-color: $green-900;
-      }
+    &:focus {
+      fill: #5A5A5A;
     }
-  }
-
-  .slider__top {
-    .slider-arrow-next {
-      right: 2.5%;
-      width: 60px;
-      height: 60px;
-    
-      background-color: $dark-800;
-      margin-top: -30px;
-      position: absolute;
-      top: 50%;
-      border: none;
-      border-radius: 6px;
-      z-index: 10;
-      font-size: 0;
-      mask: url('../images/sprite.svg#icon-slick-arrow-next') center/105px no-repeat;
-
-      &:hover {
-        background-color: $green-900;
-      }
+    &:active {
+      fill: $green-900;
     }
+
   }
 
 }
