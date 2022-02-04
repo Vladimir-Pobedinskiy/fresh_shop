@@ -1,6 +1,6 @@
 // sales
 .sales {
-  padding: 72px 0;
+  padding: 68px 0;
   background-color: #F5F5F5;
 
   &__buttons {
@@ -44,24 +44,24 @@
     }
   }
 
+  &__product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  &__product-item {
+    flex-direction: row;
+    max-width: 300px;
+    width: 100%;
+    min-height: 124px;
+    height: auto;
+    background-color: $white;
+  }
+
   .product {
-
-    &__list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      row-gap: 30px;
-      column-gap: 30px;
-      margin-bottom: 48px;
-    }
-
-    &__item {
-      flex-direction: row;
-      max-width: 300px;
-      width: 100%;
-      min-height: 124px;
-      height: auto;
-      background-color: $white;
-    }
 
     &__visual-block {
       max-width: 100px;
@@ -72,7 +72,7 @@
       position: relative;
       margin-right: 12px;
     }
-
+  
     &__top-novelty,
     &__top-hit {
       padding: 13px 0 0 16px;
@@ -82,15 +82,15 @@
       width: 100%;
       z-index: 1;
     }
-
+  
     &__top-novelty {
       max-width: 66px;
     }
-
+  
     &__top-hit {
       max-width: 42px;
     }
-
+  
     &__info-block {
       display: flex;
       flex-direction: column;
@@ -98,15 +98,15 @@
       min-width: 164px;
       width: 100%;
     }
-
+  
     &__title {
       padding: 0;
     }
-
+  
     &__subtitle-block {
       margin-bottom: 10px;
     }
-
+  
     &__subtitle {
       margin-bottom: -27px;
       @extend %opensans-600;
@@ -116,36 +116,35 @@
       color: #63A60E;
       text-transform: uppercase;
     }
-
+  
     &__subtitle--ends {
       color: #CF3E3B;
     }
-
+  
     &__subtitle--end {
       color: $silver-600;
     }
-
+  
     &__bottom {
-      justify-content: space-between;
-      margin-top: 5px;
+      
       min-height: 20px;
       height: auto;
       padding: 0;
     }
-
+  
     &__bottom-price-list {
       display: flex;
       flex-direction: row-reverse;
     }
-
+  
     &__bottom-price-item {
       margin-right: 12px;
-
+  
       &:first-child {
         margin-right: 0;
       }
     }
-
+  
     &__bottom-price {
       @extend %opensans-400;
       align-self: flex-end;
@@ -154,8 +153,9 @@
       letter-spacing: 0.03rem;
       color: #C1C1C1;
     }
-
+  
   }
+
 
   &__bottom-button {
     display: block;
@@ -176,3 +176,5 @@
   }
 
 }
+
+

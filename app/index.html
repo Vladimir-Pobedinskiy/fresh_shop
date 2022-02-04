@@ -66,7 +66,8 @@
 
   <div class="header__bottom">
     <div class="container">
-      <div class="header__bottom-wrapper">
+
+      <nav class="header__bottom-wrapper">
 
         <a class="header__bottom-link" href="#">
           <img class="header__bottom-logo logo" src="images/logo.svg" alt="логотип сайта">
@@ -78,7 +79,7 @@
             <svg class="header__bottom-catalog-icon">
               <use xlink:href="images/sprite.svg#icon-nav"></use>
             </svg>
-            <p class="header__bottom-catalog-title">Каталог продуктов</p>
+            <span class="header__bottom-catalog-title">Каталог продуктов</span>
             <img class="header__bottom-catalog-icon-arrow" src="images/icon-arrow.svg" alt="стрелка">
 
           </button>
@@ -127,18 +128,26 @@
 
         <form class="header__bottom-inputbox" action="#">
 
-          <svg class="header__bottom-inputbox-icon">
-            <use xlink:href="images/sprite.svg#icon-search"></use>
-          </svg>
+          <label class="header__bottom-label" for="#header__bottom-button">
 
-          <input class="header__bottom-input" id="header-input" type="search" name="search"
-            placeholder="  Найти в магазине ..." required>
+            <svg class="header__bottom-inputbox-icon">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+
+            <input class="header__bottom-input" id="header-input" type="search" name="search"
+              placeholder="  Найти в магазине ..." required>
+
+          </label>
+          
+          <button class="header__bottom-button" id="header__bottom-button" type="submit">
+            поиск
+          </button>
 
         </form>
 
-        <button class="header__bottom-button" type="submit">
-          <label class="header__bottom-label" for="header-input">поиск</label>
-        </button>
+     
+
+
 
         <ul class="user-nav">
           <li class="user-nav__item">
@@ -165,7 +174,9 @@
             <span class="user-nav__count">12</span>
           </li>
         </ul>
-      </div>
+
+      </nav>
+
     </div>
   </div>
 
@@ -279,9 +290,9 @@
           </li>
         </ul>
 
-        <ul class="products__top-list product__list">
+        <ul class="products__top-list">
 
-          <li class="product__item mix category-a" data-order="1">
+          <li class="products__top-item product mix category-a" data-order="1">
 
             <div class="product__visual-block">
 
@@ -326,17 +337,15 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
 
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
@@ -351,7 +360,7 @@
 
           </li>
 
-          <li class="product__item mix category-a" data-order="1">
+          <li class="products__top-item product mix category-a" data-order="1">
 
             <div class="product__visual-block">
 
@@ -362,9 +371,9 @@
                     <use xlink:href="images/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                
+
               </div>
-         
+
               <a class="product__image" href="#">
                 <img class="product__image-img" src="images/products/lemon.svg" alt="лимоны">
               </a>
@@ -381,21 +390,19 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
-                  
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
+
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
-        
+
                 <button class="product__bottom-cart-button" type="submit">
                   <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
                 </button>
@@ -404,7 +411,7 @@
             </div>
           </li>
 
-          <li class="product__item mix category-a" data-order="1">
+          <li class="products__top-item product mix category-a" data-order="1">
 
             <div class="product__visual-block">
               <ul class="product__top">
@@ -437,17 +444,15 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
-                  
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
+
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
@@ -461,7 +466,7 @@
 
           </li>
 
-          <li class="product__item mix category-d" data-order="4">
+          <li class="products__top-item product mix category-d" data-order="4">
 
             <div class="product__visual-block">
 
@@ -491,17 +496,15 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
-                  
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
+
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
@@ -514,7 +517,7 @@
             </div>
           </li>
 
-          <li class="product__item mix category-b" data-order="2">
+          <li class="products__top-item product mix category-b" data-order="2">
 
             <div class="product__visual-block">
 
@@ -546,17 +549,15 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
-                  
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
+
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
@@ -570,7 +571,7 @@
 
           </li>
 
-          <li class="product__item mix category-c" data-order="3">
+          <li class="products__top-item product mix category-c" data-order="3">
 
             <div class="product__visual-block">
 
@@ -610,17 +611,15 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
-                  
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
+
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
@@ -633,7 +632,7 @@
             </div>
           </li>
 
-          <li class="product__item mix category-c" data-order="3">
+          <li class="products__top-item product mix category-c" data-order="3">
 
             <div class="product__visual-block">
 
@@ -665,17 +664,15 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
-                  
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
+
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
@@ -688,7 +685,7 @@
             </div>
           </li>
 
-          <li class="product__item mix category-b" data-order="2">
+          <li class="products__top-item product mix category-b" data-order="2">
 
             <div class="product__visual-block">
 
@@ -719,17 +716,15 @@
                 <form class="product__bottom-counter counter" action="#">
 
                   <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-                    <div class="counter__button-image counter__button-image--minus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/minus.svg" alt="минус">
                   </button>
 
-                  <input class="counter__value" type="text" value="0">
-                  
+                  <label>
+                    <input class="counter__value" type="text" value="0">
+                  </label>
+
                   <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-                    <div class="counter__button-image counter__button-image--plus">
-                      <p class="screen-reader-only">иконка счетчика</p>
-                    </div>
+                    <img src="images/counter/plus.svg" alt="плюс">
                   </button>
 
                 </form>
@@ -795,9 +790,9 @@
         </li>
       </ul>
 
-      <ul class="sales__product-list product__list">
+      <ul class="sales__product-list">
 
-        <li class="product__item mix category-a" data-order="1">
+        <li class="sales__product-item product mix category-a" data-order="1">
 
           <div class="product__visual-block">
 
@@ -827,8 +822,8 @@
                 </li>
               </ul>
               <div class="star-box">
-                <p class="star-info">4.5</p>
-                <div class="star screen-reader-only"> рейтинг</div>
+                <p class="star-box__info">4.5</p>
+                <div class="star-box__star screen-reader-only"> рейтинг</div>
               </div>
             </div>
 
@@ -836,7 +831,7 @@
 
         </li>
 
-        <li class="product__item mix category-a" data-order="1">
+        <li class="sales__product-item product mix category-a" data-order="1">
 
           <div class="product__visual-block">
 
@@ -875,7 +870,7 @@
 
         </li>
 
-        <li class="product__item mix category-a" data-order="1">
+        <li class="sales__product-item product mix category-a" data-order="1">
 
           <div class="product__visual-block">
 
@@ -914,7 +909,7 @@
 
         </li>
 
-        <li class="product__item mix category-a" data-order="1">
+        <li class="sales__product-item product mix category-a" data-order="1">
 
           <div class="product__visual-block">
 
@@ -953,7 +948,7 @@
 
         </li>
 
-        <li class="product__item mix category-a" data-order="1">
+        <li class="sales__product-item product mix category-a" data-order="1">
 
           <div class="product__visual-block">
 
@@ -992,7 +987,7 @@
 
         </li>
 
-        <li class="product__item mix category-b" data-order="2">
+        <li class="sales__product-item product mix category-b" data-order="2">
 
           <div class="product__visual-block">
 
@@ -1031,7 +1026,7 @@
 
         </li>
 
-        <li class="product__item mix category-b" data-order="2">
+        <li class="sales__product-item product mix category-b" data-order="2">
 
           <div class="product__visual-block">
 
@@ -1070,7 +1065,7 @@
 
         </li>
 
-        <li class="product__item mix category-b" data-order="2">
+        <li class="sales__product-item product mix category-b" data-order="2">
 
           <div class="product__visual-block">
 
@@ -1167,8 +1162,8 @@
   <div class="container">
 
     <div class="news__top">
-      <h2 class="news__title title">наши новости</h2>
-      <a class="news__link" href="#">все новости</a>
+      <h2 class="news__top-title title">наши новости</h2>
+      <a class="news__top-link" href="#">все новости</a>
     </div>
 
     <ul class="news__bottom">
@@ -1266,6 +1261,7 @@
       <div class="footer__contacts">
         <a class="footer__contacts-link footer__top-text" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
         <a class="footer__contacts-link footer__top-text" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+
         <ul class="footer__socials socials">
           <li class="footer__item">
             <a class="footer__link" href="#">
@@ -1301,7 +1297,7 @@
   </div>
 
   <div class="footer__bottom container">
-    <p class="footer__bottom-copyrite">&#169; фрэшок</p>
+    <p class="footer__bottom-copyrite">&#169; 2021 фрэшок</p>
     <ul class="footer__bottom-cards">
       <li class="footer__bottom-item">
         <span class="screen-reader-only">Оплата картами visa</span>

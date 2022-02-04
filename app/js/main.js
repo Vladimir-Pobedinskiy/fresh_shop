@@ -4,10 +4,21 @@ $(function(){
   $('.slider__top').slick({
     speed: 700,
     easing:'ease',
+    nextArrow: `<button type="button" class="slick-next">Next</button>
+    <span class="slider-arrow-prev screen-reader-only">стрелка навигации</span>`,
+    prevArrow: `<button type="button" class="slick-prev">Next</button>
+    <span class="slider-arrow-next screen-reader-only">стрелка навигации</span>`
+    
   });
 
+    // слайдер 
+    $('. ').slick({
+      speed: 700,
+      easing:'ease',
+    });
+
     // звездный рейтинг
-  $(".star").rateYo({
+  $(".star-box__star").rateYo({
     maxValue: 1.0,
     numStars: 1.0,
     readOnly: true,

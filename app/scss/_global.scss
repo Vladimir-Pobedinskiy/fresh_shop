@@ -201,7 +201,7 @@ main {
   &__item {
     margin-right: 16px;
     position: relative;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -218,6 +218,7 @@ main {
     &:last-child {
       margin-right: 0;
       color: $red-900;
+
       &::after {
         display: none;
       }
@@ -230,6 +231,7 @@ main {
     line-height: 1.2;
     letter-spacing: 0.03rem;
     color: $dark-500;
+
     &:hover {
       opacity: 0.8;
     }
@@ -241,20 +243,20 @@ main {
 // звездный рейтинг
 .star-box {
   display: flex;
-}
 
-.star-info {
-  @extend %opensans-700;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0.03rem;
-  align-self: flex-end;
-}
+  &__info {
+    @extend %opensans-700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.03rem;
+    align-self: flex-end;
+  }
 
-.star {
-  align-self: flex-end;
-}
+  &__star {
+    align-self: flex-end;
+  }
 
+}
 
 //counter счетчик каталога
 .counter {
@@ -294,22 +296,6 @@ main {
     border-radius: 0 4px 4px 0;
   }
 
-  &__button-image {
-    width: 16px;
-    height: 16px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  &__button-image--minus {
-    background-image: url(../images/counter/minus.svg);
-  }
-
-  &__button-image--plus {
-    background-image: url(../images/counter/plus.svg);
-  }
-
   &__value {
     max-width: 36px;
     width: 100%;
@@ -325,19 +311,18 @@ main {
 // product
 .product {
 
-  &__item {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid $dark-500;
-    border-radius: 6px;
-    transition: border 0.5s ease;
-    position: relative;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $dark-500;
+  border-radius: 6px;
+  transition: border 0.5s ease;
+  position: relative;
 
-    &:hover {
-      border-color: $green-900;
-    }
+  &:hover {
+    border-color: $green-900;
   }
+
 
   &__visual-block {
     display: flex;
@@ -394,7 +379,7 @@ main {
   &__image {
     max-height: 215px;
     max-width: 298px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     position: relative;
 
     &:before,
@@ -437,7 +422,7 @@ main {
   }
 
   &__info-block {
-    min-height: 120px;
+    min-height: 110px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -446,11 +431,11 @@ main {
 
   &__title {
     padding: 0 18px;
-    margin-bottom: 9px;
+    margin-bottom: 12px;
     @extend %opensans-600;
     font-size: 14px;
     line-height: 1.4;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.02rem;
     color: $dark-900;
   }
 
@@ -471,7 +456,6 @@ main {
 
   &__bottom-price-item {
     align-items: flex-start;
-    margin-bottom: 3px;
   }
 
   &__bottom-price {

@@ -1,12 +1,12 @@
 // галерея продуктов
 
 .products {
-  padding: 72px 0;
+  padding: 76px 0 72px;
 
   &__top-buttons {
     display: flex;
     justify-content: center;
-    margin-bottom: 48px;
+    margin-bottom: 46px;
   }
 
   &__top-button {
@@ -16,6 +16,17 @@
       margin-right: 0;
     }
 
+  }
+
+  &__top-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 31px;
+    margin-bottom: 48px;
+  }
+
+  &__top-item {
+    flex-direction: column;
   }
 
   &__top-btn {
@@ -169,18 +180,4 @@
 }
 
 
-// product
-.product {
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 31px;
-    margin-bottom: 48px;
-  }
-
-  &__item {
-    flex-direction: column;
-  }
-
-}
