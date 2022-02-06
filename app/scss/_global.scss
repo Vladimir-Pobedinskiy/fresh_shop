@@ -3,6 +3,16 @@ body {
   height: 100%
 }
 
+.categories__list::-webkit-scrollbar {
+  width: 7px;
+  height: 104px;
+}
+
+.categories__list::-webkit-scrollbar-thumb {
+  background: #C4C4C4;
+  border-radius: 9px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -18,6 +28,7 @@ main {
 
 .container {
   max-width: 1320px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -34,7 +45,6 @@ main {
 
 .title {
   margin-bottom: 30px;
-  text-align: center;
   @extend %ruda-600;
   font-size: 32px;
   line-height: 1.4;
@@ -310,7 +320,6 @@ main {
 
 // product
 .product {
-
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -353,7 +362,11 @@ main {
     border-radius: 4px;
 
     &:focus {
-      border-color: #CF3E3B;
+      border-color: $green-200;
+    }
+
+    &:active {
+      border: 3px solid transparent;
     }
 
   }
@@ -368,18 +381,20 @@ main {
     transition: fill 0.5s ease;
 
     &:hover {
-      fill: #CF3E3B;
+      fill: #FFB800;
     }
 
     &:active {
-      fill-rule: "#CF3E3B";
+      fill: #FFB800;
+      opacity: 0.5;
     }
+
   }
 
   &__image {
     max-height: 215px;
     max-width: 298px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     position: relative;
 
     &:before,
@@ -440,6 +455,7 @@ main {
   }
 
   &__bottom {
+    margin-top: 4px;
     min-height: 50px;
     height: auto;
     display: flex;

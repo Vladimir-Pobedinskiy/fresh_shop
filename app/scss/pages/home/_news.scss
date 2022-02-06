@@ -43,6 +43,13 @@
   &__day-wrapper {
     display: flex;
     flex-direction: column;
+
+  }
+
+  &__day-link {
+    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   &__day-wrap {
@@ -77,12 +84,13 @@
     text-transform: uppercase;
   }
 
-  &__day-day {
+  &__day-date {
     @extend %ruda-600;
     font-size: 30px;
     line-height: 1;
     text-align: center;
     text-transform: uppercase;
+    color: $dark-900;
   }
 
   &__day-title-block {
@@ -95,7 +103,7 @@
     border-radius: 6px;
   }
 
-  &__day-link {
+  &__day-text-link {
     display: block;
     width: fit-content;
     @extend %opensans-600;

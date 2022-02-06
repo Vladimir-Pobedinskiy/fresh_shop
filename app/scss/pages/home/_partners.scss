@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 84px;
+    min-width: 84px;
     width: 100%;
     opacity: 0.5;
     transition: opacity 0.5s ease;
@@ -41,4 +41,30 @@
       border-color: $green-200;
     }
   }
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+  .partners__swiper-pagination {
+    margin-bottom: 5px;
+  }
+
+  .swiper-pagination-bullet {
+    outline: transparent;
+    width: 14px;
+    height: 14px;
+    background-color: $green-900;
+    transition: opacity 0.4s ease;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    box-shadow: 0 0 0 3px $green-200;
+  }
+
+  .partners__swiper-slide.swiper-slide-active {
+    opacity: 1;
+  }
+
 }
