@@ -66,78 +66,89 @@ $inputTo.on("change", function () {
     $(this).prop("value", val);
 });
 
-  // звездный рейтинг
-  $(".star-box__star").rateYo({
-    maxValue: 1.0,
-    numStars: 1.0,
-    readOnly: true,
-    normalFill: "#FFB800",
-    starWidth: "16px"
-      
-  });
+// звездный рейтинг
+$(".star-box__star").rateYo({
+  maxValue: 1.0,
+  numStars: 1.0,
+  readOnly: true,
+  normalFill: "#FFB800",
+  starWidth: "16px"
+    
+});
   
-  // галерея
-  var containerEl1 = document.querySelector('[data-ref="mixitup-container-1"]');
-  var containerEl2 = document.querySelector('[data-ref="mixitup-container-2"]');
- 
-  var config = {
-    controls: {
-      scope: 'local'
-    }
-  };
- 
-  var mixer1 = mixitup(containerEl1, config);
-  var mixer2 = mixitup(containerEl2, config);
+// галерея
+var containerEl1 = document.querySelector('[data-ref="mixitup-container-1"]');
+var containerEl2 = document.querySelector('[data-ref="mixitup-container-2"]');
+
+var config = {
+  controls: {
+    scope: 'local'
+  }
+};
+
+var mixer1 = mixitup(containerEl1, config);
+var mixer2 = mixitup(containerEl2, config);
 
 });
 
 
 // JS
 
-  // слайдер header__top
-  new Swiper('.slider__top', {
-    speed: 900,
-    slidesPerView: 'auto',
-    loop: true,
-    grabCursor: true,
- 
-   navigation: {
-     nextEl: '.slider__top-button-next',
-     prevEl: '.slider__top-button-prev'
-   },
+// слайдер header__top
+new Swiper('.slider__top', {
+  speed: 900,
+  slidesPerView: 'auto',
+  loop: true,
+  grabCursor: true,
 
-   effect: 'coverflow',
-   coverflowEffect: {
-     rotate: 30,
-     slideShadows: false,
-   },
-
-   pagination: {
-    el: '.slider__top-pagination',
-    clickable: true,
+  navigation: {
+    nextEl: '.slider__top-button-next',
+    prevEl: '.slider__top-button-prev'
   },
-   
-  });
+
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 30,
+    slideShadows: false,
+  },
+
+  pagination: {
+  el: '.slider__top-pagination',
+  clickable: true,
+},
+  
+});
 
 
 // слайдер partners
-  new Swiper('.partners__swiper', {
-    slidesPerView: 6,
-    loop: true,
-    grabCursor: true,
-    speed: 600,
+new Swiper('.partners__swiper', {
+  slidesPerView: 6,
+  loop: true,
+  grabCursor: true,
+  speed: 600,
     
 
-    pagination: {
-      el: '.partners__swiper-pagination',
-      clickable: true,
-    },
+  pagination: {
+    el: '.partners__swiper-pagination',
+    clickable: true,
+  },
 
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
-  });
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+});
+
+
+// добавление, удаление класса у button вида расположения товаров
+const list = document.querySelectorAll('.content-filter__button')
+list.forEach(item =>{ 
+       item.addEventListener('click', (e) =>{
+       list.forEach(el=>{ el.classList.remove('--active'); });
+       item.classList.add('--active');
+   })
+ 
+});
 
 
 // открытие меню каталога
@@ -169,7 +180,7 @@ catalogMenu ();
 
 // счетчик товаров каталога
 const counter = function () {
-  const btns = document.querySelectorAll('.counter__button');
+const btns = document.querySelectorAll('.counter__button');
 
 
   btns.forEach(btn => {
@@ -231,9 +242,15 @@ if (spollersArray.length > 0) {
 		const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
 		if (spollerTitles.length > 0) {
 			spollerTitles.forEach(spollerTitle => {
+				if (hideSpollerBody) {
+					spollerTitle.removeAttribute('tabindex');
 					if (!spollerTitle.classList.contains('--active')) {
 						spollerTitle.nextElementSibling.hidden = true;
 					}
+				} else {
+					spollerTitle.setAttribute('tabindex', '-1');
+					spollerTitle.nextElementSibling.hidden = false;
+				}
 			});
 		}
 	}
@@ -266,8 +283,8 @@ if (spollersArray.length > 0) {
 
 // анимация 
 let _slideUp = (target, duration = 500) => {
-	if (!target.classList.contains('--slide')) {
-		target.classList.add('--slide');
+	if (!target.classList.contains('_slide')) {
+		target.classList.add('_slide');
 		target.style.transitionProperty = 'height, margin, padding';
 		target.style.transitionDuration = duration + 'ms';
 		target.style.height = target.offsetHeight + 'px';
@@ -288,13 +305,13 @@ let _slideUp = (target, duration = 500) => {
 			target.style.removeProperty('overflow');
 			target.style.removeProperty('transition-duration');
 			target.style.removeProperty('transition-property');
-			target.classList.remove('--slide');
+			target.classList.remove('_slide');
 		}, duration);
 	}
 }
 let _slideDown = (target, duration = 500) => {
-	if (!target.classList.contains('--slide')) {
-		target.classList.add('--slide');
+	if (!target.classList.contains('_slide')) {
+		target.classList.add('_slide');
 		if (target.hidden) {
 			target.hidden = false;
 		}
@@ -318,7 +335,7 @@ let _slideDown = (target, duration = 500) => {
 			target.style.removeProperty('overflow');
 			target.style.removeProperty('transition-duration');
 			target.style.removeProperty('transition-property');
-			target.classList.remove('--slide');
+			target.classList.remove('_slide');
 		}, duration);
 	}
 }

@@ -3,7 +3,6 @@
 
   &__wrap {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -339,6 +338,11 @@
       align-items: center;
       border-radius: 3px;
       background-color: $silver-100;
+      &.--active {
+        .content-filter__button-icon {
+          fill: $green-900;
+        }
+      }
 		}
 
 		&__button-icon {
