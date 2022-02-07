@@ -1,5 +1,9 @@
 $(function(){
 
+// стилизация select
+$('.select-style').styler();
+
+
 // rangeSlider (фильтр цены)
 var $range = $(".price-filter__input");
 var $inputFrom = $(".price-filter__input-from");
@@ -96,7 +100,7 @@ var mixer2 = mixitup(containerEl2, config);
 
 // слайдер header__top
 new Swiper('.slider__top', {
-  speed: 900,
+  speed: 700,
   slidesPerView: 'auto',
   loop: true,
   grabCursor: true,
@@ -127,12 +131,6 @@ new Swiper('.partners__swiper', {
   grabCursor: true,
   speed: 600,
     
-
-  pagination: {
-    el: '.partners__swiper-pagination',
-    clickable: true,
-  },
-
   keyboard: {
     enabled: true,
     onlyInViewport: false,
@@ -174,7 +172,6 @@ window.addEventListener('click', (event) => {
 })
 
 }
-
 catalogMenu ();
 
 
@@ -205,7 +202,6 @@ const btns = document.querySelectorAll('.counter__button');
   })
 
 }
-
 counter();
 
 
@@ -348,5 +344,7 @@ let _slideToggle = (target, duration = 500) => {
 }
 
 }
-
 spollersFilter();
+
+
+

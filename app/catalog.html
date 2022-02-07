@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Fresh shop | home page</title>
+  <title>Fresh shop | catalog</title>
 </head>
 
 <body class="body">
@@ -491,31 +491,31 @@
 
               <li class="content-filter__item">
                 <label class="content-filter__select-label">
-                  <select class="content-filter__select">
-                    <option value="">По названию</option>
-                    <option value="">По популярности</option>
-                    <option value="">Сначала дешевые</option>
-                    <option value="">Сначала дорогие</option>
-                    <option value="">По алфавиту</option>
+                  <select class="content-filter__select-sort select-style" name="select-sort">
+                    <option value="1">По названию</option>
+                    <option value="2">По популярности</option>
+                    <option value="3">Сначала дешевые</option>
+                    <option value="4">Сначала дорогие</option>
+                    <option value="5">По алфавиту</option>
                   </select>
                 </label>
               </li>
 
               <li class="content-filter__item">
                 <label class="content-filter__select-label">
-                  <select class="content-filter__select">
-                    <option value="">по 12</option>
-                    <option value="">по 18</option>
-                    <option value="">по 24</option>
-                    <option value="">по 30</option>
-                    <option value="">по 36</option>
+                  <select class="content-filter__select-show select-style" name="select-show">
+                    <option value="1">по 12</option>
+                    <option value="2">по 18</option>
+                    <option value="3">по 24</option>
+                    <option value="4">по 30</option>
+                    <option value="5">по 36</option>
                   </select>
                 </label>
               </li>
 
               <li class="content-filter__item">
                 <label class="content-filter__button-label">
-                  <button class="content-filter__button" type="button">
+                  <button class="content-filter__button --active" type="button">
                     <svg class="content-filter__button-icon">
                       <use xlink:href="images/sprite.svg#icon-group-6"></use>
                     </svg>
