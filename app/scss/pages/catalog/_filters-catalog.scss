@@ -174,8 +174,6 @@
 // brand
 .brand {
 
-  &__arrow {}
-
   &__list {
     padding: 18px;
     display: flex;
@@ -228,8 +226,6 @@
   &__box {
     padding: 18px;
   }
-
-  &__label {}
 
   &__input-box {
     display: flex;
@@ -314,7 +310,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
   }
 
   &__item {
@@ -378,9 +373,6 @@
     }
 
   }
-
-
-
 
   .jq-selectbox__select {
     border: 1px solid #C1C1C1;

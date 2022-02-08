@@ -139,7 +139,7 @@
 
           </label>
           
-          <button class="header__bottom-button" id="header__bottom-button" type="submit" name="button-header">
+          <button class="header__bottom-button" id="header__bottom-button" type="submit" name="search">
             поиск
           </button>
 
@@ -217,10 +217,9 @@
 
           <li class="sidebar__item categories">
 
-            <button class="categories__button sidebar__item-button --active" type="submit" name="button-categories"
-              tabindex="-1" data-spoller>
+            <button class="categories__button sidebar__item-button --active" type="button" tabindex="-1" data-spoller>
               <h3 class="categories__button-title sidebar__item-title">Категории</h3>
-              <img class="categories__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="">
+              <img class="categories__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
             </button>
 
             <form class="categories__form" action="#">
@@ -307,7 +306,7 @@
 
           <li class="sidebar__item offer">
 
-            <button class="offer__button sidebar__item-button --active" type="submit" name="button-offer" tabindex="-1"
+            <button class="offer__button sidebar__item-button --active" type="button" tabindex="-1"
               data-spoller>
               <h3 class="offer__button-title sidebar__item-title">Предложения</h3>
               <img class="offer__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
@@ -355,7 +354,7 @@
 
           <li class="sidebar__item brand">
 
-            <button class="brand__button sidebar__item-button --active" type="submit" name="button-brand" tabindex="-1"
+            <button class="brand__button sidebar__item-button --active" type="button" tabindex="-1"
               data-spoller>
               <h3 class="brand__button-title sidebar__item-title">Бренд</h3>
               <img class="brand__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
@@ -433,8 +432,7 @@
 
           <li class="sidebar__item price-filter">
 
-            <button class="price-filter__button sidebar__item-button --active" type="submit" name="button-price-filter"
-              tabindex="-1" data-spoller>
+            <button class="price-filter__button sidebar__item-button --active" type="button" tabindex="-1" data-spoller>
               <h3 class="price-filter__button-title sidebar__item-title">Цена</h3>
               <img class="price-filter__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
             </button>
@@ -594,7 +592,7 @@
         <form class="footer__email" action="#">
           <input class="footer__promotion-input" id="footer-input" type="email" name="email"
             placeholder="email@email.com" required>
-          <button class="footer__promotion-button" type="submit" name="button-footer">подписаться</button>
+          <button class="footer__promotion-button" type="submit" name="promotion">подписаться</button>
         </form>
       </div>
 
@@ -662,13 +660,13 @@
     <ul class="footer__bottom-cards">
       <li class="footer__bottom-item">
         <span class="screen-reader-only">Оплата картами visa</span>
-        <svg class="footer__bottom-card">
+        <svg class="footer__bottom-card footer__bottom-card--visa">
           <use xlink:href="images/sprite.svg#icon-visa" style="width: 93; height: 29;"></use>
         </svg>
       </li>
       <li class="footer__bottom-item">
         <span class="screen-reader-only">Оплата картами master card</span>
-        <svg class="footer__bottom-card">
+        <svg class="footer__bottom-card footer__bottom-card--mc">
           <use xlink:href="images/sprite.svg#icon-mastercard" style="width: 49; height: 29;"></use>
         </svg>
       </li>

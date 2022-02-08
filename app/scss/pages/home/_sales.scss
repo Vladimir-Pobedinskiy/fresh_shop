@@ -3,6 +3,10 @@
   padding: 64px 0;
   background-color: #F5F5F5;
 
+  &__title {
+    text-align: center;
+  }
+
   &__buttons {
     display: flex;
     justify-content: center;
@@ -64,31 +68,28 @@
   .product {
 
     &__visual-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       max-width: 100px;
       min-width: 80px;
       width: 100%;
-      flex-direction: row;
       padding: 9px 0 0 9px;
       position: relative;
       margin-right: 12px;
     }
   
-    &__top-novelty,
-    &__top-hit {
-      padding: 13px 0 0 16px;
+    .badges {
+      margin: 12px 0 0 13px;
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
       z-index: 1;
     }
-  
-    &__top-novelty {
-      max-width: 66px;
-    }
-  
-    &__top-hit {
-      max-width: 42px;
+
+    &__image {
+      max-height: 100px;
+      max-width: 100px;
     }
   
     &__info-block {

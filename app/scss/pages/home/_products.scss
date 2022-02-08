@@ -1,7 +1,11 @@
 // галерея продуктов
 
 .products {
-  padding: 76px 0 72px;
+  padding: 74px 0 72px;
+
+  &__title {
+    text-align: center;
+  }
 
   &__top-buttons {
     display: flex;
@@ -115,7 +119,7 @@
   }
 
   &__banner-title {
-    margin-bottom: 12px;
+    margin-bottom: 3px;
     @extend %ruda-600;
     font-size: 30px;
     line-height: 1.4;
