@@ -14,22 +14,20 @@
    }
 
    &__top {
-
      height: auto;
      border-bottom: 1px solid $dark-500;
    }
 
    &__top-wrapper {
-     padding-bottom: 24px;
+     padding-bottom: 27px;
      display: flex;
      justify-content: space-between;
    }
 
    &__promotion {
-     margin-right: 40px;
+     margin-right: 93px;
      max-width: 310px;
      width: 100%;
-
    }
 
    &__top-label {
@@ -99,21 +97,50 @@
    }
 
    &__about {
-     margin-right: 40px;
-     max-width: 467px;
+     margin-right: 15px;
+     max-width: 550px;
      width: 100%;
-     display: flex;
-     justify-content: space-between;
+     column-count: 3;
+     column-width: 130px;
+     column-gap: 65px;
    }
 
    &__about-item {
-     display: flex;
-     flex-direction: column;
-     margin-right: 40px;
-     &:last-child {
-      margin-right: 0;
-     }
+     margin-bottom: 15px;
    }
+
+   &__about-link {
+    border: 3px solid transparent;
+    border-radius: 6px;
+    outline: transparent;
+    width: fit-content;
+    position: relative;
+    @extend %opensans-400;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $white;
+    transition: transform 0.2s ease, border 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      left: 0;
+      bottom: -3px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+    &:focus {
+      border-color: $white;
+    }
+  }
 
    &__contacts {
      display: flex;
@@ -124,7 +151,6 @@
 
    &__socials {
      display: flex;
-
    }
 
    &__item {
@@ -136,36 +162,8 @@
 
    }
 
-   &__about-link {
-     border: 3px solid transparent;
-     border-radius: 6px;
-     outline: transparent;
-     width: fit-content;
-     position: relative;
-     transition: transform 0.2s ease, border 0.3s ease;
-
-     &::before {
-       content: '';
-       position: absolute;
-       width: 100%;
-       height: 2px;
-       background-color: $white;
-       left: 0;
-       bottom: -3px;
-       transform: scaleX(0);
-       transition: transform 0.3s ease;
-     }
-
-     &:hover::before {
-       transform: scaleX(1);
-     }
-
-     &:focus {
-       border-color: $white;
-     }
-   }
-
    &__contacts {
+     align-self: flex-end;
      display: flex;
      justify-content: flex-start;
      flex-wrap: wrap;
@@ -186,6 +184,13 @@
        border: 3px solid $green-200;
        border-color: $white;
      }
+   }
+
+   &__socials {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     flex-wrap: wrap;
    }
 
    &__item {
@@ -251,8 +256,8 @@
 
    &__bottom-card,
    &__bottom-card {
-    height: 29px;
-    fill: $white;
+     height: 29px;
+     fill: $white;
    }
 
    &__bottom-card--visa {
@@ -260,7 +265,7 @@
    }
 
    &__bottom-card--mc {
-    width: 49px;
-  }
+     width: 49px;
+   }
 
  }

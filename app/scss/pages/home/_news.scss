@@ -43,7 +43,6 @@
   &__day-wrapper {
     display: flex;
     flex-direction: column;
-
   }
 
   &__day-link {
@@ -59,6 +58,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    transition: opacity 0.4 ease;
+    &:hover {
+      opacity: 0.8;
+    }
+
   }
 
   &__day-block {
@@ -104,12 +108,14 @@
   }
 
   &__day-text-link {
-    display: block;
-    width: fit-content;
     @extend %opensans-600;
     font-size: 16px;
     line-height: 1.5;
     color: $dark-900;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     outline: transparent;
     transition: border 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 

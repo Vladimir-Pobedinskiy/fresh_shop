@@ -10,6 +10,8 @@
   &__top-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 46px;
   }
 
@@ -92,7 +94,6 @@
 
   &__banner-item {
     padding: 76px 32px;
-
     min-height: 300px;
     max-width: 300px;
     min-width: 230px;
@@ -100,12 +101,31 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    position: relative;
+    transition: opacity 0.4s ease;
 
     &:first-child {
       max-width: 630px;
       width: 100%;
       grid-column: span 2;
     }
+
+    &:hover {
+      opacity: 0.8;
+      .products__banner-item-link {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__banner-item-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      font-size: 0;
   }
 
   &__banner-uptitle {
@@ -124,6 +144,10 @@
     font-size: 30px;
     line-height: 1.4;
     text-transform: uppercase;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 
   &__banner-link {
@@ -182,6 +206,3 @@
   }
 
 }
-
-
-

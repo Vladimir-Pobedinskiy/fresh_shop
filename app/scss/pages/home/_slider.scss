@@ -55,7 +55,7 @@
   &__link {
     border-radius: 6px;
     outline: transparent;
-    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
 
     &:hover {
       background-color: #4D810C;
@@ -102,7 +102,8 @@
     background-repeat: no-repeat;
     background-size: 19px 32px;
     background-position: center center;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    outline: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       background-color: $green-200;
@@ -129,7 +130,7 @@
 
   &__top-button-prev-icon,
   &__top-button-next-icon {
-    transition: fill 0.4s ease;
+    transition: fill 0.3s ease;
 
     &:hover {
       fill: $green-900;
@@ -153,6 +154,7 @@
     width: 16px;
     height: 16px;
     background-color: $green-900;
+    outline: transparent;
   }
 
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
