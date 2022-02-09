@@ -11,7 +11,42 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
 
+// ширина медиа-запросов
+$mw1: 576px;
+$mw2: 768px;
+$mw3: 992px;
+$mw4: 1230px;
 
+// обрезание текста
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+// использование: @include line-clamp(3);
+
+// отзывчивость 
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+   &::before {
+    @include pseudo($pos: relative);
+    width: 100%;
+    padding-top: $padding;
+   }
+  } @else {
+   padding-top: $padding;
+  }
+}
+// использование: @include responsive-ratio(16,9);
 
 
 %opensans-700 {

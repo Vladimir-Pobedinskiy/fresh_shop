@@ -126,18 +126,20 @@
           </ul>
         </div>
 
-        <form class="header__bottom-inputbox" action="#">
+        <form class="header__bottom-form" action="#">
 
-          <label class="header__bottom-label" for="#header__bottom-button">
+          <div class="header__bottom-input-box screen-reader-only" for="#header__bottom-button">
 
             <svg class="header__bottom-inputbox-icon">
               <use xlink:href="images/sprite.svg#icon-search"></use>
             </svg>
 
-            <input class="header__bottom-input" id="header-input" type="search" name="search"
-              placeholder="  Найти в магазине ..." required>
+            <label class="screen-reader-only" for="#header__bottom-button">поиск</label>
 
-          </label>
+            <input class="header__bottom-input" id="header-input" type="search" name="search"
+              placeholder="Найти в магазине ..." required>
+
+          </div>
           
           <button class="header__bottom-button" id="header__bottom-button" type="submit" name="search">
             поиск
@@ -790,7 +792,7 @@
           style="background-image: url(../images/fruits-1.svg);">
           <a class="products__banner-item-link" href="#">ссылка для открытия баннера</a>
           <p class="products__banner-uptitle">свежайшие фрукты</p>
-          <p class="products__banner-title">начни фруктовое лето<br>всего от 99 ₽</p>
+          <p class="products__banner-title products__banner-title--long ">начни фруктовое лето всего от 99 ₽</p>
           <a class="products__banner-link products__banner-item-first-child" href="#">перейти к покупкам</a>
         </li>
 
@@ -798,7 +800,7 @@
           style="background-image: url(../images/veg-2.svg);">
           <a class="products__banner-item-link" href="#">ссылка для открытия баннера</a>
           <p class="products__banner-uptitle">сезонная распродажа</p>
-          <p class="products__banner-title">овощепад<br>до -50%</p>
+          <p class="products__banner-title">овощепад до -50%</p>
           <a class="products__banner-link" href="#">перейти к покупкам</a>
         </li>
 
@@ -1266,63 +1268,57 @@
 
       <li class="news__day-wrapper">
 
-        <a class="news__day-link" href="#">
+        <a class="news__day-link screen-reader-only" href="#">ссылка на новости</a>
 
-          <div class="news__day-wrap" style="background-image: url(images/calendar/july.svg);">
-            <div class="news__day-block">
-              <p class="news__day-months">июль</p>
-              <p class="news__day-date">15</p>
-            </div>
+        <div class="news__day-wrap" style="background-image: url(images/calendar/july.svg);">
+          <div class="news__day-block">
+            <p class="news__day-months">июль</p>
+            <p class="news__day-date">15</p>
           </div>
+        </div>
 
-          <div class="news__day-title-block">
-            <a class="news__day-text-link" href="#">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете
-              ФрешОК.
-              Торопись, пока всё не разобрали!</a>
-          </div>
-
-        </a>
+        <div class="news__day-title-block">
+          <a class="news__day-text-link" href="#">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете
+            ФрешОК.
+            Торопись, пока всё не разобрали!</a>
+        </div>
 
       </li>
 
 
       <li class="news__day-wrapper">
 
-        <a class="news__day-link" href="#">
+        <a class="news__day-link screen-reader-only" href="#">ссылка на новости</a>
 
-          <div class="news__day-wrap" style="background-image: url(images/calendar/may.svg);">
-            <div class="news__day-block">
-              <p class="news__day-months">май</p>
-              <p class="news__day-date">07</p>
-            </div>
+        <div class="news__day-wrap" style="background-image: url(images/calendar/may.svg);">
+          <div class="news__day-block">
+            <p class="news__day-months">май</p>
+            <p class="news__day-date">07</p>
           </div>
+        </div>
 
-          <div class="news__day-title-block">
-            <a class="news__day-text-link" href="#">Шикарнейший выбор манго в нашем онлайн-маркете</a>
-          </div>
+        <div class="news__day-title-block">
+          <a class="news__day-text-link" href="#">Шикарнейший выбор манго в нашем онлайн-маркете</a>
+        </div>
 
-        </a>
-        
       </li>
 
 
       <li class="news__day-wrapper">
 
-        <a class="news__day-link" href="#">
+        <a class="news__day-link screen-reader-only" href="#">ссылка на новости</a>
 
-          <div class="news__day-wrap" style="background-image: url(images/calendar/february.svg);">
-            <div class="news__day-block">
-              <p class="news__day-months">февраль</p>
-              <p class="news__day-date">20</p>
-            </div>
+        <div class="news__day-wrap" style="background-image: url(images/calendar/february.svg);">
+          <div class="news__day-block">
+            <p class="news__day-months">февраль</p>
+            <p class="news__day-date">20</p>
           </div>
+        </div>
 
-          <div class="news__day-title-block">
-            <a class="news__day-text-link" href="#">Всё, что вы хотели знать о папайя</a>
-          </div>
+        <div class="news__day-title-block">
+          <a class="news__day-text-link" href="#">Всё, что вы хотели знать о папайя</a>
+        </div>
 
-        </a>
-        
       </li>
 
     </ul>
@@ -1346,44 +1342,55 @@
         <p class="footer__top-text">Следите за нашими акциями</p>
         <form class="footer__email" action="#">
           <label class="footer__top-label screen-reader-only" for="footer-input">Ваш email</label>
-            <input class="footer__promotion-input" id="footer-input" type="email" name="email"
-              placeholder="email@email.com" required>
+          <input class="footer__promotion-input" id="footer-input" type="email" name="email"
+            placeholder="email@email.com" required>
           <button class="footer__promotion-button" type="submit" name="promotion">подписаться</button>
         </form>
       </div>
-      
-      <ul class="footer__about">
 
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">О нас</a>
-        </li>
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">Контакты</a>
-        </li>
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">Публичная оферта</a>
-        </li>
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">Оплата и доставка</a>
-        </li>
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">Вакансии</a>
-        </li>
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">Акции</a>
-        </li>
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">Отзывы</a>
-        </li>
-        <li class="footer__about-item">
-          <a class="footer__about-link" href="#">Новости</a>
-        </li>
+      <nav class="footer-nav">
 
-      </ul>
+        <ul class="footer__about">
+
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">О нас</a>
+          </li>
+
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">Контакты</a>
+          </li>
+
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">Публичная оферта</a>
+          </li>
+
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">Оплата и доставка</a>
+          </li>
+
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">Вакансии</a>
+          </li>
+
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">Акции</a>
+          </li>
+
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">Отзывы</a>
+          </li>
+          
+          <li class="footer__about-item">
+            <a class="footer__about-link" href="#">Новости</a>
+          </li>
+
+        </ul>
+
+      </nav>
 
       <div class="footer__contacts">
-        <a class="footer__contacts-link footer__top-text" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
-        <a class="footer__contacts-link footer__top-text" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+        <a class="footer__contacts-link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
+        <a class="footer__contacts-link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
 
         <ul class="footer__socials socials">
           <li class="footer__item">

@@ -104,18 +104,20 @@
           </ul>
         </div>
 
-        <form class="header__bottom-inputbox" action="#">
+        <form class="header__bottom-form" action="#">
 
-          <label class="header__bottom-label" for="#header__bottom-button">
+          <div class="header__bottom-input-box screen-reader-only" for="#header__bottom-button">
 
             <svg class="header__bottom-inputbox-icon">
               <use xlink:href="images/sprite.svg#icon-search"></use>
             </svg>
 
-            <input class="header__bottom-input" id="header-input" type="search" name="search"
-              placeholder="  Найти в магазине ..." required>
+            <label class="screen-reader-only" for="#header__bottom-button">поиск</label>
 
-          </label>
+            <input class="header__bottom-input" id="header-input" type="search" name="search"
+              placeholder="Найти в магазине ..." required>
+
+          </div>
           
           <button class="header__bottom-button" id="header__bottom-button" type="submit" name="search">
             поиск

@@ -53,6 +53,7 @@
   &__item-text {
     max-width: 190px;
     width: 100%;
+    @include line-clamp(3);
     @extend %opensans-400;
     font-size: 14px;
     line-height: 1.4;
