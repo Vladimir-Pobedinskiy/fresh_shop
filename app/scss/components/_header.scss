@@ -236,15 +236,25 @@
     max-width: 420px;
     width: 100%;
     height: 50px;
+    position: relative;
   }
 
-  &__bottom-inputbox-icon {
-    top: 16px;
-    left: 15px;
+  &__bottom-input-button {
     position: absolute;
     width: 20px;
     height: 20px;
+    background-color: transparent;
+    left: 16px;
   }
+
+  &__bottom-inputbox-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+  }
+
 
   &__bottom-input {
     display: flex;
