@@ -14,7 +14,7 @@
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/catalog.min.css">
   <title>Fresh shop | catalog</title>
 </head>
 
@@ -128,28 +128,22 @@
 
         <form class="header__bottom-form" action="#">
 
-          <div class="header__bottom-input-box screen-reader-only" for="#header__bottom-button">
+          <div class="header__bottom-input-box screen-reader-only">
 
             <svg class="header__bottom-inputbox-icon">
               <use xlink:href="images/sprite.svg#icon-search"></use>
             </svg>
-
-            <label class="screen-reader-only" for="#header__bottom-button">поиск</label>
 
             <input class="header__bottom-input" id="header-input" type="search" name="search"
               placeholder="Найти в магазине ..." required>
 
           </div>
           
-          <button class="header__bottom-button" id="header__bottom-button" type="submit" name="search">
+          <button class="header__bottom-button" type="submit" name="search">
             поиск
           </button>
 
         </form>
-
-     
-
-
 
         <ul class="user-nav">
           <li class="user-nav__item">
@@ -205,7 +199,6 @@
     </div>
   </div>
 </div>
-
     <section class="filters-catalog">
   <div class="container">
 
@@ -220,7 +213,7 @@
           <li class="sidebar__item categories">
 
             <button class="categories__button sidebar__item-button --active" type="button" tabindex="-1" data-spoller>
-              <h3 class="categories__button-title sidebar__item-title">Категории</h3>
+              <span class="categories__button-title sidebar__item-title">Категории</span>
               <img class="categories__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
             </button>
 
@@ -310,7 +303,7 @@
 
             <button class="offer__button sidebar__item-button --active" type="button" tabindex="-1"
               data-spoller>
-              <h3 class="offer__button-title sidebar__item-title">Предложения</h3>
+              <span class="offer__button-title sidebar__item-title">Предложения</span>
               <img class="offer__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
             </button>
 
@@ -358,7 +351,7 @@
 
             <button class="brand__button sidebar__item-button --active" type="button" tabindex="-1"
               data-spoller>
-              <h3 class="brand__button-title sidebar__item-title">Бренд</h3>
+              <span class="brand__button-title sidebar__item-title">Бренд</span>
               <img class="brand__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
             </button>
 
@@ -435,15 +428,13 @@
           <li class="sidebar__item price-filter">
 
             <button class="price-filter__button sidebar__item-button --active" type="button" tabindex="-1" data-spoller>
-              <h3 class="price-filter__button-title sidebar__item-title">Цена</h3>
+              <span class="price-filter__button-title sidebar__item-title">Цена</span>
               <img class="price-filter__arrow sidebar__item-arrow" src="images/filters-arrow.svg" alt="стрелка">
             </button>
 
             <form class="price-filter__form" action="#">
 
               <div class="price-filter__box sidebar__item-box">
-
-                <label class="price-filter__label">
 
                   <div class="price-filter__input-box">
 
@@ -467,9 +458,6 @@
 
                   <input class="price-filter__input" type="text" data-type="double" data-min="0" data-max="1200"
                     data-from="100" data-to="1000">
-
-
-                </label>
 
               </div>
 
@@ -545,7 +533,6 @@
     </div>
   </div>
 </section>
-
     <div class="service">
   <div class="service__wrapper">
     <div class="container">
@@ -577,10 +564,10 @@
     </div>
   </div>
 </div>
-
+    
   </main>
 
-   <footer class="footer">
+  <footer class="footer">
 
   <div class="container">
     <a class="footer__top-logo screen-reader-only" href="#"><img class="logo" src="images/logo.svg"
@@ -697,7 +684,7 @@
   </div>
 
 
-</footer> 
+</footer>
 
   <script src="js/main.min.js"></script>
 </body>

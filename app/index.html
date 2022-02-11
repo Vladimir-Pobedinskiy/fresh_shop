@@ -128,28 +128,22 @@
 
         <form class="header__bottom-form" action="#">
 
-          <div class="header__bottom-input-box screen-reader-only" for="#header__bottom-button">
+          <div class="header__bottom-input-box screen-reader-only">
 
             <svg class="header__bottom-inputbox-icon">
               <use xlink:href="images/sprite.svg#icon-search"></use>
             </svg>
-
-            <label class="screen-reader-only" for="#header__bottom-button">поиск</label>
 
             <input class="header__bottom-input" id="header-input" type="search" name="search"
               placeholder="Найти в магазине ..." required>
 
           </div>
           
-          <button class="header__bottom-button" id="header__bottom-button" type="submit" name="search">
+          <button class="header__bottom-button" type="submit" name="search">
             поиск
           </button>
 
         </form>
-
-     
-
-
 
         <ul class="user-nav">
           <li class="user-nav__item">
@@ -185,7 +179,7 @@
 </header>
 
   <main class="main">
-    <h1 class="screen-reader-only"> Главная страница интернет магазина овощей и фруктов</h1>
+
     <section class="slider">
 
   <h2 class="screen-reader-only">Главный слайдер</h2>
@@ -315,7 +309,7 @@
           </li>
         </ul>
 
-        <ul class="products__top-list">
+        <div class="products__top-list">
 
           <article class="products__top-item product mix category-a" data-order="1">
 
@@ -776,7 +770,7 @@
             </div>
           </article>
 
-        </ul>
+        </div>
 
       </div>
 
@@ -838,7 +832,7 @@
         </li>
       </ul>
 
-      <ul class="sales__product-list">
+      <div class="sales__product-list">
 
         <article class="sales__product-item product mix category-a" data-order="1">
 
@@ -1184,7 +1178,7 @@
 
         </article>
 
-      </ul>
+      </div>
 
     </div>
 
@@ -1446,6 +1440,8 @@
 
 
 </footer>
+
+
   <script src="js/main.min.js"></script>
 </body>
 

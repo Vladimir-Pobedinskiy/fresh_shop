@@ -12,10 +12,10 @@ $silver-100: #F6F6F6;
 $white: #FFFFFF;
 
 // ширина медиа-запросов
-$mw1: 576px;
-$mw2: 768px;
-$mw3: 992px;
-$mw4: 1230px;
+$phone: 576px;
+$tablet: 768px;
+$tablet-2: 992px;
+$desktop: 1200px;
 
 // обрезание текста
 @mixin line-clamp($lines: 1) {

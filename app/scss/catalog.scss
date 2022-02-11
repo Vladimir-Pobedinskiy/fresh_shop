@@ -1,0 +1,23 @@
+@import 'global/reset';
+@import 'global/fonts';
+@import 'global/vars';
+@import 'global/global';
+
+
+@import 'components/header';
+
+
+@import 'pages/catalog/filters-catalog';
+
+
+@import 'components/service';
+
+
+
+@import 'components/footer';
+
+
+@import '../../node_modules/rateyo/src/jquery.rateyo';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+@import '../../node_modules/ion-rangeslider/css/ion.rangeSlider'; 
+@import '../../node_modules/jquery-form-styler/dist/jquery.formstyler';

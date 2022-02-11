@@ -1,7 +1,7 @@
-@import 'reset';
-@import 'fonts';
-@import 'vars';
-@import 'global';
+@import 'global/reset';
+@import 'global/fonts';
+@import 'global/vars';
+@import 'global/global';
 
 
 @import 'components/header';
@@ -14,10 +14,9 @@
 @import 'pages/home/partners';
 @import 'pages/home/news';
 
-// страница catalog
-@import 'pages/catalog/filters-catalog';
-
 
 @import 'components/footer';
 
-@import 'libs';
+@import '../../node_modules/rateyo/src/jquery.rateyo';
+@import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';

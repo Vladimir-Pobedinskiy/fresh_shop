@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 // делает minjs
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename');
 const svgSprite = require('gulp-svg-sprite');
 // Дополнение к функции спрайтов svg-sprite при использовании gulp-cheerio
 const cheerio = require('gulp-cheerio');
@@ -30,7 +31,7 @@ function browsersync() {
 }
 
 const htmlInclude = () => {
-  return src(['app/html/*.html']) 
+  return src(['app/html/**/*.html']) 
   .pipe(fileInclude({
     prefix: '@',
     basepath: '@file',    // включить файл относительно каталога, в котором находится файл (пример)
@@ -41,9 +42,11 @@ const htmlInclude = () => {
 
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
   .pipe(scss({outputStyle: 'expanded'}))  //compressed для min файла 
-  .pipe(concat('style.min.css'))
+  .pipe(rename({
+    suffix: '.min'
+  }))
   .pipe(autoprefixer({
     overrideBrowserslist: ['last 10 versions'],
     grid: true
@@ -131,7 +134,7 @@ function images() {
 function build() {
  return src([
    'app/**/*.html',
-   'app/css/style.min.css',
+   'app/css/*.min.css',
    'app/js/main.min.js'
  ], {base: 'app'})    // чтобы перенеслись также как хранятся в app
  .pipe(dest('dist'))
