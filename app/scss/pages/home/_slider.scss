@@ -6,30 +6,41 @@
   }
 
   &__item {
-    width: auto;
-    width: 100%;
-    min-height: 600px;
     height: auto;
-    width: 100%;
-    padding-left: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
 
+  &__container {
+    max-width: 1290px;
+    flex: 1 1 auto;
+    padding: 0 150px;
+    margin: 0 auto;
+    @media (max-width:$desktop){
+        padding: 0px 15px;
+    }
+  }
+
   &__wrap {
     min-height: 600px;
+    max-width: 1290px;
     height: auto;
     display: flex;
     align-items: center;
     cursor: grab;
+    @media (max-width:$tablet){
+      min-height: 550px;
+    }
+    @media (max-width:$mobile){
+      min-height: 490px;
+    }
   }
 
   &__inner {
-   
     padding: 24px;
+    flex: 1 1 auto;
     max-width: 1290px;
-    width: 100%;
     height: auto;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -46,13 +57,23 @@
     line-height: 1.3;
     text-transform: uppercase;
     color: $dark-500;
+    @media (max-width:$tablet-2){
+      max-width: 662px;
+       font-size: 50px; 
+    }
+    @media (max-width:$tablet){
+      max-width: 562px;
+      font-size: 40px; 
+    }
+    @media (max-width:$mobile){
+       font-size: 20px; 
+    }
   }
 
   &__subtitle {
     color: $red-900;
     margin-bottom: 12px;
   }
-
 
   &__text {
     margin-bottom: 45px;
@@ -122,8 +143,13 @@
     &:active {
       box-shadow: 0 0 0 0;
       background-color: #F3F3F2;
-      ;
     }
+
+    @media (max-width:$desktop){
+       visibility: hidden;
+
+    }
+
   }
 
   &__top-button-prev {

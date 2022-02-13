@@ -46,7 +46,6 @@ main {
 }
 
 .title {
-  margin-bottom: 30px;
   @extend %ruda-600;
   font-size: 32px;
   line-height: 1.4;
@@ -66,8 +65,65 @@ main {
   cursor: pointer;
   background-color: $green-900;
   color: $white;
+
+  @media (max-width:$mobile) {
+    font-size: 14px;
+  }
 }
 
+// меню бургер
+.nav {
+  display: none;
+
+  @media (max-width:$tablet) {
+    cursor: pointer;
+    display: block;
+  }
+
+  &__body {
+
+    padding: 25px 15px;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    overflow: auto;
+    background-color: $green-200;
+    z-index: 4;
+
+    &.nav__body--active {
+      left: 0;
+    }
+  }
+
+  &__top {
+    margin-bottom: 26px;
+    height: auto;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__link {
+    display: block;
+    max-width: 200px;
+    height: 60px;
+  }
+
+  &__link-logo {
+    display: inline;
+    max-width: none;
+
+  }
+
+}
+
+// меню 
 .menu {
 
   &__list {
@@ -77,6 +133,17 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    @media (max-width:$tablet) {
+      position: absolute;
+      flex-direction: column;
+      width: 80%;
+      height: 100vh;
+      left: -100%;
+      top: 0;
+      background-color: $white;
+      color: $dark-500;
+    }
   }
 
   &__item {
@@ -127,7 +194,6 @@ main {
   }
 }
 
-
 .user-nav {
   display: flex;
   align-items: center;
@@ -148,6 +214,14 @@ main {
 
   }
 
+  &__item-search {
+    display: none;
+
+    @media (max-width:$desktop) {
+      display: block;
+    }
+  }
+
   &__item-button {
     width: 55px;
     height: 55px;
@@ -155,9 +229,10 @@ main {
     justify-content: center;
     align-items: center;
     outline: transparent;
-    border-radius: 3px;
+    border-radius: 6px;
     background-color: $green-900;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
+    transition: background-color 0.6s ease, border 0.6s ease, fill 0.6s ease;
 
     &:hover {
       background-color: $dark-500;
@@ -168,7 +243,13 @@ main {
     }
 
     &:active {
+      border: 2px solid transparent;
       fill: $dark-500;
+    }
+
+    @media (max-width:$tablet) {
+      width: 52px;
+      height: 52px;
     }
   }
 
@@ -255,7 +336,6 @@ main {
   }
 
 }
-
 
 // звездный рейтинг
 .star-box {
@@ -349,7 +429,6 @@ main {
   }
 }
 
-
 // product
 .product {
   height: auto;
@@ -425,6 +504,7 @@ main {
 
   &__image-link {
     position: relative;
+
     &:before,
     &:after {
       content: '';
@@ -488,6 +568,7 @@ main {
   }
 
   &__bottom {
+
     margin-top: 4px;
     min-height: 50px;
     height: auto;
@@ -574,3 +655,64 @@ main {
   }
 
 }
+
+
+
+/* прорисованное меню бургерв*/
+.menu-icon {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.menu-icon span {
+  position: absolute;
+  background-color: #ffffff;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  top: 9px;
+  transition: transform 0.5s ease;
+}
+
+.menu-icon:before,
+.menu-icon:after {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: transform 0.5s ease;
+}
+
+.menu-icon--active.menu-icon:before,
+.menu-icon--active.menu-icon:after,
+.menu-icon--active.menu-icon span {
+  background-color: $dark-800;
+}
+
+.menu-icon:before {
+  top: 0;
+}
+
+.menu-icon:after {
+  bottom: 0;
+}
+
+.menu-icon.menu-icon--active span {
+  transform: scale(0);
+}
+
+.menu-icon.menu-icon--active:before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.menu-icon.menu-icon--active:after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+/* прорисованное меню бургер */

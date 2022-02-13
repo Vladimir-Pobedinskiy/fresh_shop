@@ -1,4 +1,5 @@
 .header {
+
   &__top {
     min-height: 50px;
     height: auto;
@@ -13,6 +14,13 @@
     align-items: center;
   }
 
+  &__top-back-items {
+    @media (max-width:$tablet){
+      order: 2;
+      margin-left: auto;
+    }
+  }
+
   &__top-item {
     display: inline-block;
     margin-right: 23px;
@@ -20,6 +28,14 @@
     &:last-child {
       margin-right: 0;
     }
+
+    @media (max-width:$tablet) {
+      margin-right: 31px;
+      &:last-child {
+        margin-right: -7px;
+      }
+    }
+
   }
 
   &__top-link {
@@ -45,6 +61,9 @@
     width: 32px;
     height: 22px;
     fill: $white;
+    @media (max-width:$tablet){
+      margin-right: 0;
+    }
   }
 
   &__top-text {
@@ -54,10 +73,32 @@
     line-height: 1.4;
     letter-spacing: 0.03rem;
     color: $white;
+
+    @media (max-width:$tablet) {
+      font-size: 12px;
+    }
+    @media (max-width:$mobile){
+       display: none;
+    }
   }
 
   &__bottom {
     background-color: $green-900;
+  }
+
+  &__bottom-logo {
+    @media (max-width:$tablet){
+      display: none;
+    }
+  }
+
+  &__bottom-logoshort {
+    width: 37px;
+    height: 40px;
+    display: none;
+    @media (max-width:$tablet){
+      display: block;
+    }
   }
 
   &__bottom-wrapper {
@@ -66,6 +107,10 @@
     padding-top: 6px;
     display: flex;
     align-items: center;
+    @media (max-width:$tablet){
+      min-height: 62px;
+      justify-content: space-between;
+    }
   }
 
   &__bottom-link {
@@ -90,18 +135,26 @@
     &:active {
       border-color: $green-200;
     }
+    @media (max-width:$tablet){
+      display: none;
+    }
   }
 
   &__bottom-catalog-box {
+    margin-right: auto;
     position: relative;
     z-index: 10;
+    @media (max-width:$tablet){
+      order: 3;
+      width: 100%;
+    }
   }
 
   &__bottom-catalog {
     position: relative;
     margin-right: 36px;
     max-width: 240px;
-    min-width: 230px;
+    min-width: 220px;
     width: 100%;
     height: 50px;
     padding: 16px 14px 16px 18px;
@@ -123,6 +176,10 @@
 
     &.--active {
       border-radius: 6px 6px 0 0;
+    }
+
+    @media (max-width:$tablet){
+      max-width: 100%;
     }
 
   }
@@ -218,9 +275,121 @@
       transform: rotate(180deg);
     }
 
+    @media (max-width:$tablet){
+      display: none;
+    }
+
   }
 
-  &__bottom-form {
+}
+
+// header-bottom__form
+.header-bottom {
+
+&__form {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  max-width: 578px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+
+  @media (max-width:$desktop){
+    &.header-bottom__form--active {
+      display: none;
+    }
+    max-width: 100%;
+    padding: 10px 0;
+     margin: 0 auto; 
+  }
+}
+
+&__input-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  left: 16px;
+}
+
+&__inputbox-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+
+&__input {
+  display: flex;
+  align-items: center;
+  max-width: 420px;
+  width: 100%;
+  height: 50px;
+  padding: 7px 13px 7px 46px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  outline: transparent;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+
+  @media (max-width:$desktop){
+    max-width: 100%;
+    box-shadow: inset 0 0 0 2px $dark-500;
+  }
+
+  &:hover {
+    background-color: $green-200;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $dark-500;
+    @media (max-width:$desktop){
+      box-shadow: inset 0 0 0 3px $dark-500;
+    }
+  }
+}
+
+&__input::placeholder {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.03rem;
+}
+
+&__button {
+  padding: 15px 53px;
+  border-radius: 0 6px 6px 0;
+  background-color: $dark-800;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.03rem;
+  color: $white;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+  @media (max-width:$desktop){
+    border-radius: 0;
+  }
+
+  &:hover {
+    background-color: $dark-500;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px #E0EDCF;
+    @media (max-width:$desktop){
+      box-shadow: inset 0 0 0 2px #E0EDCF;
+    }
+  }
+
+  &:active {
+    background-color: $dark-800;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+// header-bottom__form
+  &__form {
     margin-right: 40px;
     display: flex;
     align-items: center;
@@ -228,67 +397,75 @@
     width: 100%;
     height: 50px;
     position: relative;
+  
+    @media (max-width:$desktop){
+      &.header-bottom__form--active {
+        display: none;
+      }
+      max-width: 100%;
+      padding: 10px 0;
+       margin: 0 auto; 
+    }
   }
-
-  &__bottom-input-box {
-    display: flex;
-    align-items: center;
-    max-width: 420px;
-    width: 100%;
-    height: 50px;
-    position: relative;
-  }
-
-  &__bottom-input-button {
+  
+  &__input-button {
     position: absolute;
     width: 20px;
     height: 20px;
     background-color: transparent;
     left: 16px;
   }
-
-  &__bottom-inputbox-icon {
+  
+  &__inputbox-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 20px;
     height: 20px;
   }
-
-
-  &__bottom-input {
+  
+  
+  &__input {
     display: flex;
     align-items: center;
     max-width: 420px;
     width: 100%;
     height: 50px;
-    padding: 16px 13px 7px 46px;
+    padding: 7px 13px 7px 46px;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    border: none;
     outline: transparent;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
-
+  
+    @media (max-width:$desktop){
+      max-width: 100%;
+      box-shadow: inset 0 0 0 2px $dark-500;
+    }
+  
     &:hover {
       background-color: $green-200;
     }
-
+  
     &:focus {
-      box-shadow: 0 0 0 3px $dark-500;
+      box-shadow: 0 0 0 2px $dark-500;
+      @media (max-width:$desktop){
+        box-shadow: inset 0 0 0 3px $dark-500;
+      }
     }
   }
-
-  &__bottom-input::placeholder {
+  
+  &__input::placeholder {
     font-size: 14px;
     line-height: 1.4;
     letter-spacing: 0.03rem;
+    @media (max-width:$tablet){
+      
+    }
   }
-
-  &__bottom-button {
+  
+  &__button {
     padding: 15px 53px;
-    border: 0;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-radius: 0 6px 6px 0;
     background-color: $dark-800;
     font-size: 14px;
     line-height: 1.4;
@@ -296,19 +473,31 @@
     color: $white;
     text-transform: uppercase;
     transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
-
+    @media (max-width:$desktop){
+      border-radius: 0;
+    }
+  
     &:hover {
       background-color: $dark-500;
     }
-
+  
     &:focus {
       box-shadow: 0 0 0 4px #E0EDCF;
+      @media (max-width:$desktop){
+        box-shadow: inset 0 0 0 2px #E0EDCF;
+      }
     }
-
+  
     &:active {
       background-color: $dark-800;
       color: rgba(255, 255, 255, 0.5);
     }
+
+    @media (max-width:$mobile){
+      padding: 15px 26px;
+    }
+
   }
+  
 
 }

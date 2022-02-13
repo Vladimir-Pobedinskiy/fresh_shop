@@ -23,6 +23,29 @@
           </li>
         </ul>
 
+        <nav class="nav">
+          <button class="nav__icon-button menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span></button>
+          <div class="nav__body">
+
+            <div class="nav__top">
+              <a class="nav__link" href="#">
+                <img class="nav__link-logo" src="images/logo-mobile.svg" alt="логотип сайта">
+              </a>
+
+              <button class="menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span></button>
+            </div>
+
+            <div class="nav__log-in">
+
+            </div>
+
+            <div class="nav__catalog">
+
+            </div>
+            
+          </div>
+        </nav>
+
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
@@ -51,7 +74,11 @@
           <img class="header__bottom-logo logo" src="images/logo.svg" alt="логотип сайта">
         </a>
 
-        <div class="header__bottom-catalog-box">
+        <a class="header__bottom-link-short" href="#">
+          <img class="header__bottom-logoshort" src="images/logo-short.svg" alt="логотип сайта">
+        </a>
+
+        <div class="header__bottom-catalog-box header-bottom__form--active" data-da=".nav__catalog,768,1">
 
           <button class="header__bottom-catalog" type="button">
             <svg class="header__bottom-catalog-icon">
@@ -104,34 +131,40 @@
           </ul>
         </div>
 
-        <form class="header__bottom-form" action="#">
+        <form class="header-bottom__form header-bottom__form--active" data-da=".header,1200,last" action="#">
 
-          <div class="header__bottom-input-box screen-reader-only">
+          <label class="screen-reader-only"> метка для формы поиска</label>
 
-            <button class="header__bottom-input-button" type="button">
+            
+            <input class="header-bottom__input" id="header-input" type="search" name="search"
+              placeholder="Найти в магазине ..." required>
 
-              <svg class="header__bottom-inputbox-icon">
+            <button class="header-bottom__input-button" type="button">
+
+              <svg class="header-bottom__inputbox-icon">
                 <use xlink:href="images/sprite.svg#icon-search"></use>
               </svg>
               
             </button>
 
-            <input class="header__bottom-input" id="header-input" type="search" name="search"
-              placeholder="Найти в магазине ..." required>
-
-          </div>
-
-          <button class="header__bottom-button" type="submit" name="search">
+          <button class="header-bottom__button btn" type="submit" name="search">
             поиск
           </button>
 
         </form>
 
         <ul class="user-nav">
-          <li class="user-nav__item">
+          <li class="user-nav__item" data-da=".nav__log-in,768,1">
             <a class="user-nav__item-button" href="#">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="user-nav__item user-nav__item-search">
+            <a class="user-nav__item-button" href="#">
+              <svg class="user-nav__icon">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
               </svg>
             </a>
           </li>
