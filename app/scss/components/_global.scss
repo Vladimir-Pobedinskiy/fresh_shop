@@ -4,6 +4,10 @@ body {
   font-size: 14px;
 }
 
+.body.lock {
+  overflow: hidden;
+}
+
 .categories__list::-webkit-scrollbar {
   width: 7px;
   height: 104px;
@@ -52,6 +56,10 @@ main {
   letter-spacing: 0.03rem;
   text-transform: uppercase;
   color: $dark-900;
+
+  @media (max-width:$mobile) {
+    font-size: 24px;
+  }
 }
 
 .btn {
@@ -65,10 +73,6 @@ main {
   cursor: pointer;
   background-color: $green-900;
   color: $white;
-
-  @media (max-width:$mobile) {
-    font-size: 14px;
-  }
 }
 
 // меню бургер
@@ -78,19 +82,24 @@ main {
   @media (max-width:$tablet) {
     cursor: pointer;
     display: block;
+    z-index: 10;
+  }
+
+  .container-body {
+    padding: 0 15px;
   }
 
   &__body {
-
-    padding: 25px 15px;
+    padding: 25px 0;
     position: fixed;
     left: -100%;
     top: 0;
     height: 100%;
     width: 80%;
     overflow: auto;
-    background-color: $green-200;
+    background-color: $white;
     z-index: 4;
+    transition: left 0.4s ease;
 
     &.nav__body--active {
       left: 0;
@@ -110,21 +119,185 @@ main {
   }
 
   &__link {
-    display: block;
     max-width: 200px;
+    width: 100%;
     height: 60px;
   }
 
   &__link-logo {
-    display: inline;
-    max-width: none;
-
+    max-width: 200px;
+    width: 100%;
+    height: 60px;
+    fill: #63A60E;
   }
+
+  &__login {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    background-color: $green-900;
+  }
+
+  &__login-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__login-item {
+    margin-right: 12px;
+    @extend %opensans-400;
+    color: $white;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__catalog {
+    margin-bottom: 24px;
+  }
+
+  .contacts {
+    margin-bottom: 24px;
+    max-width: 100%;
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+  }
+
+  &__contacts-socials {
+    margin-bottom: 8px;
+  }
+
+  .socials__item {
+    border: none;
+  }
+
+  .socials__link-icon {
+    fill: $dark-800;
+  }
+
+  &__contacts-link {
+    display: block;
+    width: 100%;
+    padding-left: 40px;
+    margin-bottom: 18px;
+    color: $dark-800;
+    @extend %opensans-400;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03rem;
+    position: relative;
+  }
+
+  &__contacts-link-location {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+  }
+
+  &__contacts-link-tel::before,
+  &__contacts-link-location::before {
+    content: '';
+    left: 0;
+    top: 0;
+    width: 24px;
+    position: absolute;
+  }
+
+  &__contacts-link-tel::before {
+    height: 24px;
+    background-image: url(../../images/icon-tel.svg);
+  }
+
+  &__contacts-link-location::before {
+    height: 33px;
+    top: 6px;
+    background-image: url(../../images/icon-location.svg);
+  }
+
+  .nav-menu__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .nav-menu__link {
+    @extend %opensans-400;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03rem;
+    color: $dark-800;
+  }
+
+  /* прорисованное меню бургерв*/
+  .menu-icon {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+  }
+
+  .menu-icon span {
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: transform 0.5s ease;
+  }
+
+  .menu-icon:before,
+  .menu-icon:after {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: transform 0.5s ease;
+  }
+
+  .menu-icon--active.menu-icon:before,
+  .menu-icon--active.menu-icon:after,
+  .menu-icon--active.menu-icon span {
+    background-color: $dark-800;
+  }
+
+  .menu-icon:before {
+    top: 0;
+  }
+
+  .menu-icon:after {
+    bottom: 0;
+  }
+
+  .menu-icon.menu-icon--active span {
+    transform: scale(0);
+  }
+
+  .menu-icon.menu-icon--active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .menu-icon.menu-icon--active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  /* прорисованное меню бургер */
 
 }
 
 // меню 
 .menu {
+
 
   &__list {
     padding: 10px 0;
@@ -135,14 +308,7 @@ main {
     flex-wrap: wrap;
 
     @media (max-width:$tablet) {
-      position: absolute;
-      flex-direction: column;
-      width: 80%;
-      height: 100vh;
-      left: -100%;
-      top: 0;
-      background-color: $white;
-      color: $dark-500;
+      display: none;
     }
   }
 
@@ -200,11 +366,6 @@ main {
   justify-content: center;
 
   &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 55px;
-    height: 55px;
     position: relative;
     margin-right: 7px;
 
@@ -212,6 +373,12 @@ main {
       margin-right: 0;
     }
 
+  }
+
+  &__item-log-in {
+    @media (max-width:$tablet) {
+      display: none;
+    }
   }
 
   &__item-search {
@@ -248,8 +415,15 @@ main {
     }
 
     @media (max-width:$tablet) {
-      width: 52px;
-      height: 52px;
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  &__item-button-reg {
+    @media (max-width:$tablet) {
+      width: 100%;
+      justify-content: start;
     }
   }
 
@@ -275,6 +449,11 @@ main {
     letter-spacing: 0.03rem;
     color: #CF3E3B;
     background-color: $white;
+
+    @media (max-width:$tablet) {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
@@ -357,11 +536,20 @@ main {
 
 //counter счетчик каталога
 .counter {
+  top: 0;
+  left: 30%;
+  position: absolute;
   max-width: 84px;
   width: 100%;
   display: inline-flex;
+  align-self: start;
   justify-self: flex-end;
   margin-right: 18px;
+
+  
+  @media (max-width:$mobile) {
+    max-width: 70px;
+  }
 
   &__button {
     padding: 4px;
@@ -383,6 +571,7 @@ main {
     &:active {
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25)F;
     }
+
   }
 
   &__button--minus {
@@ -451,7 +640,7 @@ main {
 
   &__top {
     padding: 6px 12px;
-    min-height: 57px;
+    min-height: 45px;
   }
 
   &__top-item {
@@ -478,6 +667,11 @@ main {
 
     &:active {
       border: 3px solid transparent;
+    }
+
+    @media (max-width:$mobile) {
+      top: 7px;
+      right: 7px;
     }
 
   }
@@ -541,9 +735,15 @@ main {
 
   &__image {
     max-height: 215px;
+    height: auto;
     max-width: 298px;
+    width: 100%;
     object-fit: cover;
     margin-bottom: 8px;
+
+    @media (max-width:$mobile) {
+      min-height: 130px;
+    }
   }
 
 
@@ -556,9 +756,8 @@ main {
   }
 
   &__title {
-    min-height: 52px;
+    height: auto;
     padding: 0 18px;
-    margin-bottom: 12px;
     @include line-clamp(3);
     @extend %opensans-600;
     font-size: 14px;
@@ -568,36 +767,42 @@ main {
   }
 
   &__bottom {
-
-    margin-top: 4px;
-    min-height: 50px;
+    position: relative;
     height: auto;
     display: flex;
     align-items: center;
-
     padding: 0 18px 18px 18px;
+
+    @media (max-width:$mobile) {
+      padding: 0 12px 12px 12px;
+    }
   }
 
   &__bottom-price-list {
     margin-right: auto;
     display: flex;
     flex-direction: column;
+    align-self: end;
+
   }
 
   &__bottom-price-item {
-    align-items: flex-start;
+    align-items: flex-end;
   }
 
   &__bottom-price {
+    min-width: 47px;
     margin-right: auto;
     font-size: 14px;
     line-height: 1;
     letter-spacing: 0.03rem;
-    color: $dark-500
+    color: $dark-500;
+    align-self: end;
   }
 
   &__bottom-old-price {
     position: relative;
+    align-self: end;
   }
 
   &__bottom-old-price:before {
@@ -619,7 +824,7 @@ main {
   }
 
   &__bottom-cart-button {
-    width: 32px;
+    min-width: 32px;
     height: 32px;
     right: 18px;
     bottom: 18px;
@@ -629,6 +834,7 @@ main {
     border-radius: 4px;
     background-color: #63A60E;
     outline: transparent;
+    align-self: end;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 
     &:hover {
@@ -657,62 +863,81 @@ main {
 }
 
 
-
-/* прорисованное меню бургерв*/
-.menu-icon {
-  position: relative;
-  width: 30px;
-  height: 20px;
-  background-color: transparent;
-}
-
-.menu-icon span {
-  position: absolute;
-  background-color: #ffffff;
-  left: 0;
+// контакты
+.contacts {
+  max-width: 220px;
   width: 100%;
-  height: 2px;
-  top: 9px;
-  transition: transform 0.5s ease;
+  height: auto;
+
+  &__link {
+    display: block;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    outline: transparent;
+    @extend %opensans-400;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $white;
+    transition: opacity 0.3s ease, border 0.3s ease;
+    margin-bottom: 15px;
+
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      border: 3px solid $green-200;
+      border-color: $white;
+    }
+  }
+
 }
 
-.menu-icon:before,
-.menu-icon:after {
-  content: '';
-  position: absolute;
-  background-color: #ffffff;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  transition: transform 0.5s ease;
-}
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 
-.menu-icon--active.menu-icon:before,
-.menu-icon--active.menu-icon:after,
-.menu-icon--active.menu-icon span {
-  background-color: $dark-800;
-}
 
-.menu-icon:before {
-  top: 0;
-}
+  &__item {
+    margin-right: 12px;
+    margin-bottom: 14px;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    outline: transparent;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
 
-.menu-icon:after {
-  bottom: 0;
-}
+    &:last-child {
+      margin-right: 0;
+    }
 
-.menu-icon.menu-icon--active span {
-  transform: scale(0);
-}
+  }
 
-.menu-icon.menu-icon--active:before {
-  transform: rotate(45deg);
-  top: 9px;
-}
+  &__link-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $white;
+    outline: transparent;
+    transition: fill 0.3s ease;
 
-.menu-icon.menu-icon--active:after {
-  transform: rotate(-45deg);
-  bottom: 9px;
-}
+    &:hover {
+      fill: #CACACA;
+    }
 
-/* прорисованное меню бургер */
+    &:focus {
+      border-color: $green-200;
+    }
+
+    &:active {
+      fill: $green-200;
+    }
+  }
+
+}

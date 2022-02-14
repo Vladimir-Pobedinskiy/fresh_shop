@@ -1,21 +1,44 @@
-
 .service {
   min-height: 146px;
   height: auto;
   background-color: #F6F6F6;
+  @media (max-width:$tablet){
+    min-height: 270px;
+  }
 
   &__items {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 115px 0 185px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 115px 0 185px;
+    @media (max-width:$desktop){
+      padding: 0 0 0 50px;
+    }
+    @media (max-width:$tablet-2){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$mobile){
+     
+      justify-items: start;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
     margin-left: 75px;
-    padding: 49px 0 29px;
+    margin-right: 95px;
+    margin-bottom: 29px;
+    padding: 49px 0 0;
     max-width: 264px;
     width: 100%;
     position: relative;
+    @media (max-width:$tablet-2){
+      padding: 31px 0 0;
+    }
+    @media (max-width:$mobile){
+       margin-left: 25px; 
+       margin-bottom: -19px;
+    }
+
   }
 
   &__icon {

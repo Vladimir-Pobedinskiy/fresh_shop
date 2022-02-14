@@ -30,7 +30,7 @@
     }
 
     @media (max-width:$tablet) {
-      margin-right: 31px;
+      margin-right: 14px;
       &:last-child {
         margin-right: -7px;
       }
@@ -147,6 +147,7 @@
     @media (max-width:$tablet){
       order: 3;
       width: 100%;
+      border-bottom: 1px solid rgba(193, 193, 193, 0.3);
     }
   }
 
@@ -180,6 +181,7 @@
 
     @media (max-width:$tablet){
       max-width: 100%;
+      border-radius: 0;
     }
 
   }
@@ -254,6 +256,9 @@
     height: 17px;
     margin-right: 14px;
     fill: $green-900;
+    @media (max-width:$tablet){
+      fill: $dark-800;
+    }
   }
 
   &__bottom-catalog-title {
@@ -264,6 +269,9 @@
     @extend %opensans-600;
     color: $green-900;
     position: relative;
+    @media (max-width:$tablet){
+      color: $dark-800;
+    }
   }
 
   &__bottom-catalog-icon-arrow {

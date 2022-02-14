@@ -49,23 +49,114 @@
           <button class="nav__icon-button menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span></button>
           <div class="nav__body">
 
-            <div class="nav__top">
+            <div class="nav__top container-body">
               <a class="nav__link" href="#">
-                <img class="nav__link-logo" src="images/logo-mobile.svg" alt="логотип сайта">
+                <svg class="nav__link-logo">
+                  <use xlink:href="images/sprite.svg#icon-logo"></use>
+                </svg>
               </a>
 
               <button class="menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span></button>
             </div>
 
-            <div class="nav__log-in">
+            <div class="nav__login">
+
+              <a class="nav__login-list container-body" href="#">
+                <svg class="user-nav__icon nav__login-item">
+                  <use xlink:href="images/sprite.svg#icon-user"></use>
+                </svg>
+                <span class="nav__login-item">Вход</span>
+                <span class="nav__login-item">|</span>
+                <span class="nav__login-item">Регистрация</span>
+              </a>
 
             </div>
 
             <div class="nav__catalog">
+              
+            </div>
+
+            <div class="nav__contacts contacts container-body">
+
+              <a class="nav__contacts-link nav__contacts-link-tel" href="tel:+7907288365">+7 907 288 365</a>
+              <a class="nav__contacts-link nav__contacts-link-location" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+      
+              <ul class="nav__contacts-socials contacts__socials socials">
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__link-icon" style="width: 32; height: 32">
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__link-icon" style="width: 32; height: 32">
+                      <use xlink:href="images/sprite.svg#icon-youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__link-icon" style="width: 32; height: 32">
+                      <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__link-icon" style="width: 32; height: 32">
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
 
             </div>
+
+            <div class="nav-menu container-body">
+
+              <ul class="nav-menu__list">
+      
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">Доставка</a>
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">О нас</a>
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">Новости</a>
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">Контакты</a>
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">Акции</a>
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">Вакансии</a>
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">Отзывы</a>
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">Публичная оферта</a>
+                </li>
+      
+              </ul>
+      
+            </div>
+      
             
           </div>
+          
         </nav>
 
         <nav class="menu">
@@ -176,7 +267,7 @@
         </form>
 
         <ul class="user-nav">
-          <li class="user-nav__item" data-da=".nav__log-in,768,1">
+          <li class="user-nav__item user-nav__item-log-in">
             <a class="user-nav__item-button" href="#">
               <svg class="user-nav__icon">
                 <use xlink:href="images/sprite.svg#icon-user"></use>
@@ -664,41 +755,42 @@
 
       </nav>
 
-      <div class="footer__contacts">
-        <a class="footer__contacts-link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
-        <a class="footer__contacts-link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+      <div class="contacts">
+        <a class="contacts__link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
+        <a class="contacts__link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
 
-        <ul class="footer__socials socials">
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              <svg class="footer__link-icon" style="width: 32; height: 32">
+        <ul class="contacts__socials socials">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg class="socials__link-icon" style="width: 32; height: 32">
                 <use xlink:href="images/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              <svg class="footer__link-icon" style="width: 32; height: 32">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg class="socials__link-icon" style="width: 32; height: 32">
                 <use xlink:href="images/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              <svg class="footer__link-icon" style="width: 32; height: 32">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg class="socials__link-icon" style="width: 32; height: 32">
                 <use xlink:href="images/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              <svg class="footer__link-icon" style="width: 32; height: 32">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg class="socials__link-icon" style="width: 32; height: 32">
                 <use xlink:href="images/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
+      
     </div>
   </div>
 
