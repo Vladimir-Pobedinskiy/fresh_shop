@@ -146,8 +146,9 @@ keyboard: {
 
 // слайдер partners
 new Swiper('.partners__swiper', {
-  slidesPerView: 6,
+  slidesPerView: 2,
   loop: true,
+
   grabCursor: true,
   speed: 600,
     
@@ -155,6 +156,26 @@ new Swiper('.partners__swiper', {
     enabled: true,
     onlyInViewport: false,
   },
+
+	breakpoints: {
+    576: {
+      slidesPerView: 3,
+			spaceBetween: 93,
+
+    },
+    768: {
+      slidesPerView: 4,
+
+    },
+    992: {
+      slidesPerView: 5,
+    },
+		1200: {
+      slidesPerView: 6,
+			spaceBetween: 120,
+    }
+  },
+
 });
 
 

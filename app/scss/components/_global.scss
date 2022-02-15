@@ -236,6 +236,8 @@ main {
 
   /* прорисованное меню бургерв*/
   .menu-icon {
+    display: flex;
+    align-items: center;
     position: relative;
     width: 30px;
     height: 20px;
@@ -363,7 +365,7 @@ main {
 .user-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  order: 4;
 
   &__item {
     position: relative;
@@ -423,7 +425,6 @@ main {
   &__item-button-reg {
     @media (max-width:$tablet) {
       width: 100%;
-      justify-content: start;
     }
   }
 
@@ -536,8 +537,8 @@ main {
 
 //counter счетчик каталога
 .counter {
-  top: 0;
-  left: 30%;
+  bottom: 23px;
+  left: 40%;
   position: absolute;
   max-width: 84px;
   width: 100%;
@@ -545,6 +546,13 @@ main {
   align-self: start;
   justify-self: flex-end;
   margin-right: 18px;
+  @media (max-width:$desktop){
+    top: 0;
+  }
+  @media (max-width:$tablet){
+    top: 0;
+    left: 30%;
+  }
 
   
   @media (max-width:$mobile) {
@@ -740,10 +748,6 @@ main {
     width: 100%;
     object-fit: cover;
     margin-bottom: 8px;
-
-    @media (max-width:$mobile) {
-      min-height: 130px;
-    }
   }
 
 

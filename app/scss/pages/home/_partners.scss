@@ -1,6 +1,9 @@
 //partners
 .partners {
   padding: 74px 0 66px;
+  @media (max-width:$mobile){
+    padding: 57px 0 31px;
+  }
   &__container {
     max-width: 1190px;
     margin: 0 auto;
@@ -8,7 +11,7 @@
 
   &__list {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
   }
 
   &__item {

@@ -92,6 +92,16 @@
     &:active {
       border-bottom: 3px solid $green-200;
     }
+
+    @media (max-width:$mobile) {
+      font-size: 14px;
+    }
+  }
+
+  .product__image {
+    @media (max-width:$mobile) {
+      min-height: 130px;
+    }
   }
 
   .product__title {
@@ -235,7 +245,8 @@
   &__banner-title--long {
     max-width: 346px;
     width: 100%;
-    @media (max-width:$mobile){
+
+    @media (max-width:$mobile) {
       max-width: 230px;
     }
   }

@@ -1,11 +1,19 @@
 // sales
 .sales {
-  padding: 64px 0;
+  padding: 69px 0;
   background-color: #F5F5F5;
+
+  @media (max-width:$mobile) {
+    padding: 48px 0;
+  }
 
   &__title {
     margin-bottom: 30px;
     text-align: center;
+
+    @media (max-width:$mobile) {
+      margin-bottom: 24px;
+    }
   }
 
   &__buttons {
@@ -17,6 +25,10 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 48px;
+
+    @media (max-width:$mobile) {
+      margin-bottom: 24px;
+    }
   }
 
   &__button {
@@ -52,6 +64,10 @@
     &:active {
       border-bottom: 3px solid $green-200;
     }
+
+    @media (max-width:$mobile) {
+      font-size: 14px;
+    }
   }
 
   &__product-list {
@@ -60,6 +76,22 @@
     row-gap: 30px;
     column-gap: 30px;
     margin-bottom: 48px;
+
+    @media (max-width:$desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+
+    @media (max-width:$tablet-2) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width:$mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+      margin-bottom: 24px;
+    }
   }
 
   &__product-item {
@@ -69,6 +101,15 @@
     min-height: 124px;
     height: auto;
     background-color: $white;
+
+    @media (max-width:$tablet-2) {
+      max-width: 320px;
+    }
+
+    @media (max-width:$mobile) {
+      max-width: 300px;
+      max-height: 124px;
+    }
   }
 
   .product {
@@ -183,4 +224,3 @@
   }
 
 }
-

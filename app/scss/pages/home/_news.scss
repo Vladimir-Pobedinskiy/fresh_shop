@@ -1,12 +1,26 @@
 // news
 .news {
   padding-bottom: 72px;
+  @media (max-width:$mobile){
+     padding-bottom: 49px; 
+  }
 
   &__top {
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width:$mobile) {
+      margin-bottom: 26px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__top-title {
+    @media (max-width:$mobile){
+      width: 100%;      
+    }
   }
 
   &__top-link {
@@ -40,6 +54,16 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @media (max-width:$tablet-2) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width:$mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
   }
 
   &__day-wrapper {
@@ -72,10 +96,16 @@
   &__day-wrap {
     max-width: 410px;
     width: 100%;
-    height: 240px;
+    min-height: 240px;
+    height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    @media (max-width:$mobile) {
+      max-width: 100%;
+      min-height: 200px;
+    }
   }
 
   &__day-block {
@@ -114,15 +144,18 @@
     padding: 18px;
     max-width: 410px;
     width: 100%;
-    min-height: 108px;
-    height: auto;
+    flex: 1 1 auto;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
+    @media (max-width:$mobile){
+      flex: 0 0 auto;
+      max-width: 100%;
+      padding: 15px;
+    }
   }
 
   &__day-text-link {
-    position: absolute;
-    max-width: 374px;
+    max-width: 370px;
     width: 100%;
     @extend %opensans-600;
     @include line-clamp(3);
@@ -142,6 +175,9 @@
       border-radius: 3px;
       color: $green-900;
     }
+    @media (max-width:$mobile){
+      font-size: 14px;
+      line-height: 1.4; 
+    }
   }
 }
-
