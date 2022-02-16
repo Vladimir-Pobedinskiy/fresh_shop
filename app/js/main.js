@@ -1,11 +1,11 @@
 $(function(){
 
-	  //Меню бургер
-		$('.nav, .menu__list').on('click', function(){
-			$('.menu-icon').toggleClass('menu-icon--active');
-			$('.nav__body').toggleClass('nav__body--active');
-			$('body').toggleClass('lock');
-		})
+//Меню бургер
+$('.nav, .menu__list').on('click', function(){
+	$('.menu-icon').toggleClass('menu-icon--active');
+	$('.nav__body').toggleClass('nav__body--active');
+	$('body').toggleClass('lock');
+})
 
 // стилизация select
 $('.select-style').styler();
@@ -105,15 +105,6 @@ var mixer2 = mixitup(containerEl2, config);
 
 // JS
 
-// замена значения placeholer при адаптиве
-var inp = document.querySelector('.header-bottom__input');
-window.addEventListener('resize', changePlaceholder);
-changePlaceholder.call(window);
-
-function changePlaceholder() {
-  inp.setAttribute('placeholder', this.innerWidth >= 768 ? 'Найти в магазине ...' : 'Я ищу ...');
-}
-
 // слайдер header__top
 new Swiper('.slider__top', {
   speed: 700,
@@ -179,44 +170,88 @@ new Swiper('.partners__swiper', {
 });
 
 
-// добавление, удаление класса у button вида расположения товаров
-const list = document.querySelectorAll('.content-filter__button')
-list.forEach(item =>{ 
-       item.addEventListener('click', (e) =>{
-       list.forEach(el=>{ el.classList.remove('--active'); });
-       item.classList.add('--active');
-   })
- 
-});
-
 
 // открытие меню каталога
 const catalogMenu = function () {
 
-const list = document.querySelector('.header__bottom-catalog');
-const catalogList = document.querySelector('.header__bottom-catalog-list');
-const arrowCatalogList = document.querySelector('.header__bottom-catalog-icon-arrow');
+	const list = document.querySelector('.header__bottom-catalog');
+	const catalogList = document.querySelector('.header__bottom-catalog-list');
+	const arrowCatalogList = document.querySelector('.header__bottom-catalog-icon-arrow');
+	
+	list.addEventListener('click', (event) => {
+		list.classList.toggle('--active');
+		catalogList.classList.toggle('--active');
+		arrowCatalogList.classList.toggle('--active');
+	})
+	
+	window.addEventListener('click', (event) => { 
+		const target = event.target; 
+		if (!target.closest('.header__bottom-catalog')) { 
+			list.classList.remove('--active');
+			catalogList.classList.remove('--active');
+			arrowCatalogList.classList.remove('--active');
+		}
+	})
+	
+	}
+	catalogMenu ();
+	
 
-list.addEventListener('click', (event) => {
-  list.classList.toggle('--active');
-  catalogList.classList.toggle('--active');
-  arrowCatalogList.classList.toggle('--active');
-})
+// замена значения placeholer при адаптиве
+var inp = document.querySelector('.header-bottom__input');
+window.addEventListener('resize', changePlaceholder);
+changePlaceholder.call(window);
 
-window.addEventListener('click', (event) => { 
-  const target = event.target; 
-  if (!target.closest('.header__bottom-catalog')) { 
-    list.classList.remove('--active');
-    catalogList.classList.remove('--active');
-    arrowCatalogList.classList.remove('--active');
-  }
-})
-
+function changePlaceholder() {
+  inp.setAttribute('placeholder', this.innerWidth >= 768 ? 'Найти в магазине ...' : 'Я ищу ...');
 }
-catalogMenu ();
 
 
-// кнопка поиска
+// добавление, удаление класса у button вида расположения товаров на странице каталога
+const list = document.querySelectorAll('.content-filter__button')
+list.forEach(item =>{ 
+       item.addEventListener('click', (e) =>{
+       list.forEach(el=>{ el.classList.remove('content-filter__button--active'); });
+       item.classList.add('content-filter__button--active');
+   })
+ 
+});
+
+// вид расположения товара на странице каталога
+const buttonList = document.querySelector('.button-list');
+const buttonGrid = document.querySelector('.button-grid');
+const contentProduct = document.querySelectorAll('.filters-catalog__content-product');
+const contentProductList = document.querySelectorAll('.filters-catalog__content-list');
+
+buttonList.addEventListener("click", function(event) {
+  event.preventDefault();
+	contentProductList.forEach((el) => {
+    el.classList.add("filters-catalog__content-list--list");
+  });
+  contentProduct.forEach((el) => {
+    el.classList.add("filters-catalog__content-product--list");
+  });
+});
+
+buttonGrid.addEventListener("click", function(event) {
+  event.preventDefault();
+	contentProductList.forEach((el) => {
+    el.classList.remove("filters-catalog__content-list--list");
+  });
+  contentProduct.forEach((el) => {
+    el.classList.remove("filters-catalog__content-product--list");
+  });
+});
+
+// buttonList.addEventListener("click", function(event) {
+//   event.preventDefault();
+//   for(var i = 0; i < contentProduct.length; i++) {
+//     contentProduct[i].classList.add("filters-catalog__content-product--list");
+//   }
+// });
+
+
+// кнопка поиска (скрытие, открытие при адаптиве)
 const searchHeader = function () {
 
 	const search = document.querySelector('.user-nav__item-search');

@@ -201,6 +201,12 @@
       color: #C1C1C1;
     }
 
+    &__bottom-new-price {
+      @extend %opensans-600;
+      font-size: 18px;
+      line-height: 1;
+    }
+
   }
 
 
