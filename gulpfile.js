@@ -31,7 +31,7 @@ function browsersync() {
 }
 
 const htmlInclude = () => {
-  return src(['app/html/**/*.html']) 
+  return src(['app/html/*.html']) 
   .pipe(fileInclude({
     prefix: '@',
     basepath: '@file',    // включить файл относительно каталога, в котором находится файл (пример)
