@@ -328,13 +328,77 @@
 
         <div class="filters-catalog__content-products-wrap">
 
-          <ul class="filters-catalog__content-list">
+          <div class="filters-catalog__content-list">
 
-            <li class="filters-catalog__content-product product">
+            <article class="filters-catalog__content-product product">
 
-            </li>
+              <div class="product__visual-block">
+  
+                <ul class="product__top">
+  
+                  <li class="product__top-item">
+                    <button class="badges badges--novelty" type="button">новинка</button>
+                  </li>
+                  <li class="product__top-item">
+                    <button class="badges badges--sale" type="button">-50%</button>
+                  </li>
+  
+                </ul>
+  
+                <button class="product__top-heart-button" type="button">
+                  <svg class="product__top-heart">
+                    <use xlink:href="images/sprite.svg#icon-heart"></use>
+                  </svg>
+                </button>
+  
+                <a data-fancybox class="product__image-link" href="images/products/pineapple.svg">
+                  <img class="product__image" src="images/products/pineapple.svg" alt="ананасы">
+                </a>
+  
+              </div>
+  
+              <div class="product__info-block">
+                <a class="product__link" href="#">
+                  <h3 class="product__title">Ананас, 1кг</h3>
+                </a>
+                <div class="product__bottom">
+  
+                  <ul class="product__bottom-price-list">
+                    <li class="product__bottom-price-item">
+                      <p class="product__bottom-price product__bottom-old-price">1999 ₽</p>
+                    </li>
+                    <li class="product__bottom-price-item">
+                      <p class="product__bottom-new-price">999 ₽</p>
+                    </li>
+                  </ul>
+  
+                  <form class="product__bottom-counter counter" action="#">
+  
+                    <button class="counter__button counter__button--minus" type="button" data-direction="minus">
+                      <img src="images/counter/minus.svg" alt="минус">
+                    </button>
+  
+                    <label>
+                      <input class="counter__value" type="text" value="0" name="product-quantity">
+                    </label>
+  
+                    <button class="counter__button counter__button--plus" type="button" data-direction="plus">
+                      <img src="images/counter/plus.svg" alt="плюс">
+                    </button>
+  
+                  </form>
+  
+                  <button class="product__bottom-cart-button" type="button">
+                    <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
+                  </button>
+  
+                </div>
+  
+              </div>
+  
+            </article>
 
-          </ul>
+          </div>
 
         </div>
 
