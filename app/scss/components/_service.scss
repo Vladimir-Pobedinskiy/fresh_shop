@@ -2,7 +2,8 @@
   min-height: 146px;
   height: auto;
   background-color: #F6F6F6;
-  @media (max-width:$tablet){
+
+  @media (max-width:$tablet) {
     min-height: 270px;
   }
 
@@ -10,14 +11,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 115px 0 185px;
-    @media (max-width:$desktop){
+
+    @media (max-width:$desktop) {
       padding: 0 0 0 50px;
     }
-    @media (max-width:$tablet-2){
+
+    @media (max-width:$tablet-2) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width:$mobile){
-     
+
+    @media (max-width:$mobile) {
+
       justify-items: start;
       grid-template-columns: repeat(1, 1fr);
     }
@@ -31,12 +35,14 @@
     max-width: 264px;
     width: 100%;
     position: relative;
-    @media (max-width:$tablet-2){
+
+    @media (max-width:$tablet-2) {
       padding: 31px 0 0;
     }
-    @media (max-width:$mobile){
-       margin-left: 25px; 
-       margin-bottom: -19px;
+
+    @media (max-width:$mobile) {
+      margin-left: 25px;
+      margin-bottom: -19px;
     }
 
   }

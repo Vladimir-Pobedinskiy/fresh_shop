@@ -1,9 +1,11 @@
 //partners
 .partners {
   padding: 74px 0 66px;
-  @media (max-width:$mobile){
+
+  @media (max-width:$mobile) {
     padding: 57px 0 31px;
   }
+
   &__container {
     max-width: 1190px;
     margin: 0 auto;
@@ -44,10 +46,10 @@
     }
   }
 
-.swiper-button-prev,
-.swiper-button-next {
-  display: none;
-}
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 
   .partners__swiper-pagination {
     margin-bottom: 5px;

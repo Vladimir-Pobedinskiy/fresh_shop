@@ -549,6 +549,9 @@ main {
   @media (max-width:$desktop){
     top: 0;
   }
+  @media (max-width:$desktop){
+    left: 30%;
+  }
   @media (max-width:$tablet){
     top: 0;
     left: 30%;

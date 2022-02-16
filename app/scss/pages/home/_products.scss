@@ -110,7 +110,11 @@
 
   .product__bottom {
     margin-top: auto;
-    min-height: 85px;
+    min-height: 74px;
+
+    @media (max-width:$mobile) {
+      min-height: 85px;
+    }
   }
 
   &__button {

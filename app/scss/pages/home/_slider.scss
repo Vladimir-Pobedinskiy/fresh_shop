@@ -17,8 +17,9 @@
     flex: 1 1 auto;
     padding: 0 150px;
     margin: 0 auto;
-    @media (max-width:$desktop){
-        padding: 0;
+
+    @media (max-width:$desktop) {
+      padding: 0;
     }
   }
 
@@ -29,10 +30,12 @@
     display: flex;
     align-items: center;
     cursor: grab;
-    @media (max-width:$tablet){
+
+    @media (max-width:$tablet) {
       min-height: 550px;
     }
-    @media (max-width:$mobile){
+
+    @media (max-width:$mobile) {
       min-height: 320px;
     }
   }
@@ -44,10 +47,12 @@
     height: auto;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.8);
-    @media (max-width:$tablet){
+
+    @media (max-width:$tablet) {
       padding: 15px;
     }
-    @media (max-width:$mobile){
+
+    @media (max-width:$mobile) {
       padding: 15px 15px 5px;
     }
 
@@ -64,16 +69,19 @@
     line-height: 1.3;
     text-transform: uppercase;
     color: $dark-500;
-    @media (max-width:$tablet-2){
+
+    @media (max-width:$tablet-2) {
       max-width: 662px;
-       font-size: 50px; 
+      font-size: 50px;
     }
-    @media (max-width:$tablet){
+
+    @media (max-width:$tablet) {
       max-width: 562px;
-      font-size: 40px; 
+      font-size: 40px;
     }
-    @media (max-width:$mobile){
-       font-size: 20px; 
+
+    @media (max-width:$mobile) {
+      font-size: 20px;
     }
   }
 
@@ -91,11 +99,13 @@
     font-size: 16px;
     line-height: 1.4;
     color: $dark-500;
-    @media (max-width:$tablet){
+
+    @media (max-width:$tablet) {
       margin-bottom: 35px;
     }
-    @media (max-width:$mobile){
-      margin-bottom: 27px; 
+
+    @media (max-width:$mobile) {
+      margin-bottom: 27px;
     }
   }
 
@@ -116,8 +126,8 @@
       box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    @media (max-width:$mobile){
-       font-size: 14px; 
+    @media (max-width:$mobile) {
+      font-size: 14px;
     }
 
   }
@@ -162,9 +172,8 @@
       background-color: #F3F3F2;
     }
 
-    @media (max-width:$desktop){
-       visibility: hidden;
-
+    @media (max-width:$desktop) {
+      visibility: hidden;
     }
 
   }
@@ -197,8 +206,9 @@
 
   .slider__top-pagination {
     margin-bottom: 15px;
-    @media (max-width:$mobile){
-       margin-bottom: 0; 
+
+    @media (max-width:$mobile) {
+      margin-bottom: 0;
     }
   }
 
@@ -208,7 +218,8 @@
     height: 16px;
     background-color: $green-900;
     outline: transparent;
-    @media (max-width:$mobile){
+
+    @media (max-width:$mobile) {
       width: 10px;
       height: 10px;
       margin: 0 8px !important;
