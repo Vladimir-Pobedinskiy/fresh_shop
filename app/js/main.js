@@ -1,15 +1,15 @@
 $(function(){
 
 //Меню бургер
-$('.nav, .menu__list').on('click', function(){
+$('.nav').on('click', function(){
 	$('.menu-icon').toggleClass('menu-icon--active');
 	$('.nav__body').toggleClass('nav__body--active');
 	$('body').toggleClass('lock');
 })
 
+
 // стилизация select
 $('.select-style').styler();
-
 
 // rangeSlider (фильтр цены)
 var $range = $(".price-filter__input");
@@ -45,7 +45,6 @@ function updateInputs (data) {
 $inputFrom.on("change", function () {
     var val = $(this).prop("value");
 
-    // validate
     if (val < min) {
         val = min;
     } else if (val > to) {
@@ -63,7 +62,6 @@ $inputFrom.on("change", function () {
 $inputTo.on("change", function () {
     var val = $(this).prop("value");
 
-    // validate
     if (val < from) {
         val = from;
     } else if (val > max) {
@@ -169,8 +167,6 @@ new Swiper('.partners__swiper', {
 
 });
 
-
-
 // открытие меню каталога
 const catalogMenu = function () {
 
@@ -193,9 +189,22 @@ const catalogMenu = function () {
 		}
 	})
 	
-	}
-	catalogMenu ();
+}
+catalogMenu ();
+
 	
+// кнопка поиска (скрытие, открытие при адаптиве)
+const searchHeader = function () {
+
+	const search = document.querySelector('.user-nav__item-search');
+	const headerFormSearch = document.querySelector('.header-bottom__form');
+	
+	search.addEventListener('click', (event) => {
+		headerFormSearch.classList.toggle('header-bottom__form--active');
+	})
+	
+}
+searchHeader ();
 
 // замена значения placeholer при адаптиве
 var inp = document.querySelector('.header-bottom__input');
@@ -206,6 +215,33 @@ function changePlaceholder() {
   inp.setAttribute('placeholder', this.innerWidth >= 768 ? 'Найти в магазине ...' : 'Я ищу ...');
 }
 
+// счетчик товаров каталога
+const counter = function () {
+	const btns = document.querySelectorAll('.counter__button');
+	
+		btns.forEach(btn => {
+			btn.addEventListener('click', function () {
+				const direction = this.dataset.direction;
+				const inp = this.parentElement.querySelector('.counter__value');
+				const currentValue = +inp.value;
+				let newValue;
+	
+				if (direction === 'plus') {
+					newValue = currentValue + 1;
+				} else {
+					newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+				}
+	
+				if (newValue > 99) {
+					return 99;
+				}
+	
+				inp.value = newValue;
+			})
+		})
+	
+}
+counter();
 
 // добавление, удаление класса у button вида расположения товаров на странице каталога
 const list = document.querySelectorAll('.content-filter__button')
@@ -251,51 +287,27 @@ buttonGrid.addEventListener("click", function(event) {
 // });
 
 
-// кнопка поиска (скрытие, открытие при адаптиве)
-const searchHeader = function () {
+// функция скрытия сайдбара при адаптиве
+const sidebarHidden = function () {
 
-	const search = document.querySelector('.user-nav__item-search');
-	const headerFormSearch = document.querySelector('.header-bottom__form');
-	
-	search.addEventListener('click', (event) => {
-		//search.classList.toggle('--active');
-		headerFormSearch.classList.toggle('header-bottom__form--active');
-	})
-	
-	}
-	searchHeader ();
+const buttonFilters = document.querySelector('.content-filter__button-sidebar-hidden');
+const sidebarBox = document.querySelector('.sidebar-box');
+const menuIconSidebar = document.querySelector('.menu-icon-sidebar');
+const bodyLock = document.querySelector('.body');
 
-
-
-
-// счетчик товаров каталога
-const counter = function () {
-const btns = document.querySelectorAll('.counter__button');
-
-
-  btns.forEach(btn => {
-    btn.addEventListener('click', function () {
-      const direction = this.dataset.direction;
-      const inp = this.parentElement.querySelector('.counter__value');
-      const currentValue = +inp.value;
-      let newValue;
-
-      if (direction === 'plus') {
-        newValue = currentValue + 1;
-      } else {
-        newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
-      }
-
-      if (newValue > 99) {
-        return 99;
-      }
-
-      inp.value = newValue;
-    })
-  })
+buttonFilters.addEventListener('click', (event) => {
+	sidebarBox.classList.toggle('sidebar-box--active');
+	bodyLock.classList.toggle('lock');
+	menuIconSidebar.classList.toggle('menu-icon-sidebar--active');
+})
+menuIconSidebar.addEventListener('click', (event) => {
+	sidebarBox.classList.toggle('sidebar-box--active');
+	menuIconSidebar.classList.toggle('menu-icon-sidebar--active');
+	bodyLock.classList.toggle('lock');
+})
 
 }
-counter();
+sidebarHidden ();
 
 
 // SPOLLERS
@@ -440,7 +452,9 @@ let _slideToggle = (target, duration = 500) => {
 spollersFilter();
 
 
-// Dynamic Adaptiv
+
+
+// Dynamic Adapt 
 
 "use strict";
 
