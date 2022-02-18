@@ -173,8 +173,8 @@ const catalogMenu = function () {
 	const list = document.querySelector('.header__bottom-catalog');
 	const catalogList = document.querySelector('.header__bottom-catalog-list');
 	const arrowCatalogList = document.querySelector('.header__bottom-catalog-icon-arrow');
-	
-	list.addEventListener('click', (event) => {
+
+	list.addEventListener('click', (event) => { 
 		list.classList.toggle('--active');
 		catalogList.classList.toggle('--active');
 		arrowCatalogList.classList.toggle('--active');
@@ -454,7 +454,10 @@ spollersFilter();
 
 
 
-// Dynamic Adapt 
+
+// Dynamic Adapt v.1
+
+const dynamicAdaptiv = function () {
 
 "use strict";
 
@@ -611,3 +614,7 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
+
+}
+
+dynamicAdaptiv ();

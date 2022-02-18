@@ -46,42 +46,58 @@
         </ul>
 
         <nav class="nav">
-          <button class="nav__icon-button menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span></button>
+          
+          <button class="nav__icon-button menu-icon" type="button"><span class="sr-only">логотип меню бургер</span></button>
+
           <div class="nav__body">
 
             <div class="nav__top container-body">
+
               <a class="nav__link" href="#">
                 <svg class="nav__link-logo">
                   <use xlink:href="images/sprite.svg#icon-logo"></use>
                 </svg>
               </a>
 
-              <button class="menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span></button>
+              <button class="menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span>
+              </button>
+
             </div>
 
             <div class="nav__login">
 
-              <a class="nav__login-list container-body" href="#">
-                <svg class="user-nav__icon nav__login-item">
-                  <use xlink:href="images/sprite.svg#icon-user"></use>
-                </svg>
-                <span class="nav__login-item">Вход</span>
-                <span class="nav__login-item">|</span>
-                <span class="nav__login-item">Регистрация</span>
-              </a>
-
+                <ul class="nav__login-list">
+                    <a class="nav__login-link" href="#">
+                      <svg class="nav__login-icon">
+                        <use xlink:href="images/sprite.svg#icon-user"></use>
+                      </svg>
+                    </a>
+                  <li class="nav__login-item">
+                    <a class="nav__login-link" href="#">Вход</a>
+                  </li>
+                  <li class="nav__login-item">
+                    <a class="nav__login-link" href="#">Регистрация</a>
+                  </li>
+                </ul>
+              
             </div>
 
             <div class="nav__catalog">
-              
+
             </div>
 
             <div class="nav__contacts contacts container-body">
 
-              <a class="nav__contacts-link nav__contacts-link-tel" href="tel:+7907288365">+7 907 288 365</a>
-              <a class="nav__contacts-link nav__contacts-link-location" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+              <ul class="nav__contacts contacts__callback">
+                <li class="nav__contacts-item contacts__callback-item ">
+                  <a class="nav__contacts-link nav__contacts-link--tel" style="background-image: url(images/icon-tel.svg);" href="tel:+7907288365">+7 907 288 365</a>
+                </li>
+                <li class="nav__contacts-item nav__contacts-item--location contacts__callback-item">
+                  <a class="nav__contacts-link nav__contacts-link--location" style="background-image: url(images/icon-location.svg);" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+                </li>
+              </ul>
       
-              <ul class="nav__contacts-socials contacts__socials socials">
+              <ul class="nav__socials contacts__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="socials__link-icon" style="width: 32; height: 32">
@@ -191,7 +207,7 @@
           <img class="header__bottom-logoshort" src="images/logo-short.svg" alt="логотип сайта">
         </a>
 
-        <div class="header__bottom-catalog-box">
+        <div class="header__bottom-catalog-box" data-da=".nav__catalog,768,3">
 
           <button class="header__bottom-catalog" type="button">
             <svg class="header__bottom-catalog-icon">
@@ -242,9 +258,10 @@
             </li>
 
           </ul>
+
         </div>
 
-        <form class="header-bottom__form header-bottom__form--active" data-da=".header,1200,last" action="#">
+        <form class="header-bottom__form" action="#">
 
           <label class="screen-reader-only"> метка для формы поиска</label>
 
@@ -1891,14 +1908,13 @@
 
   <footer class="footer">
 
-  <div class="footer__top-container container">
-    <a class="footer__top-logo screen-reader-only" href="#"><img class="logo" src="images/logo.svg"
-        alt="логотип сайта">логотип футера</a>
-  </div>
-
   <div class="footer__top">
-    <div class="footer__top-wrapper  container">
-
+    <div class="footer__top-wrapper container">
+      <div class="footer__logo-box">
+        <a class="footer__top-logo screen-reader-only" href="#"><img class="logo" src="images/logo.svg"
+            alt="логотип сайта">логотип футера
+        </a>
+      </div>
       <div class="footer__promotion">
         <p class="footer__top-text">Следите за нашими акциями</p>
         <form class="footer__email" action="#">
@@ -1940,7 +1956,7 @@
           <li class="footer__about-item">
             <a class="footer__about-link" href="#">Отзывы</a>
           </li>
-          
+
           <li class="footer__about-item">
             <a class="footer__about-link" href="#">Новости</a>
           </li>
@@ -1949,11 +1965,21 @@
 
       </nav>
 
-      <div class="contacts" data-da=".footer__top-container,1200,last">
-        <a class="contacts__link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
-        <a class="contacts__link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+      <div class="contacts">
+
+        <ul class="contacts__callback">
+
+          <li class="contacts__callback-item">
+            <a class="contacts__link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
+          </li>
+          <li class="contacts__callback-item">
+            <a class="contacts__link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+          </li>
+
+        </ul>
 
         <ul class="contacts__socials socials">
+
           <li class="socials__item">
             <a class="socials__link" href="#">
               <svg class="socials__link-icon" style="width: 32; height: 32">
@@ -1982,9 +2008,11 @@
               </svg>
             </a>
           </li>
+
         </ul>
+
       </div>
-      
+
     </div>
   </div>
 

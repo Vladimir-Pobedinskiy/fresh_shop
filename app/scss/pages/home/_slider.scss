@@ -61,7 +61,7 @@
   &__title,
   &__subtitle {
     display: block;
-    max-width: 762px;
+    max-width: 780px;
     width: 100%;
     @include line-clamp(2);
     @extend %ruda-900;
@@ -71,7 +71,7 @@
     color: $dark-500;
 
     @media (max-width:$tablet-2) {
-      max-width: 662px;
+      max-width: 700px;
       font-size: 50px;
     }
 

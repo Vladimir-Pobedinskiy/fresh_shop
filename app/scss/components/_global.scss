@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-  font-size: 14px;
 }
 
 .body.lock {
@@ -40,6 +39,10 @@ main {
 }
 
 .screen-reader-only {
+ font-size: 0;
+}
+
+.sr-only {
   font-size: 0;
 }
 
@@ -73,167 +76,6 @@ main {
   cursor: pointer;
   background-color: $green-900;
   color: $white;
-}
-
-// меню бургер
-.nav {
-  display: none;
-
-  @media (max-width:$tablet) {
-    cursor: pointer;
-    display: block;
-    z-index: 15;
-  }
-
-  .container-body {
-    padding: 0 15px;
-  }
-
-  &__body {
-    padding: 25px 0;
-    position: fixed;
-    left: -100%;
-    top: 0;
-    height: 100%;
-    width: 80%;
-    overflow: auto;
-    background-color: $white;
-    z-index: 15;
-    transition: left 0.4s ease;
-
-    &.nav__body--active {
-      left: 0;
-    }
-  }
-
-  &__top {
-    margin-bottom: 26px;
-    height: auto;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  &__link {
-    max-width: 200px;
-    width: 100%;
-    height: 60px;
-  }
-
-  &__link-logo {
-    max-width: 200px;
-    width: 100%;
-    height: 60px;
-    fill: #63A60E;
-  }
-
-  &__login {
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    background-color: $green-900;
-  }
-
-  &__login-list {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-
-  &__login-item {
-    margin-right: 12px;
-    @extend %opensans-400;
-    color: $white;
-    font-size: 18px;
-    line-height: 1;
-    letter-spacing: 0.03rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__catalog {
-    margin-bottom: 24px;
-  }
-
-  .contacts {
-    margin-bottom: 24px;
-    max-width: 100%;
-    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
-  }
-
-  &__contacts-socials {
-    margin-bottom: 8px;
-  }
-
-  .socials__item {
-    border: none;
-  }
-
-  .socials__link-icon {
-    fill: $dark-800;
-  }
-
-  &__contacts-link {
-    display: block;
-    width: 100%;
-    padding-left: 40px;
-    margin-bottom: 18px;
-    color: $dark-800;
-    @extend %opensans-400;
-    font-size: 18px;
-    line-height: 1.2;
-    letter-spacing: 0.03rem;
-    position: relative;
-  }
-
-  &__contacts-link-location {
-    display: flex;
-    align-items: center;
-    min-height: 40px;
-  }
-
-  &__contacts-link-tel::before,
-  &__contacts-link-location::before {
-    content: '';
-    left: 0;
-    top: 0;
-    width: 24px;
-    position: absolute;
-  }
-
-  &__contacts-link-tel::before {
-    height: 24px;
-    background-image: url(../../images/icon-tel.svg);
-  }
-
-  &__contacts-link-location::before {
-    height: 33px;
-    top: 6px;
-    background-image: url(../../images/icon-location.svg);
-  }
-
-  .nav-menu__item {
-    margin-bottom: 15px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .nav-menu__link {
-    @extend %opensans-400;
-    font-size: 18px;
-    line-height: 1.2;
-    letter-spacing: 0.03rem;
-    color: $dark-800;
-  }
-
 }
 
 // меню 
@@ -413,6 +255,7 @@ main {
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -761,7 +604,7 @@ main {
     border-bottom: 1px solid $silver-600;
     position: absolute;
     content: "";
-    width: 100%;
+    width: 85%;
     height: 50%;
     transform: rotate(-7deg);
   }
@@ -813,12 +656,23 @@ main {
 
 }
 
-
 // контакты
 .contacts {
   max-width: 220px;
   width: 100%;
   height: auto;
+
+  &__callback {
+    margin-bottom: 15px;
+  }
+
+  &__callback-item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   &__link {
     display: block;
@@ -827,11 +681,9 @@ main {
     outline: transparent;
     @extend %opensans-400;
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1.4;
     color: $white;
     transition: opacity 0.3s ease, border 0.3s ease;
-    margin-bottom: 15px;
-
 
     &:hover {
       opacity: 0.7;
@@ -976,128 +828,6 @@ main {
 
 }
 
- /* прорисованное меню бургерв*/
- .menu-icon {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 30px;
-  height: 20px;
-  background-color: transparent;
-  z-index: 10;
-}
-
-.menu-icon span {
-  position: absolute;
-  background-color: #ffffff;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  top: 9px;
-  transition: transform 0.5s ease;
-}
-
-.menu-icon:before,
-.menu-icon:after {
-  content: '';
-  position: absolute;
-  background-color: #ffffff;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  z-index: 21;
-  transition: transform 0.5s ease;
-}
-
-.menu-icon--active.menu-icon:before,
-.menu-icon--active.menu-icon:after,
-.menu-icon--active.menu-icon span {
-  background-color: $dark-800;
-}
-
-.menu-icon:before {
-  top: 0;
-}
-
-.menu-icon:after {
-  bottom: 0;
-}
-
-.menu-icon.menu-icon--active span {
-  transform: scale(0);
-}
-
-.menu-icon.menu-icon--active:before {
-  transform: rotate(45deg);
-  top: 9px;
-}
-
-.menu-icon.menu-icon--active:after {
-  transform: rotate(-45deg);
-  bottom: 9px;
-}
-
-/* прорисованное меню бургер */
 
 
- /* прорисованное меню бургер сайдбара*/
- .menu-icon-sidebar {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 23px;
-  height: 20px;
-  background-color: transparent;
-}
 
-.menu-icon-sidebar span {
-  position: absolute;
-  background-color: $dark-800;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  top: 9px;
-  transition: transform 0.5s ease;
-}
-
-.menu-icon-sidebar:before,
-.menu-icon-sidebar:after {
-  content: '';
-  position: absolute;
-  background-color: $dark-800;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  z-index: 21;
-  transition: transform 0.5s ease;
-}
-
-.menu-icon-sidebar--active.menu-icon-sidebar:before,
-.menu-icon-sidebar--active.menu-icon-sidebar:after,
-.menu-icon-sidebar--active.menu-icon-sidebar span {
-  background-color: $dark-800;
-}
-
-.menu-icon-sidebar:before {
-  top: 0;
-}
-
-.menu-icon-sidebar:after {
-  bottom: 0;
-}
-
-.menu-icon-sidebar.menu-icon-sidebar--active span {
-  transform: scale(0);
-}
-
-.menu-icon-sidebar.menu-icon-sidebar--active:before {
-  transform: rotate(45deg);
-  top: 9px;
-}
-
-.menu-icon-sidebar.menu-icon-sidebar--active:after {
-  transform: rotate(-45deg);
-  bottom: 9px;
-}
-
-/* прорисованное меню бургер */

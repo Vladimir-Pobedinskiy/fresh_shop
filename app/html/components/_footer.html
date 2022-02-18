@@ -1,13 +1,12 @@
 <footer class="footer">
 
-  <div class="footer__top-container container">
-    <a class="footer__top-logo screen-reader-only" href="#"><img class="logo" src="images/logo.svg"
-        alt="логотип сайта">логотип футера</a>
-  </div>
-
   <div class="footer__top">
-    <div class="footer__top-wrapper  container">
-
+    <div class="footer__top-wrapper container">
+      <div class="footer__logo-box">
+        <a class="footer__top-logo screen-reader-only" href="#"><img class="logo" src="images/logo.svg"
+            alt="логотип сайта">логотип футера
+        </a>
+      </div>
       <div class="footer__promotion">
         <p class="footer__top-text">Следите за нашими акциями</p>
         <form class="footer__email" action="#">
@@ -49,7 +48,7 @@
           <li class="footer__about-item">
             <a class="footer__about-link" href="#">Отзывы</a>
           </li>
-          
+
           <li class="footer__about-item">
             <a class="footer__about-link" href="#">Новости</a>
           </li>
@@ -58,11 +57,21 @@
 
       </nav>
 
-      <div class="contacts" data-da=".footer__top-container,1200,last">
-        <a class="contacts__link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
-        <a class="contacts__link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+      <div class="contacts">
+
+        <ul class="contacts__callback">
+
+          <li class="contacts__callback-item">
+            <a class="contacts__link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
+          </li>
+          <li class="contacts__callback-item">
+            <a class="contacts__link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+          </li>
+
+        </ul>
 
         <ul class="contacts__socials socials">
+
           <li class="socials__item">
             <a class="socials__link" href="#">
               <svg class="socials__link-icon" style="width: 32; height: 32">
@@ -91,9 +100,11 @@
               </svg>
             </a>
           </li>
+
         </ul>
+
       </div>
-      
+
     </div>
   </div>
 

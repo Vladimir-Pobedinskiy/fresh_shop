@@ -66,6 +66,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    overflow: hidden
   }
 
   &__top-btn {
@@ -110,7 +111,7 @@
 
   .product__bottom {
     margin-top: auto;
-    min-height: 74px;
+    min-height: 82px;
 
     @media (max-width:$mobile) {
       min-height: 85px;
@@ -140,7 +141,7 @@
     }
 
     @media (max-width:$mobile) {
-      margin: 0 auto 50px;
+      margin: 0 auto 48px;
       font-size: 18px;
       padding: 11px 24px;
     }
@@ -284,14 +285,14 @@
 
   }
 
-  &__banner-item-first-child {
+  &__banner-text-decoration--white {
     &::before {
       background-color: $white;
     }
   }
 
-  &__banner-item-first-child,
-  &__banner-item-first-child a {
+  &__banner-text-decoration--white,
+  &__banner-text-decoration--white a {
     color: $white;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
 
@@ -300,8 +301,8 @@
     }
   }
 
-  &__banner-item-nth-child,
-  &__banner-item-nth-child a {
+  &__banner-text-decoration--black,
+  &__banner-text-decoration--black a {
     color: $dark-500;
 
     &:focus {
