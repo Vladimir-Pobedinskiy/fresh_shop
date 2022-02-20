@@ -424,7 +424,7 @@ main {
 
   &__top {
     padding: 6px 12px;
-    min-height: 47px;
+    min-height: 51px;
   }
 
   &__top-item {
@@ -814,6 +814,12 @@ main {
 
   &__icon-prev {
     fill: $silver-600;
+  }
+
+  &__icon-next,
+  &__icon-prev {
+    width: 11px;
+    height: 18px;
   }
 
 }

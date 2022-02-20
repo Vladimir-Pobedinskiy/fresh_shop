@@ -197,10 +197,12 @@ catalogMenu ();
 const searchHeader = function () {
 
 	const search = document.querySelector('.user-nav__item-search');
+	const headerBottom = document.querySelector('.header__bottom');
 	const headerFormSearch = document.querySelector('.header-bottom__form');
 	
 	search.addEventListener('click', (event) => {
 		headerFormSearch.classList.toggle('header-bottom__form--active');
+		headerBottom.classList.toggle('header__bottom--active');
 	})
 	
 }

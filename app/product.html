@@ -14,7 +14,7 @@
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="css/catalog.min.css">
+  <link rel="stylesheet" href="css/product.min.css">
   <title>Fresh shop | product</title>
 </head>
 
@@ -341,7 +341,7 @@
         </li>
 
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Питахайя красная с белой мякотью</a>
+          <span class="breadcrumbs__link">Питахайя красная с белой мякотью</span>
         </li>
 
       </ul>
@@ -349,6 +349,145 @@
     </div>
   </div>
 </div>
+    <section class="product-content">
+
+  <h2 class="screen-reader-only">Страница товара</h2>
+
+  <article class="product-content__item product">
+
+    <div class="product__image">
+
+      <a data-fancybox class="product__image-link" href="images/products/dragon-fruit.svg">
+        <img class="product__image" src="images/products/dragon-fruit.svg" alt="питахайя красная">
+      </a>
+
+    </div>
+
+    <div class="product__info-block">
+
+      <a class="product__link" href="#">
+        <h3 class="product__title">Питахайя красная с белой мякотью, 1шт</h3>
+      </a>
+
+      <button class="badges badges--hit" type="button">хит</button>
+
+      <div class="product__status-block">
+
+        <span class="product__code">Код: 0111111</span>
+
+        <div class="star-box">
+          <p class="star-box__info">4.5</p>
+          <div class="star-box__star screen-reader-only"> рейтинг</div>
+        </div>
+
+        <p class="product__subtitle">в наличии</p>
+
+        <ul class="product__bottom-price-list">
+          <li class="product__bottom-price-item">
+            <p class="product__bottom-price product__bottom-old-price">149 ₽</p>
+          </li>
+          <li class="product__bottom-price-item">
+            <p class="product__bottom-new-price">99 ₽</p>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="product__cart-block">
+
+        <form class="product__bottom-counter counter" action="#">
+
+          <button class="counter__button counter__button--minus" type="button" data-direction="minus">
+            <img src="images/counter/minus.svg" alt="минус">
+          </button>
+
+          <label>
+            <input class="counter__value" type="text" value="0" name="product-quantity">
+          </label>
+
+          <button class="counter__button counter__button--plus" type="button" data-direction="plus">
+            <img src="images/counter/plus.svg" alt="плюс">
+          </button>
+
+          <button class="product__bottom-cart-button" type="submit">
+            <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
+          </button>
+
+          <button class="product__top-heart-button" type="button">
+            <svg class="product__top-heart">
+              <use xlink:href="images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+
+        </form>
+
+      </div>
+
+      <div class="product__delivery-block">
+        <h4 class="product__delivery-block-title">доставка</h4>
+
+        <ul class="product__delivery-list">
+
+          <li class="product__delivery-item">
+            Минимальная сумма заказа - 100 руб.
+          </li>
+          <li class="product__delivery-item">
+            Время доставки заказа - 60-120 мин.
+          </li>
+          <li class="product__delivery-item">
+            Оплата осуществляется только банковской картой.
+          </li>
+          <li class="product__delivery-item">
+            Окончательная сумма заказа формируется после сбора товаров.
+          </li>
+
+        </ul>
+
+        <a class="product__delivery-link" href="#">Подробнее</a>
+
+      </div>
+
+
+    </div>
+
+  </article>
+
+  <div data-tabs class="product-content__tabs tabs">
+    <nav data-tabs-titles class="tabs__navigation">
+      <button type="button" class="tabs__title _tab-active">описание</button>
+      <button type="button" class="tabs__title">характеристики</button>
+      <button type="button" class="tabs__title">отзывы</button>
+    </nav>
+    <div data-tabs-body class="tabs__content">
+      <div class="tabs__body description-tab">
+        <ul class="description-tab__list">
+          <li class="description-tab__item">
+            <p>Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
+            </p>
+          </li>
+          <li class="description-tab__item">
+            <p>Витамины: С, Е, РР, витамины группы В
+            </p>
+          </li>
+          <li class="description-tab__item">
+            <p>Микроэлементы: железо, калий, кальций, магний, фосфор
+            </p>
+          </li>
+          <li class="description-tab__item">
+            <p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="tabs__body">
+        Содержимое второго таба
+      </div>
+      <div class="tabs__body">
+        Содержимое третьего таба
+      </div>
+    </div>
+  </div>
+
+</section>
     <div class="service">
   <div class="service__wrapper">
     <div class="container">
