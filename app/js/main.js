@@ -297,13 +297,11 @@ const bodyLock = document.querySelector('.body');
 
 buttonFilters.addEventListener('click', (event) => {
 	sidebarBox.classList.toggle('sidebar-box--active');
-	bodyLock.classList.toggle('lock');
 	menuIconSidebar.classList.toggle('menu-icon-sidebar--active');
 })
 menuIconSidebar.addEventListener('click', (event) => {
 	sidebarBox.classList.toggle('sidebar-box--active');
 	menuIconSidebar.classList.toggle('menu-icon-sidebar--active');
-	bodyLock.classList.toggle('lock');
 })
 
 }

@@ -7,16 +7,6 @@ body {
   overflow: hidden;
 }
 
-.categories__list::-webkit-scrollbar {
-  width: 7px;
-  height: 104px;
-}
-
-.categories__list::-webkit-scrollbar-thumb {
-  background: #C4C4C4;
-  border-radius: 9px;
-}
-
 body {
   display: flex;
   flex-direction: column;
