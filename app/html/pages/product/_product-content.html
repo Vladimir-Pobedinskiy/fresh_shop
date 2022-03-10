@@ -2,20 +2,28 @@
 
   <h2 class="screen-reader-only">Страница товара</h2>
 
-  <article class="product-content__item product">
+  <article class="product-content__item product container">
 
-    <div class="product__image">
+    <div class="swiper product__swiper product__image-wrapper">
 
-      <a data-fancybox class="product__image-link" href="images/products/dragon-fruit.svg">
-        <img class="product__image" src="images/products/dragon-fruit.svg" alt="питахайя красная">
-      </a>
+
+        <div class="small-slider">
+          <a class="product__image-link" href="images/products/dragonfruit-big.jpg">
+            <img class="product__image" src="images/fruit_dragonfruit_420.svg" />
+          </a>
+          <a class="product__image-link" href="images/products/dragonfruit-big.jpg">
+            <img class="product__image" src="images/fruit_dragonfruit_420.svg" />
+          </a>
+    
+        </div>
+
 
     </div>
 
-    <div class="product__info-block">
+    <div class="product__info">
 
       <a class="product__link" href="#">
-        <h3 class="product__title">Питахайя красная с белой мякотью, 1шт</h3>
+        <h3 class="product__title">Питахайя красная с белой мякотью</h3>
       </a>
 
       <button class="badges badges--hit" type="button">хит</button>
@@ -24,42 +32,48 @@
 
         <span class="product__code">Код: 0111111</span>
 
-        <div class="star-box">
-          <p class="star-box__info">4.5</p>
-          <div class="star-box__star screen-reader-only"> рейтинг</div>
-        </div>
+        <span class="star-box">
+          <div class="star-box__star-product screen-reader-only" data-rateyo-rating="4"> рейтинг</div>
+        </span>
 
         <p class="product__subtitle">в наличии</p>
 
-        <ul class="product__bottom-price-list">
-          <li class="product__bottom-price-item">
-            <p class="product__bottom-price product__bottom-old-price">149 ₽</p>
-          </li>
-          <li class="product__bottom-price-item">
-            <p class="product__bottom-new-price">99 ₽</p>
-          </li>
-        </ul>
-
       </div>
+
+      <ul class="product__bottom-price-list">
+        <li class="product__bottom-price-item">
+          <p class="product__bottom-price product__bottom-old-price">299 ₽</p>
+        </li>
+        <li class="product__bottom-price-item">
+          <p class="product__bottom-new-price">199 ₽</p>
+        </li>
+      </ul>
 
       <div class="product__cart-block">
 
-        <form class="product__bottom-counter counter" action="#">
+        <form class="product__bottom-form" action="#">
 
-          <button class="counter__button counter__button--minus" type="button" data-direction="minus">
-            <img src="images/counter/minus.svg" alt="минус">
-          </button>
+          <div class="counter">
 
-          <label>
-            <input class="counter__value" type="text" value="0" name="product-quantity">
-          </label>
+            <button class="counter__button counter__button--minus" type="button" data-direction="minus">
+              <img class="counter__button-img" src="images/counter/minus.svg" alt="минус">
+            </button>
 
-          <button class="counter__button counter__button--plus" type="button" data-direction="plus">
-            <img src="images/counter/plus.svg" alt="плюс">
-          </button>
+            <label>
+              <input class="counter__value" type="text" value="0" name="product-quantity">
+            </label>
+
+            <button class="counter__button counter__button--plus" type="button" data-direction="plus">
+              <img class="counter__button-img" src="images/counter/plus.svg" alt="плюс">
+            </button>
+
+          </div>
 
           <button class="product__bottom-cart-button" type="submit">
-            <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
+            <div class="product__cart">
+              <img class="product__cart-img" src="images/products/cart-btn-product.svg" alt="корзина">
+            </div>
+            <p class="product__cart-title">добавить в корзину</p>
           </button>
 
           <button class="product__top-heart-button" type="button">
@@ -73,7 +87,7 @@
       </div>
 
       <div class="product__delivery-block">
-        <h4 class="product__delivery-block-title">доставка</h4>
+        <h4 class="product__delivery-block-title">доставка и оплата</h4>
 
         <ul class="product__delivery-list">
 
@@ -101,39 +115,494 @@
 
   </article>
 
-  <div data-tabs class="product-content__tabs tabs">
-    <nav data-tabs-titles class="tabs__navigation">
-      <button type="button" class="tabs__title _tab-active">описание</button>
-      <button type="button" class="tabs__title">характеристики</button>
-      <button type="button" class="tabs__title">отзывы</button>
-    </nav>
-    <div data-tabs-body class="tabs__content">
-      <div class="tabs__body description-tab">
-        <ul class="description-tab__list">
-          <li class="description-tab__item">
-            <p>Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
-            </p>
-          </li>
-          <li class="description-tab__item">
-            <p>Витамины: С, Е, РР, витамины группы В
-            </p>
-          </li>
-          <li class="description-tab__item">
-            <p>Микроэлементы: железо, калий, кальций, магний, фосфор
-            </p>
-          </li>
-          <li class="description-tab__item">
-            <p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="tabs__body">
-        Содержимое второго таба
-      </div>
-      <div class="tabs__body">
-        Содержимое третьего таба
+  <div class="tabs" data-tabs="tab">
+
+    <div class="tabs__wrapper">
+
+      <ul class="tabs__nav">
+        <li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">описание</button></li>
+        <li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">характеристики</button></li>
+        <li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">отзывы (2)</button></li>
+      </ul>
+
+      <div class="tabs__content">
+
+        <div class="tabs__panel description-tab">
+          <ul class="description-tab__list">
+            <li class="description-tab__item">
+              <p>Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
+                укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ.
+                Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении
+                питахайи,
+                понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт
+                низкокалорийный и состоит на 90% из воды, способствует снижению веса.
+              </p>
+            </li>
+            <li class="description-tab__item">
+              <p>Витамины: С, Е, РР, витамины группы В
+              </p>
+            </li>
+            <li class="description-tab__item">
+              <p>Микроэлементы: железо, калий, кальций, магний, фосфор
+              </p>
+            </li>
+            <li class="description-tab__item">
+              <p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tabs__panel characteristics-tab">
+          <ul class="characteristics-tab__list">
+            <li class="characteristics-tab__item">
+              <span class="characteristics-tab__description">Вес:</span>
+              <span class="characteristics-tab__name"> 250-350 г;</span>
+            </li>
+            <li class="characteristics-tab__item">
+              <span class="characteristics-tab__description">Калорийность (на 100г):</span>
+              <span class="characteristics-tab__name"> 50 ккал;</span>
+            </li>
+            <li class="characteristics-tab__item">
+              <span class="characteristics-tab__description">Условия хранения:</span>
+              <span class="characteristics-tab__name"> температура от +3 до +8;</span>
+            </li>
+            <li class="characteristics-tab__item">
+              <span class="characteristics-tab__description">Другие названия:</span>
+              <span class="characteristics-tab__name"> Драконов фрукт, Глаз дракона;</span>
+            </li>
+            <li class="characteristics-tab__item">
+              <span class="characteristics-tab__description">Страна происхождения:</span>
+              <span class="characteristics-tab__name"> Вьетнам;</span>
+            </li>
+            <li class="characteristics-tab__item">
+              <span class="characteristics-tab__description">Срок хранения:</span>
+              <span class="characteristics-tab__name"> до 5 дней.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tabs__panel reviews-tab">
+
+          <h4 class="reviews-tab__title">мнения наших клиентов</h4>
+
+          <ul class="reviews-tab__list">
+            <li class="reviews-tab__item review">
+
+              <div class="review__inner">
+
+                <div class="review__user">
+                  <img class="review__user-logo" src="images/user-logo.svg" alt="логотип покупателя">
+                  <div class="review__info">
+                    <p class="review__user-name">Андрей</p>
+                    <p class="review__date">10.06.2021</p>
+                  </div>
+                </div>
+
+                <span class="star-box">
+                  <div class="star-box__star-product screen-reader-only" data-rateyo-rating="4"> рейтинг</div>
+                </span>
+
+              </div>
+
+              <p class="review__description">Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+              </p>
+
+            </li>
+            <li class="reviews-tab__item review">
+
+              <div class="review__inner">
+
+                <div class="review__user">
+                  <img class="review__user-logo" src="images/user-logo.svg" alt="логотип покупателя">
+                  <div class="review__info">
+                    <p class="review__user-name">Екатерина Белая</p>
+                    <p class="review__date">7.06.2021</p>
+                  </div>
+                </div>
+
+                <span class="star-box">
+                  <div class="star-box__star-product screen-reader-only" data-rateyo-rating="5"> рейтинг</div>
+                </span>
+              </div>
+
+              <p class="review__description">Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий
+                (просто взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность -
+                пробовать экзотические фрукты.
+              </p>
+
+            </li>
+          </ul>
+
+          <h4 class="reviews-tab__title">оставить отзыв</h4>
+
+          <form class="comment">
+            <div class="comment__user-rating">
+              <label class="comment__label-rating" for="star-box">Ваша оценка *</label>
+              <span class="star-box" id="star-box">
+                <div class="star-box__star-user screen-reader-only"> рейтинг</div>
+              </span>
+            </div>
+
+            <div class="comment__box">
+
+              <div class="comment__textarea-box">
+                <label class="comment__label" for="textarea">Ваш отзыв *</label>
+                <textarea class="comment__textarea" id="textarea" placeholder="Введите текст отзыва" name="massageText"
+                  required></textarea>
+              </div>
+
+              <ul class="comment__info-list">
+
+                <li class="comment__info-item">
+                  <label class="comment__label" for="comment__user-name-input">Имя</label>
+                  <input class="comment__user-input" id="comment__user-name-input" type="text" name="userName"
+                    placeholder="Введите ваше имя" required>
+                </li>
+
+                <li class="comment__info-item">
+                  <label class="comment__label" for="comment__user-email-input">Email *</label>
+                  <input class="comment__user-input" id="comment__user-email-input" type="text" name="Email"
+                    placeholder="youremail@mail.com" required>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <label class="comment__label-checkbox">
+              <input class="comment__checkbox-input" type="checkbox">
+              <span class="comment__checkbox"></span>
+              Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+            </label>
+
+            <button class="comment__button btn" type="submit">Оставить отзыв</button>
+
+          </form>
+
+        </div>
       </div>
     </div>
   </div>
 
 </section>
+
+<div class="interest-sale container">
+
+  <div class="interest-sale__top">
+
+    <h3 class="interest-sale__title">вас может заинтересовать</h3>
+
+    <div class="interest-sale__navigation">
+
+      <button class="interest-sale__button" type="button">
+        <span class="screen-reader-only">навигация</span>
+        <div class="swiper-button-prev interest-sale__swiper-button-prev">
+
+        </div>
+      </button>
+
+      <button class="interest-sale__button" type="button">
+        <span class="screen-reader-only">навигация</span>
+        <div class="swiper-button-next interest-sale__swiper-button-next">
+
+        </div>
+      </button>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="swiper interest-sale__swiper interest-sale__list-box">
+
+    <div class="swiper-wrapper interest-sale__swiper-wrapper interest-sale__list">
+
+      <article class="swiper-slide interest-sale__item product">
+
+        <div class="product__visual-block">
+          <ul class="product__top">
+            <li class="product__top-item">
+              <button class="badges badges--hit" type="button">хит</button>
+            </li>
+          </ul>
+
+          <button class="product__top-heart-button" type="button">
+            <svg class="product__top-heart">
+              <use xlink:href="images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+
+          <a data-fancybox class="product__image-link" href="images/products/carrot.svg">
+            <img class="product__image" src="images/products/carrot.svg" alt="морковь">
+          </a>
+
+        </div>
+
+        <div class="product__info-block">
+
+          <div class="product__subimage-block">
+            <p class="product__subtitle product__subtitle--end">нет в наличии</p>
+            <div class="star-box">
+              <p class="star-box__info">4.5</p>
+              <div class="star-box__star screen-reader-only"> рейтинг</div>
+            </div>
+          </div>
+
+          <a class="product__link" href="#">
+            <h3 class="product__title">Морковь молодая с бабушкиной грядки, 1кг</h3>
+          </a>
+          <div class="product__bottom">
+
+            <ul class="product__bottom-price-list">
+              <li class="product__bottom-price-item">
+                <p class="product__bottom-new-price">49 ₽</p>
+              </li>
+            </ul>
+
+            <form class="product__bottom-counter counter" action="#">
+
+              <button class="counter__button counter__button--minus" type="button" data-direction="minus">
+                <img src="images/counter/minus.svg" alt="минус">
+              </button>
+
+              <label>
+                <input class="counter__value" type="text" value="0" name="product-quantity">
+              </label>
+
+              <button class="counter__button counter__button--plus" type="button" data-direction="plus">
+                <img src="images/counter/plus.svg" alt="плюс">
+              </button>
+
+            </form>
+
+            <button class="product__bottom-cart-button" type="button">
+              <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="swiper-slide interest-sale__item product">
+
+        <div class="product__visual-block">
+
+          <ul class="product__top">
+
+            <li class="product__top-item">
+              <button class="badges badges--sale" type="button">-30%</button>
+            </li>
+
+          </ul>
+
+          <button class="product__top-heart-button" type="button">
+            <svg class="product__top-heart">
+              <use xlink:href="images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+
+          <a data-fancybox class="product__image-link" href="images/products/juice.svg">
+            <img class="product__image" src="images/products/juice.svg" alt="сок">
+          </a>
+
+        </div>
+
+        <div class="product__info-block">
+
+          <div class="product__subimage-block">
+            <p class="product__subtitle">в наличии</p>
+            <div class="star-box">
+              <p class="star-box__info">4.5</p>
+              <div class="star-box__star screen-reader-only"> рейтинг</div>
+            </div>
+          </div>
+
+          <a class="product__link" href="#">
+            <h3 class="product__title">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
+              безалкогольн...
+            </h3>
+          </a>
+
+          <div class="product__bottom">
+
+            <ul class="product__bottom-price-list">
+              <li class="product__bottom-price-item">
+                <p class="product__bottom-price product__bottom-old-price">299 ₽</p>
+              </li>
+              <li class="product__bottom-price-item">
+                <p class="product__bottom-new-price">199 ₽</p>
+              </li>
+            </ul>
+
+            <form class="product__bottom-counter counter" action="#">
+
+              <button class="counter__button counter__button--minus" type="button" data-direction="minus">
+                <img src="images/counter/minus.svg" alt="минус">
+              </button>
+
+              <label>
+                <input class="counter__value" type="text" value="0" name="product-quantity">
+              </label>
+
+              <button class="counter__button counter__button--plus" type="button" data-direction="plus">
+                <img src="images/counter/plus.svg" alt="плюс">
+              </button>
+
+            </form>
+
+            <button class="product__bottom-cart-button" type="button">
+              <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="swiper-slide interest-sale__item product">
+
+        <div class="product__visual-block">
+          <ul class="product__top">
+            <li class="product__top-item">
+              <button class="badges badges--novelty" type="button">новинка</button>
+            </li>
+          </ul>
+
+          <button class="product__top-heart-button" type="button">
+            <svg class="product__top-heart">
+              <use xlink:href="images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+
+          <a data-fancybox class="product__image-link" href="images/products/coffee.svg">
+            <img class="product__image" src="images/products/coffee.svg" alt="кофе">
+          </a>
+
+        </div>
+
+        <div class="product__info-block">
+
+          <div class="product__subimage-block">
+            <p class="product__subtitle product__subtitle--ends">заканчивается</p>
+            <div class="star-box">
+              <p class="star-box__info">4.5</p>
+              <div class="star-box__star screen-reader-only"> рейтинг</div>
+            </div>
+          </div>
+
+          <a class="product__link" href="#">
+            <h3 class="product__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+          </a>
+          <div class="product__bottom">
+
+            <ul class="product__bottom-price-list">
+              <li class="product__bottom-price-item">
+                <p class="product__bottom-new-price">877 ₽</p>
+              </li>
+            </ul>
+
+            <form class="product__bottom-counter counter" action="#">
+
+              <button class="counter__button counter__button--minus" type="button" data-direction="minus">
+                <img src="images/counter/minus.svg" alt="минус">
+              </button>
+
+              <label>
+                <input class="counter__value" type="text" value="0" name="product-quantity">
+              </label>
+
+              <button class="counter__button counter__button--plus" type="button" data-direction="plus">
+                <img src="images/counter/plus.svg" alt="плюс">
+              </button>
+
+            </form>
+
+            <button class="product__bottom-cart-button" type="button">
+              <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="swiper-slide interest-sale__item product">
+
+        <div class="product__visual-block">
+          <ul class="product__top">
+            <li class="product__top-item">
+              <button class="badges badges--novelty" type="button">новинка</button>
+            </li>
+          </ul>
+
+          <button class="product__top-heart-button" type="button">
+            <svg class="product__top-heart">
+              <use xlink:href="images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+
+          <a data-fancybox class="product__image-link" href="images/products/coffee.svg">
+            <img class="product__image" src="images/products/coffee.svg" alt="кофе">
+          </a>
+
+        </div>
+
+        <div class="product__info-block">
+
+          <div class="product__subimage-block">
+            <p class="product__subtitle product__subtitle--ends">заканчивается</p>
+            <div class="star-box">
+              <p class="star-box__info">4.5</p>
+              <div class="star-box__star screen-reader-only"> рейтинг</div>
+            </div>
+          </div>
+
+          <a class="product__link" href="#">
+            <h3 class="product__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+          </a>
+          <div class="product__bottom">
+
+            <ul class="product__bottom-price-list">
+              <li class="product__bottom-price-item">
+                <p class="product__bottom-new-price">877 ₽</p>
+              </li>
+            </ul>
+
+            <form class="product__bottom-counter counter" action="#">
+
+              <button class="counter__button counter__button--minus" type="button" data-direction="minus">
+                <img src="images/counter/minus.svg" alt="минус">
+              </button>
+
+              <label>
+                <input class="counter__value" type="text" value="0" name="product-quantity">
+              </label>
+
+              <button class="counter__button counter__button--plus" type="button" data-direction="plus">
+                <img src="images/counter/plus.svg" alt="плюс">
+              </button>
+
+            </form>
+
+            <button class="product__bottom-cart-button" type="button">
+              <img class="product__bottom-cart" src="images/products/cart-btn.svg" alt="корзина">
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+
+  </div>
+
+</div>

@@ -46,8 +46,9 @@
         </ul>
 
         <nav class="nav">
-          
-          <button class="nav__icon-button menu-icon" type="button"><span class="sr-only">логотип меню бургер</span></button>
+
+          <button class="nav__icon-button menu-icon" type="button"><span class="sr-only">логотип меню
+              бургер</span></button>
 
           <div class="nav__body">
 
@@ -66,20 +67,21 @@
 
             <div class="nav__login">
 
-                <ul class="nav__login-list">
-                    <a class="nav__login-link" href="#">
-                      <svg class="nav__login-icon">
-                        <use xlink:href="images/sprite.svg#icon-user"></use>
-                      </svg>
-                    </a>
-                  <li class="nav__login-item">
-                    <a class="nav__login-link" href="#">Вход</a>
-                  </li>
-                  <li class="nav__login-item">
-                    <a class="nav__login-link" href="#">Регистрация</a>
-                  </li>
-                </ul>
-              
+              <span class="nav__login-link">
+                <svg class="nav__login-icon">
+                  <use xlink:href="images/sprite.svg#icon-user"></use>
+                </svg>
+              </span>
+
+              <ul class="nav__login-list">
+                <li class="nav__login-item">
+                  <a class="nav__login-link" href="#">Вход</a>
+                </li>
+                <li class="nav__login-item">
+                  <a class="nav__login-link" href="#">Регистрация</a>
+                </li>
+              </ul>
+
             </div>
 
             <div class="nav__catalog">
@@ -88,16 +90,18 @@
 
             <div class="nav__contacts contacts container-body">
 
-              <ul class="nav__contacts contacts__callback">
+              <ul class="nav__contacts-list contacts__callback">
                 <li class="nav__contacts-item contacts__callback-item ">
-                  <a class="nav__contacts-link nav__contacts-link--tel" style="background-image: url(images/icon-tel.svg);" href="tel:+7907288365">+7 907 288 365</a>
+                  <a class="nav__contacts-link nav__contacts-link--tel"
+                    style="background-image: url(images/icon-tel.svg);" href="tel:+7907288365">+7 907 288 365</a>
                 </li>
-                <li class="nav__contacts-item nav__contacts-item--location contacts__callback-item">
-                  <a class="nav__contacts-link nav__contacts-link--location" style="background-image: url(images/icon-location.svg);" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+                <li class="nav__contacts-item contacts__callback-item">
+                  <a class="nav__contacts-link nav__contacts-link--location"
+                    style="background-image: url(images/icon-location.svg);" href="#">Санкт-Петербург, ул. Ленина, 1</a>
                 </li>
               </ul>
-      
-              <ul class="nav__socials contacts__socials socials">
+
+              <ul class="nav__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="socials__link-icon" style="width: 32; height: 32">
@@ -133,7 +137,7 @@
             <div class="nav-menu container-body">
 
               <ul class="nav-menu__list">
-      
+
                 <li class="nav-menu__item">
                   <a class="nav-menu__link" href="#">Доставка</a>
                 </li>
@@ -165,14 +169,14 @@
                 <li class="nav-menu__item">
                   <a class="nav-menu__link" href="#">Публичная оферта</a>
                 </li>
-      
+
               </ul>
-      
+
             </div>
-      
-            
+
+
           </div>
-          
+
         </nav>
 
         <nav class="menu">
@@ -263,19 +267,19 @@
 
         <form class="header-bottom__form" action="#">
 
-          <label class="screen-reader-only"> метка для формы поиска</label>
+          <label class="screen-reader-only" for="header-input"> метка для формы поиска</label>
 
-            
-            <input class="header-bottom__input" id="header-input" type="search" name="search"
-              placeholder="Найти в магазине ..." required>
 
-            <button class="header-bottom__input-button" type="button">
+          <input class="header-bottom__input" id="header-input" type="search" name="search"
+            placeholder="Найти в магазине ..." required>
 
-              <svg class="header-bottom__inputbox-icon">
-                <use xlink:href="images/sprite.svg#icon-search"></use>
-              </svg>
-              
-            </button>
+          <button class="header-bottom__input-button" type="button">
+
+            <svg class="header-bottom__inputbox-icon">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+
+          </button>
 
           <button class="header-bottom__button btn" type="submit" name="search">
             поиск

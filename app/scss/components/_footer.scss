@@ -160,6 +160,8 @@
      column-count: 3;
      column-width: 130px;
      column-gap: 63px;
+     page-break-inside:avoid;
+     break-inside:avoid-column;
 
      @media (max-width:$desktop) {
        column-count: 2;
@@ -177,7 +179,7 @@
    }
 
    &__about-item {
-     margin-bottom: 15px;
+     margin-bottom: 18px;
 
      @media (max-width:$tablet) {
        margin-bottom: 18px;

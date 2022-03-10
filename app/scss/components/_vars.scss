@@ -48,6 +48,13 @@ $desktop: 1200px;
 }
 // использование: @include responsive-ratio(16,9);
 
+%cb-hidden {
+width: 1px;
+height: 1px;
+overflow: hidden;
+position: absolute;
+clip: rect(0 0 0 0);
+}
 
 %opensans-700 {
   font-family: 'OpenSans-Bold', sans-serif;
