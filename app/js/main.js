@@ -207,6 +207,7 @@ new Swiper('.interest-sale__swiper', {
 	loop: true,
 	grabCursor: true,
 	slidesPerGroup: 1,
+	slidesPerView: 4,
 	spaceBetween: 30,
 
 	navigation: {
@@ -745,7 +746,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+	const lockPaddingValue = window.innerWidth - document.querySelector('.body').offsetWidth + 'px';
 
 	if (lockPadding.length > 0) {
 		for (let index = 0; index < lockPadding.length; index++) {
