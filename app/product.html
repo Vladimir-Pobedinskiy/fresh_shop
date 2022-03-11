@@ -361,17 +361,11 @@
 
     <div class="swiper product__swiper product__image-wrapper">
 
-
-        <div class="small-slider">
-          <a class="product__image-link" href="images/products/dragonfruit-big.jpg">
-            <img class="product__image" src="images/fruit_dragonfruit_420.svg" />
+        <div class="product__image-inner">
+          <a class="product__image-link popup-link" href="#popup">
+            <img class="product__image" src="images/fruit_dragonfruit_420.svg">
           </a>
-          <a class="product__image-link" href="images/products/dragonfruit-big.jpg">
-            <img class="product__image" src="images/fruit_dragonfruit_420.svg" />
-          </a>
-    
         </div>
-
 
     </div>
 
@@ -961,6 +955,17 @@
   </div>
 
 </div>
+
+<div id="popup" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <a class="popup__close close-popup" href="#">
+        <img src="images/close-icon.svg" alt="иконка">
+      </a>
+      <img class="popup__img" src="images/products/dragonfruit-big.jpg" alt="петахойя">
+    </div>
+  </div>
+</div>
     <div class="service">
   <div class="service__wrapper">
     <div class="container">
@@ -1125,7 +1130,7 @@
 
 
 </footer>
-
+  <script src="js/popups.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
