@@ -194,19 +194,42 @@ new Swiper('.product__swiper', {
 	slidesPerView: 1,
 
 	navigation: {
-		nextEl: '.product__swiper-button-next',
-		prevEl: '.product__swiper-button-prev'
+		nextEl: '.product__swiper-button--next',
+		prevEl: '.product__swiper-button--prev'
 	},
 
 });
 
-
-new Swiper('.interest-sale__swiper', {
-
+new Swiper('.popup__swiper', {
 	speed: 700,
 	loop: true,
 	grabCursor: true,
+	slidesPerView: 1,
 	slidesPerGroup: 1,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+
+	navigation: {
+		nextEl: '.popup__swiper-button--next',
+		prevEl: '.popup__swiper-button--prev'
+	},
+
+	pagination: {
+		el: '.popup__pagination',
+		clickable: true,
+	},
+
+	keyboard: {
+		enabled: true,
+		onlyInViewport: false,
+	},
+
+});
+
+new Swiper('.interest-sale__swiper', {
+	speed: 700,
+	loop: true,
 	slidesPerView: 4,
 	spaceBetween: 30,
 
@@ -219,6 +242,7 @@ new Swiper('.interest-sale__swiper', {
 		enabled: true,
 		onlyInViewport: false,
 	},
+
 });
 
 // открытие меню каталога
@@ -355,29 +379,6 @@ if (buttonList && buttonGrid) {
 //     contentProduct[i].classList.add("filters-catalog__content-product--list");
 //   }
 // });
-
-
-// функция скрытия сайдбара при адаптиве
-const sidebarHidden = function () {
-
-	const buttonFilters = document.querySelector('.content-filter__button-sidebar-hidden');
-	const sidebarBox = document.querySelector('.sidebar-box');
-	const menuIconSidebar = document.querySelector('.menu-icon-sidebar');
-	const bodyLock = document.querySelector('.body');
-
-	if (buttonFilters && menuIconSidebar) {
-		buttonFilters.addEventListener('click', (event) => {
-			sidebarBox.classList.toggle('sidebar-box--active');
-			menuIconSidebar.classList.toggle('menu-icon-sidebar--active');
-		})
-		menuIconSidebar.addEventListener('click', (event) => {
-			sidebarBox.classList.toggle('sidebar-box--active');
-			menuIconSidebar.classList.toggle('menu-icon-sidebar--active');
-		})
-	}
-
-}
-sidebarHidden();
 
 
 // SPOLLERS
@@ -780,6 +781,13 @@ function bodyUnLock() {
 		unlock = true;
 	}, timeout);
 }
+
+document.addEventListener('keydown', function (e) {
+	if (e.which === 27) {
+		const popupActive = document.querySelector('.popup.open');
+		popupClose(popupActive);
+	}
+});
 
 (function () {
 	// проверяем поддержку

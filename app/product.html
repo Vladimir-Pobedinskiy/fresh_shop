@@ -359,13 +359,40 @@
 
   <article class="product-content__item product container">
 
-    <div class="swiper product__swiper product__image-wrapper">
+    <div class="swiper product__swiper product__image-box">
+      <div class="swiper-wrapper product__swiper-wrapper product__wrapper">
 
-        <div class="product__image-inner">
+        <div class="swiper-slide product__swiper-slide product__image-inner">
           <a class="product__image-link popup-link" href="#popup">
             <img class="product__image" src="images/fruit_dragonfruit_420.svg">
           </a>
         </div>
+
+        <div class="swiper-slide product__swiper-slide product__image-inner">
+          <a class="product__image-link popup-link" href="#popup">
+            <img class="product__image" src="images/products/dragonfruit-2.jpg">
+          </a>
+        </div>
+
+        <div class="swiper-slide product__swiper-slide product__image-inner">
+          <a class="product__image-link popup-link" href="#popup">
+            <img class="product__image" src="images/products/dragonfruit-3.jpg">
+          </a>
+        </div>
+
+      </div>
+
+      <div class="swiper-button-prev product__swiper-button product__swiper-button--prev">
+        <svg class="product__icon-arrow">
+          <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
+        </svg>
+      </div>
+
+      <div class="swiper-button-next product__swiper-button product__swiper-button--next">
+        <svg class="product__icon-arrow">
+          <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
+        </svg>
+      </div>
 
     </div>
 
@@ -646,14 +673,18 @@
       <button class="interest-sale__button" type="button">
         <span class="screen-reader-only">навигация</span>
         <div class="swiper-button-prev interest-sale__swiper-button-prev">
-
+          <svg class="interest-sale__icon">
+            <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
+          </svg>
         </div>
       </button>
 
       <button class="interest-sale__button" type="button">
         <span class="screen-reader-only">навигация</span>
         <div class="swiper-button-next interest-sale__swiper-button-next">
-
+          <svg class="interest-sale__icon">
+            <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
+          </svg>
         </div>
       </button>
 
@@ -1025,14 +1056,53 @@
 </div>
 
 <div id="popup" class="popup">
+
   <div class="popup__body">
+
     <div class="popup__content">
+
       <a class="popup__close close-popup" href="#">
         <img src="images/close-icon.svg" alt="иконка">
       </a>
-      <img class="popup__img" src="images/products/dragonfruit-big.jpg" alt="петахойя">
+
+      <div class="popup__content-box swiper popup__swiper">
+
+        <div class="popup__content-inner swiper-wrapper popup__swiper-wrapper">
+
+          <div class="popup__img-box swiper-slide popup__swiper-slide">
+            <img class="popup__img" src="images/products/dragonfruit-1.jpg" alt="петахойя">
+          </div>
+
+          <div class="popup__img-box swiper-slide popup__swiper-slide">
+            <img class="popup__img" src="images/products/dragonfruit-2.jpg" alt="петахойя">
+          </div>
+
+          <div class="popup__img-box swiper-slide popup__swiper-slide">
+            <img class="popup__img" src="images/products/dragonfruit-3.jpg" alt="петахойя">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="swiper-button-prev popup__swiper-button popup__swiper-button--prev">
+        <svg class="popup__icon-arrow">
+          <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
+        </svg>
+      </div>
+
+      <div class="swiper-button-next popup__swiper-button popup__swiper-button--next">
+        <svg class="popup__icon-arrow">
+          <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
+        </svg>
+      </div>
+
+      <div class="swiper-pagination popup__pagination"></div>
+
     </div>
+
   </div>
+
 </div>
     <div class="service">
   <div class="service__wrapper">
