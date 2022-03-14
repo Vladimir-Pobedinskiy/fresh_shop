@@ -144,6 +144,7 @@
     &__image {
       max-height: 100px;
       max-width: 100px;
+      object-fit: contain;
     }
 
     &__info-block {

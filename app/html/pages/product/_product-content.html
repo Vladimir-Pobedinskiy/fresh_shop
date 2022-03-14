@@ -4,23 +4,29 @@
 
   <article class="product-content__item product container">
 
+    <div class="product__title-block">
+      <a class="product__link" href="#">
+        <h3 class="product__title-head">Питахайя красная с белой мякотью</h3>
+      </a>
+    </div>
+
     <div class="swiper product__swiper product__image-box">
       <div class="swiper-wrapper product__swiper-wrapper product__wrapper">
 
         <div class="swiper-slide product__swiper-slide product__image-inner">
-          <a class="product__image-link popup-link" href="#popup">
+          <a class="product__image-link popup-link" href="#popup-product">
             <img class="product__image" src="images/fruit_dragonfruit_420.svg">
           </a>
         </div>
 
         <div class="swiper-slide product__swiper-slide product__image-inner">
-          <a class="product__image-link popup-link" href="#popup">
+          <a class="product__image-link popup-link" href="#popup-product">
             <img class="product__image" src="images/products/dragonfruit-2.jpg">
           </a>
         </div>
 
         <div class="swiper-slide product__swiper-slide product__image-inner">
-          <a class="product__image-link popup-link" href="#popup">
+          <a class="product__image-link popup-link" href="#popup-product">
             <img class="product__image" src="images/products/dragonfruit-3.jpg">
           </a>
         </div>
@@ -39,6 +45,8 @@
         </svg>
       </div>
 
+      <div class="swiper-pagination product__pagination"></div>
+
     </div>
 
     <div class="product__info">
@@ -51,12 +59,16 @@
 
       <div class="product__status-block">
 
-        <span class="product__code">Код: 0111111</span>
+        <div class="product__code-box">
 
-        <span class="star-box">
-          <div class="star-box__star-product screen-reader-only" data-rateyo-rating="4"> рейтинг</div>
-        </span>
+          <span class="product__code">Код: 0111111</span>
 
+          <span class="star-box">
+            <div class="star-box__star-product screen-reader-only" data-rateyo-rating="4"> рейтинг</div>
+          </span>
+
+        </div>
+        
         <p class="product__subtitle">в наличии</p>
 
       </div>
@@ -694,58 +706,60 @@
 
     </div>
 
-
+    <div class="swiper-pagination interest-sale__pagination"></div>
 
   </div>
 
 </div>
 
-<div id="popup" class="popup">
+<div class="popup-box">
+  <div id="popup-product" class="popup product-content__popup">
 
-  <div class="popup__body">
-
-    <div class="popup__content">
-
-      <a class="popup__close close-popup" href="#">
-        <img src="images/close-icon.svg" alt="иконка">
-      </a>
-
-      <div class="popup__content-box swiper popup__swiper">
-
-        <div class="popup__content-inner swiper-wrapper popup__swiper-wrapper">
-
-          <div class="popup__img-box swiper-slide popup__swiper-slide">
-            <img class="popup__img" src="images/products/dragonfruit-1.jpg" alt="петахойя">
+    <div class="popup__body product-content__popup-body">
+  
+      <div class="popup__content product-content__popup-content">
+  
+        <a class="popup__close close-popup" href="#">
+          <img src="images/close-icon.svg" alt="иконка">
+        </a>
+  
+        <div class="popup__content-box swiper popup__swiper">
+  
+          <div class="popup__content-inner swiper-wrapper popup__swiper-wrapper">
+  
+            <div class="popup__img-box swiper-slide popup__swiper-slide">
+              <img class="popup__img" src="images/products/dragonfruit-1.jpg" alt="петахойя">
+            </div>
+  
+            <div class="popup__img-box swiper-slide popup__swiper-slide">
+              <img class="popup__img" src="images/products/dragonfruit-2.jpg" alt="петахойя">
+            </div>
+  
+            <div class="popup__img-box swiper-slide popup__swiper-slide">
+              <img class="popup__img" src="images/products/dragonfruit-3.jpg" alt="петахойя">
+            </div>
+  
           </div>
-
-          <div class="popup__img-box swiper-slide popup__swiper-slide">
-            <img class="popup__img" src="images/products/dragonfruit-2.jpg" alt="петахойя">
-          </div>
-
-          <div class="popup__img-box swiper-slide popup__swiper-slide">
-            <img class="popup__img" src="images/products/dragonfruit-3.jpg" alt="петахойя">
-          </div>
-
+  
         </div>
-
+  
+        <div class="swiper-button-prev popup__swiper-button popup__swiper-button--prev">
+          <svg class="popup__icon-arrow">
+            <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
+          </svg>
+        </div>
+  
+        <div class="swiper-button-next popup__swiper-button popup__swiper-button--next">
+          <svg class="popup__icon-arrow">
+            <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
+          </svg>
+        </div>
+  
+        <div class="swiper-pagination popup__pagination"></div>
+  
       </div>
-
-      <div class="swiper-button-prev popup__swiper-button popup__swiper-button--prev">
-        <svg class="popup__icon-arrow">
-          <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
-        </svg>
-      </div>
-
-      <div class="swiper-button-next popup__swiper-button popup__swiper-button--next">
-        <svg class="popup__icon-arrow">
-          <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
-        </svg>
-      </div>
-
-      <div class="swiper-pagination popup__pagination"></div>
-
+  
     </div>
-
+  
   </div>
-
 </div>

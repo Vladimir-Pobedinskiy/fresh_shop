@@ -1,11 +1,11 @@
 $(function () {
 
 	//Меню бургер
-	$('.nav').on('click', function () {
-		$('.menu-icon').toggleClass('menu-icon--active');
-		$('.nav__body').toggleClass('nav__body--active');
-		$('body').toggleClass('lock');
-	})
+	// $('.nav').on('click', function () {
+	// 	$('.menu-icon').toggleClass('menu-icon--active');
+	// 	$('.nav__body').toggleClass('nav__body--active');
+	// 	$('body').toggleClass('lock');
+	// })
 
 
 	// стилизация select
@@ -198,14 +198,23 @@ new Swiper('.product__swiper', {
 		prevEl: '.product__swiper-button--prev'
 	},
 
+	pagination: {
+		el: '.product__pagination',
+		clickable: true,
+	},
+
+	keyboard: {
+		enabled: true,
+		onlyInViewport: false,
+	},
+
 });
 
 new Swiper('.popup__swiper', {
 	speed: 700,
 	loop: true,
 	grabCursor: true,
-	slidesPerView: 1,
-	slidesPerGroup: 1,
+	slidesPerView: 'auto',
 	observer: true,
 	observeParents: true,
 	observeSlideChildren: true,
@@ -230,17 +239,48 @@ new Swiper('.popup__swiper', {
 new Swiper('.interest-sale__swiper', {
 	speed: 700,
 	loop: true,
-	slidesPerView: 4,
-	spaceBetween: 30,
+	slidesPerView: 2,
+	spaceBetween: 5,
+	
 
 	navigation: {
 		nextEl: '.interest-sale__swiper-button-next',
 		prevEl: '.interest-sale__swiper-button-prev'
 	},
 
+	pagination: {
+		el: '.interest-sale__pagination',
+		clickable: true,
+	},
+
 	keyboard: {
 		enabled: true,
 		onlyInViewport: false,
+	},
+
+	breakpoints: {
+		500: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+
+		576: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+
+		615: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+
+		},
+		992: {
+			spaceBetween: 15,
+		},
+		1200: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		}
 	},
 
 });
@@ -379,6 +419,29 @@ if (buttonList && buttonGrid) {
 //     contentProduct[i].classList.add("filters-catalog__content-product--list");
 //   }
 // });
+
+
+// функция скрытия сайдбара при адаптиве
+ const sidebarHidden = function () {
+
+ 	const buttonFilters = document.querySelector('.content-filter__button-sidebar-hidden');
+ 	const sidebarBox = document.querySelector('.sidebar-box');
+ 	const menuIconSidebar = document.querySelector('.menu-icon-sidebar');
+
+
+ 	if (buttonFilters && menuIconSidebar) {
+ 		buttonFilters.addEventListener('click', (event) => {
+ 			sidebarBox.classList.toggle('sidebar-box--active');
+ 		
+ 		})
+ 		menuIconSidebar.addEventListener('click', (event) => {
+ 			sidebarBox.classList.toggle('sidebar-box--active');
+
+ 		})
+ 	}
+
+ }
+// sidebarHidden();
 
 
 // SPOLLERS

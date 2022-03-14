@@ -45,138 +45,145 @@
           </li>
         </ul>
 
-        <nav class="nav">
 
-          <button class="nav__icon-button menu-icon" type="button"><span class="sr-only">логотип меню
-              бургер</span></button>
+        <a class="header__icon-button menu-icon popup-link" href="#popup_nav"><span class="sr-only">логотип меню
+            бургер</span>
+        </a>
 
-          <div class="nav__body">
+        <nav id="popup_nav" class="nav popup">
 
-            <div class="nav__top container-body">
+          <div class="nav__wrapper popup__body">
 
-              <a class="nav__link" href="#">
-                <svg class="nav__link-logo">
-                  <use xlink:href="images/sprite.svg#icon-logo"></use>
-                </svg>
-              </a>
+            <div class="nav__body popup__content">
 
-              <button class="menu-icon" type="button"><span class="screen-reader-only">логотип меню бургер</span>
-              </button>
+              <div class="nav__top container-body">
+
+                <a class="nav__link" href="#">
+                  <svg class="nav__link-logo">
+                    <use xlink:href="images/sprite.svg#icon-logo"></use>
+                  </svg>
+                </a>
+
+                <a class="nav__close close-popup" href="#">
+                  <img src="images/close-icon-filters.svg" alt="иконка">
+                </a>
+
+              </div>
+
+              <div class="nav__login">
+
+                <span class="nav__login-link">
+                  <svg class="nav__login-icon">
+                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                  </svg>
+                </span>
+
+                <ul class="nav__login-list">
+                  <li class="nav__login-item">
+                    <a class="nav__login-link" href="#">Вход</a>
+                  </li>
+                  <li class="nav__login-item">
+                    <a class="nav__login-link" href="#">Регистрация</a>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class="nav__catalog">
+
+              </div>
+
+              <div class="nav__contacts contacts container-body">
+
+                <ul class="nav__contacts-list contacts__callback">
+                  <li class="nav__contacts-item contacts__callback-item ">
+                    <a class="nav__contacts-link nav__contacts-link--tel"
+                      style="background-image: url(images/icon-tel.svg);" href="tel:+7907288365">+7 907 288 365</a>
+                  </li>
+                  <li class="nav__contacts-item contacts__callback-item">
+                    <a class="nav__contacts-link nav__contacts-link--location"
+                      style="background-image: url(images/icon-location.svg);" href="#">Санкт-Петербург, ул. Ленина,
+                      1</a>
+                  </li>
+                </ul>
+
+                <ul class="nav__socials socials">
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="width: 32; height: 32">
+                        <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="width: 32; height: 32">
+                        <use xlink:href="images/sprite.svg#icon-youtube"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="width: 32; height: 32">
+                        <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="socials__link-icon" style="width: 32; height: 32">
+                        <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class="nav-menu container-body">
+
+                <ul class="nav-menu__list">
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">Доставка</a>
+                  </li>
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">О нас</a>
+                  </li>
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">Новости</a>
+                  </li>
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">Контакты</a>
+                  </li>
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">Акции</a>
+                  </li>
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">Вакансии</a>
+                  </li>
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">Отзывы</a>
+                  </li>
+
+                  <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="#">Публичная оферта</a>
+                  </li>
+
+                </ul>
+
+              </div>
+
 
             </div>
-
-            <div class="nav__login">
-
-              <span class="nav__login-link">
-                <svg class="nav__login-icon">
-                  <use xlink:href="images/sprite.svg#icon-user"></use>
-                </svg>
-              </span>
-
-              <ul class="nav__login-list">
-                <li class="nav__login-item">
-                  <a class="nav__login-link" href="#">Вход</a>
-                </li>
-                <li class="nav__login-item">
-                  <a class="nav__login-link" href="#">Регистрация</a>
-                </li>
-              </ul>
-
-            </div>
-
-            <div class="nav__catalog">
-
-            </div>
-
-            <div class="nav__contacts contacts container-body">
-
-              <ul class="nav__contacts-list contacts__callback">
-                <li class="nav__contacts-item contacts__callback-item ">
-                  <a class="nav__contacts-link nav__contacts-link--tel"
-                    style="background-image: url(images/icon-tel.svg);" href="tel:+7907288365">+7 907 288 365</a>
-                </li>
-                <li class="nav__contacts-item contacts__callback-item">
-                  <a class="nav__contacts-link nav__contacts-link--location"
-                    style="background-image: url(images/icon-location.svg);" href="#">Санкт-Петербург, ул. Ленина, 1</a>
-                </li>
-              </ul>
-
-              <ul class="nav__socials socials">
-                <li class="socials__item">
-                  <a class="socials__link" href="#">
-                    <svg class="socials__link-icon" style="width: 32; height: 32">
-                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a class="socials__link" href="#">
-                    <svg class="socials__link-icon" style="width: 32; height: 32">
-                      <use xlink:href="images/sprite.svg#icon-youtube"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a class="socials__link" href="#">
-                    <svg class="socials__link-icon" style="width: 32; height: 32">
-                      <use xlink:href="images/sprite.svg#icon-telegram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a class="socials__link" href="#">
-                    <svg class="socials__link-icon" style="width: 32; height: 32">
-                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-
-            <div class="nav-menu container-body">
-
-              <ul class="nav-menu__list">
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">Доставка</a>
-                </li>
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">О нас</a>
-                </li>
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">Новости</a>
-                </li>
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">Контакты</a>
-                </li>
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">Акции</a>
-                </li>
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">Вакансии</a>
-                </li>
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">Отзывы</a>
-                </li>
-
-                <li class="nav-menu__item">
-                  <a class="nav-menu__link" href="#">Публичная оферта</a>
-                </li>
-
-              </ul>
-
-            </div>
-
 
           </div>
-
         </nav>
 
         <nav class="menu">
@@ -359,23 +366,29 @@
 
   <article class="product-content__item product container">
 
+    <div class="product__title-block">
+      <a class="product__link" href="#">
+        <h3 class="product__title-head">Питахайя красная с белой мякотью</h3>
+      </a>
+    </div>
+
     <div class="swiper product__swiper product__image-box">
       <div class="swiper-wrapper product__swiper-wrapper product__wrapper">
 
         <div class="swiper-slide product__swiper-slide product__image-inner">
-          <a class="product__image-link popup-link" href="#popup">
+          <a class="product__image-link popup-link" href="#popup-product">
             <img class="product__image" src="images/fruit_dragonfruit_420.svg">
           </a>
         </div>
 
         <div class="swiper-slide product__swiper-slide product__image-inner">
-          <a class="product__image-link popup-link" href="#popup">
+          <a class="product__image-link popup-link" href="#popup-product">
             <img class="product__image" src="images/products/dragonfruit-2.jpg">
           </a>
         </div>
 
         <div class="swiper-slide product__swiper-slide product__image-inner">
-          <a class="product__image-link popup-link" href="#popup">
+          <a class="product__image-link popup-link" href="#popup-product">
             <img class="product__image" src="images/products/dragonfruit-3.jpg">
           </a>
         </div>
@@ -394,6 +407,8 @@
         </svg>
       </div>
 
+      <div class="swiper-pagination product__pagination"></div>
+
     </div>
 
     <div class="product__info">
@@ -406,12 +421,16 @@
 
       <div class="product__status-block">
 
-        <span class="product__code">Код: 0111111</span>
+        <div class="product__code-box">
 
-        <span class="star-box">
-          <div class="star-box__star-product screen-reader-only" data-rateyo-rating="4"> рейтинг</div>
-        </span>
+          <span class="product__code">Код: 0111111</span>
 
+          <span class="star-box">
+            <div class="star-box__star-product screen-reader-only" data-rateyo-rating="4"> рейтинг</div>
+          </span>
+
+        </div>
+        
         <p class="product__subtitle">в наличии</p>
 
       </div>
@@ -1049,92 +1068,64 @@
 
     </div>
 
-
+    <div class="swiper-pagination interest-sale__pagination"></div>
 
   </div>
 
 </div>
 
-<div id="popup" class="popup">
+<div class="popup-box">
+  <div id="popup-product" class="popup product-content__popup">
 
-  <div class="popup__body">
-
-    <div class="popup__content">
-
-      <a class="popup__close close-popup" href="#">
-        <img src="images/close-icon.svg" alt="иконка">
-      </a>
-
-      <div class="popup__content-box swiper popup__swiper">
-
-        <div class="popup__content-inner swiper-wrapper popup__swiper-wrapper">
-
-          <div class="popup__img-box swiper-slide popup__swiper-slide">
-            <img class="popup__img" src="images/products/dragonfruit-1.jpg" alt="петахойя">
+    <div class="popup__body product-content__popup-body">
+  
+      <div class="popup__content product-content__popup-content">
+  
+        <a class="popup__close close-popup" href="#">
+          <img src="images/close-icon.svg" alt="иконка">
+        </a>
+  
+        <div class="popup__content-box swiper popup__swiper">
+  
+          <div class="popup__content-inner swiper-wrapper popup__swiper-wrapper">
+  
+            <div class="popup__img-box swiper-slide popup__swiper-slide">
+              <img class="popup__img" src="images/products/dragonfruit-1.jpg" alt="петахойя">
+            </div>
+  
+            <div class="popup__img-box swiper-slide popup__swiper-slide">
+              <img class="popup__img" src="images/products/dragonfruit-2.jpg" alt="петахойя">
+            </div>
+  
+            <div class="popup__img-box swiper-slide popup__swiper-slide">
+              <img class="popup__img" src="images/products/dragonfruit-3.jpg" alt="петахойя">
+            </div>
+  
           </div>
-
-          <div class="popup__img-box swiper-slide popup__swiper-slide">
-            <img class="popup__img" src="images/products/dragonfruit-2.jpg" alt="петахойя">
-          </div>
-
-          <div class="popup__img-box swiper-slide popup__swiper-slide">
-            <img class="popup__img" src="images/products/dragonfruit-3.jpg" alt="петахойя">
-          </div>
-
+  
         </div>
-
+  
+        <div class="swiper-button-prev popup__swiper-button popup__swiper-button--prev">
+          <svg class="popup__icon-arrow">
+            <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
+          </svg>
+        </div>
+  
+        <div class="swiper-button-next popup__swiper-button popup__swiper-button--next">
+          <svg class="popup__icon-arrow">
+            <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
+          </svg>
+        </div>
+  
+        <div class="swiper-pagination popup__pagination"></div>
+  
       </div>
-
-      <div class="swiper-button-prev popup__swiper-button popup__swiper-button--prev">
-        <svg class="popup__icon-arrow">
-          <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
-        </svg>
-      </div>
-
-      <div class="swiper-button-next popup__swiper-button popup__swiper-button--next">
-        <svg class="popup__icon-arrow">
-          <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
-        </svg>
-      </div>
-
-      <div class="swiper-pagination popup__pagination"></div>
-
+  
     </div>
-
-  </div>
-
-</div>
-    <div class="service">
-  <div class="service__wrapper">
-    <div class="container">
-
-      <h2 class="screen-reader-only">Сервисные услуги</h2>
-
-      <ul class="service__items">
-
-        <li class="service__item">
-          <div class="service__icon  service__icon--delivery screen-reader-only">иконка доставки</div>
-          <h3 class="service__item-title">Бесплатная доставка</h3>
-          <p class="service__item-text">Для заказов на сумму от 500 ₽ </p>
-        </li>
-
-        <li class="service__item">
-          <div class="service__icon service__icon--return screen-reader-only">иконка возврата</div>
-          <h3 class="service__item-title">Возврат товара</h3>
-          <p class="service__item-text">Если товары были испорчены</p>
-        </li>
-        
-        <li class="service__item">
-          <div class="service__icon service__icon--support screen-reader-only">иконка круглосуточной поддержки</div>
-          <h3 class="service__item-title">Поддержка 24/7</h3>
-          <p class="service__item-text">Лучшие операторы</p>
-        </li>
-
-      </ul>
-
-    </div>
+  
   </div>
 </div>
+
     
   </main>
 
