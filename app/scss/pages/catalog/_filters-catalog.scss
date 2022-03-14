@@ -390,9 +390,18 @@
     }
   }
 
+  &__button-label {
+    display: block;
+  }
+
   &__button-sidebar-hidden {
+    display: block;
     border-radius: 3px;
     outline: transparent;
+  }
+
+  &__button-icon {
+    fill: $green-900;
   }
 
   &__item {

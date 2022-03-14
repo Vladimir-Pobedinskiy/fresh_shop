@@ -21,7 +21,7 @@
 		height: auto;
 
 		@media (max-width:$mobile) {
-			padding: 27px 15px 15px;
+			padding: 27px 15px 5px;
 		}
 
 		&__title-block {
@@ -190,8 +190,10 @@
 			@media (max-width:$tablet) {
 				padding: 23px 0 15px;
 			}
-			@media (max-width:$mobile){
+
+			@media (max-width:$mobile) {
 				padding: 0 0 15px;
+				min-height: 515px;
 			}
 
 		}
@@ -217,7 +219,8 @@
 			font-size: 16px;
 			line-height: 1;
 			letter-spacing: 0.03em;
-			@media (max-width:$mobile){
+
+			@media (max-width:$mobile) {
 				padding: 6px 9px 14px;
 			}
 		}
@@ -303,8 +306,9 @@
 			display: flex;
 			align-items: center;
 			width: 100%;
-			@media (max-width:$mobile){
-				 margin-bottom: 35px; 
+
+			@media (max-width:$mobile) {
+				margin-bottom: 35px;
 			}
 		}
 
@@ -435,7 +439,6 @@
 }
 
 .tabs {
-	margin-top: -52px;
 	border-top: 1px solid #C1C1C1;
 	display: flex;
 	justify-content: center;
@@ -451,8 +454,9 @@
 		list-style: none;
 		display: flex;
 		justify-content: center;
-		@media (max-width:$mobile){
-			 margin-bottom: 2px; 
+
+		@media (max-width:$mobile) {
+			margin-bottom: 2px;
 		}
 	}
 
@@ -804,7 +808,10 @@
 
 
 .interest-sale {
-margin-bottom: 16px;
+	@media (max-width:$mobile) {
+		margin-bottom: 16px;
+	}
+
 	&__top {
 		min-height: 60px;
 		margin-bottom: 48px;
@@ -1026,8 +1033,10 @@ margin-bottom: 16px;
 
 }
 
-.popup-box{
+.popup-box {
 	.popup {
+		display: flex;
+		align-items: center;
 		position: fixed;
 		width: 100%;
 		height: 100%;
@@ -1056,18 +1065,9 @@ margin-bottom: 16px;
 
 		&__body {
 			width: 100%;
-			padding: 60px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			@media (max-width:$tablet){
-				margin-top: 20%;
-			}
-			@media (max-width:$mobile){
-				margin-top: 40%;
-			}
+			padding: 54px 96px;
 
-			@media (max-width:$mobile) {
+			@media (max-width:$tablet-2) {
 				padding: 15px;
 			}
 		}
@@ -1085,6 +1085,9 @@ margin-bottom: 16px;
 			visibility: hidden;
 			position: relative;
 			transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+			@media (max-width:$tablet-2){
+				min-height: 667px;
+			}
 		}
 
 		&__content-box {
@@ -1096,8 +1099,6 @@ margin-bottom: 16px;
 			max-width: 750px;
 			width: 100%;
 		}
-
-
 
 		&__close {
 			top: 38px;
@@ -1147,10 +1148,16 @@ margin-bottom: 16px;
 
 		&__swiper-button--prev {
 			margin-left: 60px;
+			@media (max-width:$desktop){
+				 margin-left: 10px; 
+			}
 		}
 
 		&__swiper-button--next {
 			margin-right: 60px;
+			@media (max-width:$desktop){
+				 margin-right: 10px; 
+			}
 		}
 
 		&__icon-arrow {

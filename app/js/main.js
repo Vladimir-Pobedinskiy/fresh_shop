@@ -1001,3 +1001,6 @@ const tabs = new Tabs('tab', {
 
 	}
 });
+
+
+

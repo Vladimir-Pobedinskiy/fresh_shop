@@ -207,13 +207,18 @@
     min-height: 600px;
     height: auto;
     background-color: $white;
-    transform-origin: top;
-    transform: scale(0);
-    transition: transform 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 
     &.--active {
-      transform-origin: top;
-      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+
+    @media (max-width:$tablet){
+      max-width: 100%;
     }
   }
 
@@ -230,6 +235,10 @@
 
     &:last-child {
       border-radius: 0 0 6px 6px;
+    }
+
+    @media (max-width:$tablet){
+      max-width: 100%;
     }
 
   }
