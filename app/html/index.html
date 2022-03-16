@@ -18,24 +18,24 @@
   <title>Fresh shop | home page</title>
 </head>
 
-<body class="body animated-show animated-show-active">
+<body class="body">
 
   @include('components/_header.html')
 
-  <main class="main">
-
-    @include('pages/home/_slider.html')
-    @include('components/_service.html')
-    @include('pages/home/_products.html')
-    @include('pages/home/_sales.html')
-    @include('pages/home/_partners.html')
-    @include('pages/home/_news.html')
-
+  <main class="transition-fade" id="swup">
+    <div class="main__inner">
+      @include('pages/home/_slider.html')
+      @include('components/_service.html')
+      @include('pages/home/_products.html')
+      @include('pages/home/_sales.html')
+      @include('pages/home/_partners.html')
+      @include('pages/home/_news.html')
+    </div>
   </main>
 
   @include('components/_footer.html')
 
-
+  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
   <script src="js/main.min.js"></script>
 </body>
 

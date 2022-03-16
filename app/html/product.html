@@ -18,18 +18,20 @@
   <title>Fresh shop | product</title>
 </head>
 
-<body class="body animated-show animated-show-active">
+<body class="body">
 
   @include('components/_header.html')
 
-  <main class="main">
-
-    @include('pages/product/_breadcrumbs.html')
-    @include('pages/product/_product-content.html')
-    
+  <main class="transition-fade" id="swup">
+    <div class="main__inner">
+      @include('pages/product/_breadcrumbs.html')
+      @include('pages/product/_product-content.html')
+    </div>
   </main>
 
   @include('components/_footer.html')
+
+  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
   <script src="js/main.min.js"></script>
 </body>
 

@@ -1002,5 +1002,14 @@ const tabs = new Tabs('tab', {
 	}
 });
 
+// загрузка страниц без перезагрузки (swup.js)
+const swup = new Swup(
 
+);
 
+// перезагрузка страницы
+function reload_interval(time){
+	setTimeout(function(){
+		location.reload();
+	}, time);
+}
