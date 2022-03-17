@@ -1,0 +1,312 @@
+// галерея продуктов
+
+.products {
+  padding: 74px 0 72px;
+
+  @media (max-width:$mobile) {
+    padding: 48px 0 48px;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+    text-align: center;
+
+    @media (max-width:$mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__top-buttons {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 46px;
+
+    @media (max-width:$mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__top-button {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+  &__top-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 48px;
+
+    @media (max-width:$tablet-2) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width:$tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width:$mobile) {
+      margin-bottom: 24px;
+      gap: 5px;
+    }
+  }
+
+  &__top-item {
+    max-height: 409px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top-btn {
+    @extend %opensans-700;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+    color: $dark-500;
+    background-color: $white;
+    outline: transparent;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    transition: border 0.5s ease, color 0.5s ease;
+
+    &:hover {
+      color: $green-900
+    }
+
+    &:focus {
+      border-color: $green-200;
+    }
+
+    &:active {
+      border-bottom: 3px solid $green-200;
+    }
+
+    @media (max-width:$mobile) {
+      font-size: 14px;
+    }
+  }
+
+  .product__image {
+    @media (max-width:$mobile) {
+      min-height: 130px;
+    }
+  }
+
+  .product__title {
+    min-height: 62px;
+  }
+
+  .product__bottom {
+    margin-top: auto;
+    min-height: 82px;
+
+    @media (max-width:$mobile) {
+      min-height: 85px;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto 72px;
+    outline: transparent;
+    background-color: $white;
+    color: $green-900;
+    border: 1px solid $green-900;
+    border-radius: 6px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+
+    &:hover {
+      background-color: $green-200;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+    }
+
+    &:active {
+      box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width:$mobile) {
+      margin: 0 auto 48px;
+      font-size: 18px;
+      padding: 11px 24px;
+    }
+  }
+
+  //products__banner
+
+  &__banner-list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width:$tablet-2) {
+      justify-items: center;
+    }
+
+    @media (max-width:$tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 100%;
+      gap: 15px;
+    }
+  }
+
+  &__banner-item {
+    padding: 76px 32px;
+    min-height: 300px;
+    max-width: 300px;
+    min-width: 220px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    transition: opacity 0.4s ease;
+
+    @media (max-width:$mobile) {
+      padding: 76px 32px 30px 15px;
+      max-width: 100%;
+    }
+
+    &:first-child {
+      max-width: 630px;
+      width: 100%;
+      grid-column: span 2;
+
+      @media (max-width:$tablet-2) {
+        max-width: 100%;
+      }
+
+      @media (max-width:$mobile) {
+        grid-column: span 1;
+      }
+
+    }
+
+    &:hover {
+      opacity: 0.7;
+
+      .products__banner-item-link {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__banner-item-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 0;
+  }
+
+  &__banner-uptitle {
+    margin-bottom: 18px;
+    @extend %opensans-700;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+  }
+
+  &__banner-title {
+    max-width: 170px;
+    width: 100%;
+    margin-bottom: 3px;
+    @include line-clamp(3);
+    @extend %ruda-600;
+    font-size: 30px;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+    @media (max-width:$mobile) {
+      font-size: 24px;
+      max-width: 130px;
+    }
+  }
+
+  &__banner-title--long {
+    max-width: 346px;
+    width: 100%;
+
+    @media (max-width:$mobile) {
+      max-width: 230px;
+    }
+  }
+
+  &__banner-link {
+    @extend %opensans-700;
+    font-size: 14px;
+    line-height: 1;
+    padding-bottom: 2px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    outline: transparent;
+    position: relative;
+    transition: transform 0.2s ease, border 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $dark-500;
+      left: 0;
+      bottom: -3px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+  }
+
+  &__banner-text-decoration--white {
+    &::before {
+      background-color: $white;
+    }
+  }
+
+  &__banner-text-decoration--white,
+  &__banner-text-decoration--white a {
+    color: $white;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+
+    &:focus {
+      border-color: $white;
+    }
+  }
+
+  &__banner-text-decoration--black,
+  &__banner-text-decoration--black a {
+    color: $dark-500;
+
+    &:focus {
+      border-color: $dark-500;
+    }
+
+  }
+
+}

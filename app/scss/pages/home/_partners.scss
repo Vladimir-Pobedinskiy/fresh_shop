@@ -1,0 +1,70 @@
+//partners
+.partners {
+  padding: 74px 0 66px;
+
+  @media (max-width:$mobile) {
+    padding: 57px 0 26px;
+  }
+
+  &__container {
+    max-width: 1190px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 84px;
+    width: 100%;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+
+  &__item-link {
+    display: block;
+    width: fit-content;
+    padding: 2px;
+    cursor: pointer;
+    outline: transparent;
+    border: 3px solid transparent;
+    transition: border 0.3s ease;
+
+    &:focus {
+      border-radius: 3px;
+      border-color: $green-200;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .partners__swiper-pagination {
+    margin-bottom: 5px;
+  }
+
+  .swiper-pagination-bullet {
+    outline: transparent;
+    width: 14px;
+    height: 14px;
+    background-color: $green-900;
+    transition: opacity 0.4s ease;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    box-shadow: 0 0 0 3px $green-200;
+  }
+
+}
