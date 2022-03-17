@@ -1014,7 +1014,7 @@ function reload_interval(time){
 	}, time);
 }
 
-// плавная прокрутка по якорны ссылкам
+// плавная прокрутка по якорным ссылкам
 
 const anchors = document.querySelectorAll('a[href^="#"]')
 
